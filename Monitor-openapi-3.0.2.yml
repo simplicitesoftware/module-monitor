@@ -34,6 +34,10 @@ components:
         monPrjName:
           description: Nom
           type: string
+    ArrayOfMonProjectInstance:
+      type: array
+      items:
+        $ref: '#/components/schemas/MonProjectInstance'
     ArrayOfMonCntPrj:
       type: array
       items:
@@ -94,9 +98,15 @@ components:
         monHeaFreeHeap:
           description: Heap libre
           type: integer
+        monHeaActions:
+          description: Actions
+          type: integer
         monHeaAppVersion:
           description: Version Applicative
           type: string
+        monHeaObjects:
+          description: Objets
+          type: integer
         monHeaStatus:
           description: Statut
           type: string
@@ -105,6 +115,9 @@ components:
           - KO
         monHeaHeapSize:
           description: Taille heap
+          type: integer
+        monHeaScripts:
+          description: Scripts
           type: integer
         monHeaBuiltOn:
           description: Compilé le
@@ -118,18 +131,30 @@ components:
         monHeaTotalFreeSize:
           description: Total Free Size
           type: integer
+        monHeaFunctions:
+          description: Fonctions
+          type: integer
+        monHeaStates:
+          description: États
+          type: integer
         monHeaDiskUsage:
           description: Utilisation Espace
           type: number
         monHeaVersion:
           description: Version Platforme
           type: string
+        monHeaGroups:
+          description: Groupes
+          type: integer
         monHeaUsableDisk:
           description: Espace utilisable
           type: integer
         monHeaInstId__monInstUrl:
           description: URL Instance
           type: string
+        monHeaConstraints:
+          description: Contraintes
+          type: integer
         monHeaHeapUsage:
           description: Utilisation Heap
           type: number
@@ -148,6 +173,15 @@ components:
         monHeaMaxGrantCache:
           description: Grant Cache Max
           type: integer
+        monHeaAttributes:
+          description: Attributs
+          type: integer
+        monHeaPublications:
+          description: Publications
+          type: integer
+        monHeaCrosstables:
+          description: Tableaux croisés
+          type: integer
         monHeaSessions:
           description: Sessions
           type: integer
@@ -163,6 +197,12 @@ components:
         monHeaGrantCacheRatio:
           description: Utilisation Grant Cache
           type: number
+        monHeaLastLogin:
+          description: Dernière Connexion
+          type: string
+        monHeaTemplates:
+          description: Templates
+          type: integer
         monHeaObjectCache:
           description: Cache Objet
           type: integer
@@ -177,12 +217,6 @@ components:
       properties:
         monInstUrl:
           description: URL
-          type: string
-        monInstPrjId:
-          description: Projet
-          type: string
-        monInstPrjId__monPrjName:
-          description: Nom Projet
           type: string
         row_id:
           description: Id
@@ -239,6 +273,21 @@ components:
           type: integer
           enum:
           - 403
+    MonProjectInstance:
+      type: object
+      properties:
+        monInstUrl:
+          description: URL
+          type: string
+        monInstPrjId:
+          description: Projet
+          type: string
+        monInstPrjId__monPrjName:
+          description: Nom Projet
+          type: string
+        row_id:
+          description: Id
+          type: string
   securitySchemes:
     basicAuth:
       scheme: basic
@@ -963,6 +1012,201 @@ paths:
         required: true
       tags:
       - MonHealth
+  /rest/MonProjectInstance/{row_id}:
+    post:
+      summary: Create a new MonProjectInstancebusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MonProjectInstance'
+      operationId: obj-monprojectinstance-create
+      responses:
+        '200':
+          description: Success in creating a new business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MonProjectInstance'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - MonProjectInstance
+    get:
+      summary: Get a MonProjectInstance business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-monprojectinstance-get
+      responses:
+        '200':
+          description: Success in getting a single business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MonProjectInstance'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - MonProjectInstance
+    delete:
+      summary: Delete a MonProjectInstance business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-monprojectinstance-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+          content:
+            application/json: {}
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - MonProjectInstance
+    put:
+      summary: Update a MonProjectInstancebusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MonProjectInstance'
+      operationId: obj-monprojectinstance-update
+      responses:
+        '200':
+          description: Success in updating a business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MonProjectInstance'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - MonProjectInstance
   /rest/MonContact/{row_id}:
     post:
       summary: Create a new MonContactbusiness object record
@@ -1208,18 +1452,6 @@ paths:
         in: query
         name: monInstUrl
         description: Search filter for URL
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: monInstPrjId
-        description: Search filter for Projet
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: monInstPrjId__monPrjName
-        description: Search filter for Nom Projet
         required: false
       tags:
       - MonInstance
@@ -1498,6 +1730,78 @@ paths:
         name: monHeaObjectCacheRatio
         description: Search filter for Utilisation Cache Objet
         required: false
+      - schema:
+          type: integer
+        in: query
+        name: monHeaObjects
+        description: Search filter for Objets
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: monHeaAttributes
+        description: Search filter for Attributs
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: monHeaFunctions
+        description: Search filter for Fonctions
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: monHeaGroups
+        description: Search filter for Groupes
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: monHeaStates
+        description: Search filter for États
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: monHeaConstraints
+        description: Search filter for Contraintes
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: monHeaCrosstables
+        description: Search filter for Tableaux croisés
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: monHeaTemplates
+        description: Search filter for Templates
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: monHeaScripts
+        description: Search filter for Scripts
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: monHeaActions
+        description: Search filter for Actions
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: monHeaPublications
+        description: Search filter for Publications
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: monHeaLastLogin
+        description: Search filter for Dernière Connexion
+        required: false
       tags:
       - MonHealth
   /rest/MonProject:
@@ -1553,6 +1857,72 @@ paths:
         required: false
       tags:
       - MonProject
+  /rest/MonProjectInstance:
+    get:
+      summary: Search MonProjectInstance business object records or get contextualized
+        metadata
+      security:
+      - bearerAuth: []
+      operationId: obj-monprojectinstance-search
+      responses:
+        '200':
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArrayOfMonProjectInstance'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: _metadata
+        description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _count
+        description: Count?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _doc
+        description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: monInstUrl
+        description: Search filter for URL
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: monInstPrjId
+        description: Search filter for Projet
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: monInstPrjId__monPrjName
+        description: Search filter for Nom Projet
+        required: false
+      tags:
+      - MonProjectInstance
   /rest/MonProject/{row_id}:
     post:
       summary: Create a new MonProjectbusiness object record
@@ -1770,3 +2140,5 @@ tags:
   description: Instance
 - name: MonProject
   description: Projet
+- name: MonProjectInstance
+  description: Instance

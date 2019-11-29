@@ -9,6 +9,7 @@ import org.json.JSONObject;
 import com.simplicite.util.Grant;
 import com.simplicite.util.ObjectDB;
 import com.simplicite.util.Tool;
+import com.simplicite.util.AppLog;
 
 /**
  * Business object MonHealth
@@ -24,6 +25,7 @@ public class MonHealth extends ObjectDB {
 		"monHeaSessions", "application.activesessions",
 		"monHeaEnabledUsers", "application.enabledusers",
 		"monHeaTotalUsers", "application.totalusers",
+		"monHeaLastLogin", "application.lastlogindate",
 		"monHeaFreeDisk", "disk.diskfree",
 		"monHeaUsableDisk", "disk.diskusable",
 		"monHeaTotalDisk", "disk.disktotal",
@@ -35,11 +37,22 @@ public class MonHealth extends ObjectDB {
 		"monHeaMaxGrantCache", "cache.grantcachemax",
 		"monHeaObjectCache", "cache.objectcache",
 		"monHeaMaxObjectCache", "cache.objectcachemax",
-		"monHeaDatabasePatchLevel", "database.dbpatchlevel"
+		"monHeaDatabasePatchLevel", "database.dbpatchlevel",
+		"monHeaObjects", "userconfiguration.m_object",
+		"monHeaAttributes", "userconfiguration.m_field",
+		"monHeaFunctions", "userconfiguration.m_function",
+		"monHeaGroups", "userconfiguration.m_group",
+		"monHeaStates", "userconfiguration.bpm_state",
+		"monHeaConstraints", "userconfiguration.m_constraint",
+		"monHeaCrosstables", "userconfiguration.m_crosstab",
+		"monHeaTemplates", "userconfiguration.m_template",
+		"monHeaScripts", "userconfiguration.m_script",
+		"monHeaActions", "userconfiguration.m_action",
+		"monHeaPublications", "userconfiguration.m_printtemplate"
 	);
 
 	public static MonHealth getHealth(String instanceBaseUrl, Grant g) throws JSONException, IOException {
-		JSONObject req = new JSONObject(Tool.readUrl(instanceBaseUrl+"/health?format=json"));
+		JSONObject req = new JSONObject(Tool.readUrl(instanceBaseUrl+"/health?format=json&full=true"));
 		MonHealth health = (MonHealth) g.getTmpObject(ObjHealth);
 		synchronized(health){
 			health.resetValues();
@@ -56,7 +69,12 @@ public class MonHealth extends ObjectDB {
 	private void feedJson(JSONObject json){
 		corresp.forEach((attr, jsonField)->{
 			String[] f = jsonField.split("\\.");
-			setFieldValue(attr, json.getJSONObject(f[0]).get(f[1]));
+			try{
+				setFieldValue(attr, json.getJSONObject(f[0]).get(f[1]));
+				AppLog.info(getClass(), "feedJson", "Field "+attr+" populated : "+getFieldValue(attr), getGrant());
+			} catch(JSONException e){
+				AppLog.error(getClass(), "feedJson", "Field not found : "+jsonField, e, getGrant());
+			}
 		});
 	}
 

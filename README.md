@@ -61,7 +61,7 @@ No custom action
 | `monHeaStatus`                                               | enum(7) using `MONHEASTATUS` list        |          |           |          | -                                                                                |
 | `monHeaVersion`                                              | char(10)                                 |          |           |          | -                                                                                |
 | `monHeaBuiltOn`                                              | char(250)                                |          |           |          | -                                                                                |
-| `monHeaDatabasePatchLevel`                                   | char(10)                                 |          |           |          | -                                                                                |
+| `monHeaDatabasePatchLevel`                                   | char(100)                                |          |           |          | -                                                                                |
 | `monHeaAppVersion`                                           | char(10)                                 |          |           |          | -                                                                                |
 | `monHeaSessions`                                             | int(10)                                  |          |           |          | -                                                                                |
 | `monHeaEnabledUsers`                                         | int(10)                                  |          |           |          | -                                                                                |
@@ -81,6 +81,18 @@ No custom action
 | `monHeaObjectCache`                                          | int(10)                                  |          |           |          | -                                                                                |
 | `monHeaMaxObjectCache`                                       | int(10)                                  |          |           |          | -                                                                                |
 | `monHeaObjectCacheRatio`                                     | float(5, 2)                              |          |           |          | -                                                                                |
+| `monHeaObjects`                                              | int(5)                                   |          |           |          | -                                                                                |
+| `monHeaAttributes`                                           | int(5)                                   |          |           |          | -                                                                                |
+| `monHeaFunctions`                                            | int(5)                                   |          |           |          | -                                                                                |
+| `monHeaGroups`                                               | int(5)                                   |          | yes       |          | -                                                                                |
+| `monHeaStates`                                               | int(5)                                   |          |           |          | -                                                                                |
+| `monHeaConstraints`                                          | int(5)                                   |          |           |          | -                                                                                |
+| `monHeaCrosstables`                                          | int(5)                                   |          |           |          | -                                                                                |
+| `monHeaTemplates`                                            | int(5)                                   |          |           |          | -                                                                                |
+| `monHeaScripts`                                              | int(5)                                   |          |           |          | -                                                                                |
+| `monHeaActions`                                              | int(5)                                   |          |           |          | -                                                                                |
+| `monHeaPublications`                                         | int(5)                                   |          |           |          | -                                                                                |
+| `monHeaLastLogin`                                            | datetime                                 |          |           |          | -                                                                                |
 
 ### Lists
 
@@ -95,20 +107,17 @@ No custom action
 `MonInstance` business object definition
 ----------------------------------------
 
-Simplicité instance
+
 
 ### Fields
 
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
 | ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
 | `monInstUrl`                                                 | url(100)                                 | yes*     | yes       |          | -                                                                                |
-| `monInstPrjId` link to **`MonProject`**                      | id                                       |          | yes       |          | -                                                                                |
-| _Ref. `monInstPrjId.monPrjName`_                             | _char(50)_                               |          |           |          | -                                                                                |
 
 ### Custom actions
 
-* `callInstance`: 
-* `callInstances`: 
+No custom action
 
 `MonProject` business object definition
 ---------------------------------------
@@ -124,4 +133,22 @@ Simplicité instance
 ### Custom actions
 
 No custom action
+
+`MonProjectInstance` business object definition
+-----------------------------------------------
+
+Simplicité instance
+
+### Fields
+
+| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
+| ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
+| `monInstUrl`                                                 | url(100)                                 | yes*     | yes       |          | -                                                                                |
+| `monInstPrjId` link to **`MonProject`**                      | id                                       |          | yes       |          | -                                                                                |
+| _Ref. `monInstPrjId.monPrjName`_                             | _char(50)_                               |          |           |          | -                                                                                |
+
+### Custom actions
+
+* `callInstance`: 
+* `callInstances`: 
 
