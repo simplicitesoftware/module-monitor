@@ -1,0 +1,10 @@
+{
+    "date": "Fri Nov 29 12:14:04 CET 2019",
+    "name": "Monitor",
+    "format": "xml",
+    "description": "",
+    "files": ["Monitor.xml"],
+    "repository": {},
+    "version": "1",
+    "dependencies": [{"Simplicite": "4.0"}]
+}

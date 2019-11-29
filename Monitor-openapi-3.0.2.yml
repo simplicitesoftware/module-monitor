@@ -1,0 +1,1772 @@
+#  ___ _            _ _    _ _    __
+# / __(_)_ __  _ __| (_)__(_) |_ /_/
+# \__ \ | '  \| '_ \ | / _| |  _/ -_)
+# |___/_|_|_|_| .__/_|_\__|_|\__\___|
+#             |_| Module: Monitor 1
+components:
+  schemas:
+    Error404:
+      type: object
+      properties:
+        error:
+          description: Error message
+          type: string
+        status:
+          description: Error status
+          type: integer
+          enum:
+          - 404
+    MonContact:
+      type: object
+      properties:
+        monCntEmail:
+          description: Email
+          type: string
+        row_id:
+          description: Id
+          type: string
+    MonProject:
+      type: object
+      properties:
+        row_id:
+          description: Id
+          type: string
+        monPrjName:
+          description: Nom
+          type: string
+    ArrayOfMonCntPrj:
+      type: array
+      items:
+        $ref: '#/components/schemas/MonCntPrj'
+    PublicationResult:
+      type: object
+      properties:
+        mime:
+          description: MIME type
+          type: string
+        content:
+          description: Content (plain text or base64 encoded)
+          type: string
+    ArrayOfMonContact:
+      type: array
+      items:
+        $ref: '#/components/schemas/MonContact'
+    ArrayOfMonHealth:
+      type: array
+      items:
+        $ref: '#/components/schemas/MonHealth'
+    ActionResult:
+      type: object
+      properties:
+        result:
+          description: Action result
+          type: string
+    MonCntPrj:
+      type: object
+      properties:
+        monCntprjPrjId__monPrjName:
+          description: Nom mon cntprj prj id
+          type: string
+        monCntprjCntId:
+          description: mon cntprj cnt id
+          type: string
+        row_id:
+          description: Id
+          type: string
+        monCntprjCntId__monCntEmail:
+          description: Email mon cntprj cnt id
+          type: string
+        monCntprjPrjId:
+          description: mon cntprj prj id
+          type: string
+    TreeviewData:
+      type: object
+      properties:
+        item:
+          description: Object item with lists of linked objects' items
+          type: object
+    MonHealth:
+      type: object
+      properties:
+        monHeaTotalUsers:
+          description: Total utilisateurs
+          type: integer
+        monHeaFreeHeap:
+          description: Heap libre
+          type: integer
+        monHeaAppVersion:
+          description: Version Applicative
+          type: string
+        monHeaStatus:
+          description: Statut
+          type: string
+          enum:
+          - OK
+          - KO
+        monHeaHeapSize:
+          description: Taille heap
+          type: integer
+        monHeaBuiltOn:
+          description: Compilé le
+          type: string
+        monHeaFreeDisk:
+          description: Espace libre
+          type: integer
+        monHeaObjectCacheRatio:
+          description: Utilisation Cache Objet
+          type: number
+        monHeaTotalFreeSize:
+          description: Total Free Size
+          type: integer
+        monHeaDiskUsage:
+          description: Utilisation Espace
+          type: number
+        monHeaVersion:
+          description: Version Platforme
+          type: string
+        monHeaUsableDisk:
+          description: Espace utilisable
+          type: integer
+        monHeaInstId__monInstUrl:
+          description: URL Instance
+          type: string
+        monHeaHeapUsage:
+          description: Utilisation Heap
+          type: number
+        monHeaDate:
+          description: Date
+          type: string
+        monHeaTotalDisk:
+          description: Espace total
+          type: integer
+        monHeaEnabledUsers:
+          description: Utilisateurs actifs
+          type: integer
+        monHeaDatabasePatchLevel:
+          description: Niveau patch BDD
+          type: string
+        monHeaMaxGrantCache:
+          description: Grant Cache Max
+          type: integer
+        monHeaSessions:
+          description: Sessions
+          type: integer
+        monHeaMaxObjectCache:
+          description: Cache Objet Max
+          type: integer
+        monHeaGrantCache:
+          description: Grant Cache
+          type: integer
+        monHeaMaxHeapSize:
+          description: Heap max
+          type: integer
+        monHeaGrantCacheRatio:
+          description: Utilisation Grant Cache
+          type: number
+        monHeaObjectCache:
+          description: Cache Objet
+          type: integer
+        monHeaInstId:
+          description: Instance
+          type: string
+        row_id:
+          description: Id
+          type: string
+    MonInstance:
+      type: object
+      properties:
+        monInstUrl:
+          description: URL
+          type: string
+        monInstPrjId:
+          description: Projet
+          type: string
+        monInstPrjId__monPrjName:
+          description: Nom Projet
+          type: string
+        row_id:
+          description: Id
+          type: string
+    Error400:
+      type: object
+      properties:
+        error:
+          description: Error message
+          type: string
+        status:
+          description: Error status
+          type: integer
+          enum:
+          - 400
+    ArrayOfMonInstance:
+      type: array
+      items:
+        $ref: '#/components/schemas/MonInstance'
+    ArrayOfMonProject:
+      type: array
+      items:
+        $ref: '#/components/schemas/MonProject'
+    Error401:
+      type: object
+      properties:
+        error:
+          description: Error message
+          type: string
+        status:
+          description: Error status
+          type: integer
+          enum:
+          - 401
+    Error500:
+      type: object
+      properties:
+        error:
+          description: Error message
+          type: string
+        status:
+          description: Error status
+          type: integer
+          enum:
+          - 500
+    Error403:
+      type: object
+      properties:
+        error:
+          description: Error message
+          type: string
+        status:
+          description: Error status
+          type: integer
+          enum:
+          - 403
+  securitySchemes:
+    basicAuth:
+      scheme: basic
+      type: http
+    bearerAuth:
+      bearerFormat: Simplicite token
+      scheme: bearer
+      type: http
+openapi: 3.0.2
+paths:
+  /rest/MonCntPrj/{row_id}:
+    post:
+      summary: Create a new MonCntPrjbusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MonCntPrj'
+      operationId: obj-moncntprj-create
+      responses:
+        '200':
+          description: Success in creating a new business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MonCntPrj'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - MonCntPrj
+    get:
+      summary: Get a MonCntPrj business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-moncntprj-get
+      responses:
+        '200':
+          description: Success in getting a single business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MonCntPrj'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - MonCntPrj
+    delete:
+      summary: Delete a MonCntPrj business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-moncntprj-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+          content:
+            application/json: {}
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - MonCntPrj
+    put:
+      summary: Update a MonCntPrjbusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MonCntPrj'
+      operationId: obj-moncntprj-update
+      responses:
+        '200':
+          description: Success in updating a business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MonCntPrj'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - MonCntPrj
+  /login:
+    get:
+      summary: Login (obtain bearer token)
+      security:
+      - basicAuth: []
+      operationId: login
+      responses:
+        '200':
+          description: Successful login
+          content:
+            application/json: {}
+            text/plain: {}
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+      parameters:
+      - schema:
+          type: string
+          enum:
+          - json
+          - oauth2
+          - token
+        in: query
+        name: _output
+        description: Optional output format
+        required: false
+      tags:
+      - session
+  /logout:
+    get:
+      summary: Logout (revoke bearer token)
+      security:
+      - bearerAuth: []
+      operationId: logout
+      responses:
+        '200':
+          description: Successfull logout
+          content:
+            application/json: {}
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+      tags:
+      - session
+  /rest/MonContact:
+    get:
+      summary: Search MonContact business object records or get contextualized metadata
+      security:
+      - bearerAuth: []
+      operationId: obj-moncontact-search
+      responses:
+        '200':
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArrayOfMonContact'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: _metadata
+        description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _count
+        description: Count?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _doc
+        description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: monCntEmail
+        description: Search filter for Email
+        required: false
+      tags:
+      - MonContact
+  /rest/MonInstance/{row_id}:
+    post:
+      summary: Create a new MonInstancebusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MonInstance'
+      operationId: obj-moninstance-create
+      responses:
+        '200':
+          description: Success in creating a new business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MonInstance'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - MonInstance
+    get:
+      summary: Get a MonInstance business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-moninstance-get
+      responses:
+        '200':
+          description: Success in getting a single business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MonInstance'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - MonInstance
+    delete:
+      summary: Delete a MonInstance business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-moninstance-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+          content:
+            application/json: {}
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - MonInstance
+    put:
+      summary: Update a MonInstancebusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MonInstance'
+      operationId: obj-moninstance-update
+      responses:
+        '200':
+          description: Success in updating a business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MonInstance'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - MonInstance
+  /:
+    get:
+      summary: Get user session information
+      security:
+      - bearerAuth: []
+      operationId: info
+      responses:
+        '200':
+          description: Success in getting user session information
+          content:
+            application/json: {}
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: texts
+        description: Texts?
+        required: false
+      tags:
+      - session
+  /rest/MonHealth/{row_id}:
+    post:
+      summary: Create a new MonHealthbusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MonHealth'
+      operationId: obj-monhealth-create
+      responses:
+        '200':
+          description: Success in creating a new business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MonHealth'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - MonHealth
+    get:
+      summary: Get a MonHealth business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-monhealth-get
+      responses:
+        '200':
+          description: Success in getting a single business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MonHealth'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - MonHealth
+    delete:
+      summary: Delete a MonHealth business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-monhealth-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+          content:
+            application/json: {}
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - MonHealth
+    put:
+      summary: Update a MonHealthbusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MonHealth'
+      operationId: obj-monhealth-update
+      responses:
+        '200':
+          description: Success in updating a business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MonHealth'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - MonHealth
+  /rest/MonContact/{row_id}:
+    post:
+      summary: Create a new MonContactbusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MonContact'
+      operationId: obj-moncontact-create
+      responses:
+        '200':
+          description: Success in creating a new business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MonContact'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - MonContact
+    get:
+      summary: Get a MonContact business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-moncontact-get
+      responses:
+        '200':
+          description: Success in getting a single business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MonContact'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - MonContact
+    delete:
+      summary: Delete a MonContact business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-moncontact-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+          content:
+            application/json: {}
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - MonContact
+    put:
+      summary: Update a MonContactbusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MonContact'
+      operationId: obj-moncontact-update
+      responses:
+        '200':
+          description: Success in updating a business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MonContact'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - MonContact
+  /rest/MonInstance:
+    get:
+      summary: Search MonInstance business object records or get contextualized metadata
+      security:
+      - bearerAuth: []
+      operationId: obj-moninstance-search
+      responses:
+        '200':
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArrayOfMonInstance'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: _metadata
+        description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _count
+        description: Count?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _doc
+        description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: monInstUrl
+        description: Search filter for URL
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: monInstPrjId
+        description: Search filter for Projet
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: monInstPrjId__monPrjName
+        description: Search filter for Nom Projet
+        required: false
+      tags:
+      - MonInstance
+  /rest/MonCntPrj:
+    get:
+      summary: Search MonCntPrj business object records or get contextualized metadata
+      security:
+      - bearerAuth: []
+      operationId: obj-moncntprj-search
+      responses:
+        '200':
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArrayOfMonCntPrj'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: _metadata
+        description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _count
+        description: Count?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _doc
+        description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: monCntprjCntId
+        description: Search filter for mon cntprj cnt id
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: monCntprjCntId__monCntEmail
+        description: Search filter for Email mon cntprj cnt id
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: monCntprjPrjId
+        description: Search filter for mon cntprj prj id
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: monCntprjPrjId__monPrjName
+        description: Search filter for Nom mon cntprj prj id
+        required: false
+      tags:
+      - MonCntPrj
+  /rest/MonHealth:
+    get:
+      summary: Search MonHealth business object records or get contextualized metadata
+      security:
+      - bearerAuth: []
+      operationId: obj-monhealth-search
+      responses:
+        '200':
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArrayOfMonHealth'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: _metadata
+        description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _count
+        description: Count?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _doc
+        description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: monHeaInstId
+        description: Search filter for Instance
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: monHeaInstId__monInstUrl
+        description: Search filter for URL Instance
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: monHeaDate
+        description: Search filter for Date
+        required: false
+      - schema:
+          type: string
+          enum:
+          - OK
+          - KO
+        in: query
+        name: monHeaStatus
+        description: Search filter for Statut
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: monHeaVersion
+        description: Search filter for Version Platforme
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: monHeaBuiltOn
+        description: Search filter for Compilé le
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: monHeaDatabasePatchLevel
+        description: Search filter for Niveau patch BDD
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: monHeaAppVersion
+        description: Search filter for Version Applicative
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: monHeaSessions
+        description: Search filter for Sessions
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: monHeaEnabledUsers
+        description: Search filter for Utilisateurs actifs
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: monHeaTotalUsers
+        description: Search filter for Total utilisateurs
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: monHeaFreeDisk
+        description: Search filter for Espace libre
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: monHeaUsableDisk
+        description: Search filter for Espace utilisable
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: monHeaTotalDisk
+        description: Search filter for Espace total
+        required: false
+      - schema:
+          type: number
+        in: query
+        name: monHeaDiskUsage
+        description: Search filter for Utilisation Espace
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: monHeaFreeHeap
+        description: Search filter for Heap libre
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: monHeaHeapSize
+        description: Search filter for Taille heap
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: monHeaMaxHeapSize
+        description: Search filter for Heap max
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: monHeaTotalFreeSize
+        description: Search filter for Total Free Size
+        required: false
+      - schema:
+          type: number
+        in: query
+        name: monHeaHeapUsage
+        description: Search filter for Utilisation Heap
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: monHeaGrantCache
+        description: Search filter for Grant Cache
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: monHeaMaxGrantCache
+        description: Search filter for Grant Cache Max
+        required: false
+      - schema:
+          type: number
+        in: query
+        name: monHeaGrantCacheRatio
+        description: Search filter for Utilisation Grant Cache
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: monHeaObjectCache
+        description: Search filter for Cache Objet
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: monHeaMaxObjectCache
+        description: Search filter for Cache Objet Max
+        required: false
+      - schema:
+          type: number
+        in: query
+        name: monHeaObjectCacheRatio
+        description: Search filter for Utilisation Cache Objet
+        required: false
+      tags:
+      - MonHealth
+  /rest/MonProject:
+    get:
+      summary: Search MonProject business object records or get contextualized metadata
+      security:
+      - bearerAuth: []
+      operationId: obj-monproject-search
+      responses:
+        '200':
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArrayOfMonProject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: _metadata
+        description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _count
+        description: Count?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _doc
+        description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: monPrjName
+        description: Search filter for Nom
+        required: false
+      tags:
+      - MonProject
+  /rest/MonProject/{row_id}:
+    post:
+      summary: Create a new MonProjectbusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MonProject'
+      operationId: obj-monproject-create
+      responses:
+        '200':
+          description: Success in creating a new business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MonProject'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - MonProject
+    get:
+      summary: Get a MonProject business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-monproject-get
+      responses:
+        '200':
+          description: Success in getting a single business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MonProject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - MonProject
+    delete:
+      summary: Delete a MonProject business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-monproject-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+          content:
+            application/json: {}
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - MonProject
+    put:
+      summary: Update a MonProjectbusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MonProject'
+      operationId: obj-monproject-update
+      responses:
+        '200':
+          description: Success in updating a business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MonProject'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - MonProject
+info:
+  license:
+    name: Simplicite license
+    url: http://www.simplicitesoftware.com
+  contact:
+    name: Simplicite Software
+    url: http://www.simplicitesoftware.com
+    email: contact@simplicitesoftware.com
+  description: API for module Monitor
+  title: Monitor
+  version: '1'
+tags:
+- name: MonCntPrj
+  description: MonCntPrj
+- name: MonContact
+  description: Responsable
+- name: MonHealth
+  description: Santé
+- name: MonInstance
+  description: Instance
+- name: MonProject
+  description: Projet
