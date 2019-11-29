@@ -1,12 +1,7 @@
 package com.simplicite.objects.Monitor;
 
-import java.util.Date;
-
-import  org.quartz.CronExpression;
-
 import com.simplicite.commons.Monitor.MailTool;
 import com.simplicite.util.AppLog;
-import com.simplicite.util.ObjectDB;
 import com.simplicite.util.Tool;
 
 /**
@@ -14,32 +9,18 @@ import com.simplicite.util.Tool;
  */
 public class MonProjectInstance extends MonInstance {
 	private static final long serialVersionUID = 1L;
-	private static final String ObjHealth = "MonHealth";
 
-	public void callInstances(){
-		search().forEach(row->callSingleInstance(row[getFieldIndex("row_id")],row[getFieldIndex("monInstUrl")]));
-	}
-
-	public void callInstance(){
-		callSingleInstance(getFieldValue("row_id"), getFieldValue("monInstUrl"));
-	}
-
-	private void callSingleInstance(String instanceId, String instanceBaseUrl){
+	@Override
+	protected void callSingleInstance(String instanceId, String instanceBaseUrl) {
 		boolean notifyManager = false;
-
 		try{
-			boolean[] oldcrud = getGrant().changeAccess("MonHealth", true,true,false,false);
-			MonHealth health = MonHealth.getHealth(instanceBaseUrl, getGrant());
-			health.setFieldValue("monHeaInstId", instanceId);
-			health.create();
-			notifyManager = health.hasProblem();
-			getGrant().changeAccess("MonHealth", oldcrud);
+			createHealthRow(instanceId, instanceBaseUrl);
+			notifyManager = getLatestHealth().hasProblem();
 		}
 		catch(Exception e){
 			notifyManager = true;
 			AppLog.error(getClass(), "callSingleInstance", "Unable to request URL : "+instanceBaseUrl, e, getGrant());
 		}
-
 		if(notifyManager){
 			AppLog.info(getClass(), "callSingleInstance", "--- Instance has problem, notifying : "+instanceBaseUrl, getGrant());
 			notifyContacts(instanceId, instanceBaseUrl);
