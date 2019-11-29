@@ -1,15 +1,21 @@
 package com.simplicite.objects.Monitor;
 
-import java.util.*;
-import com.simplicite.util.*;
-import com.simplicite.util.tools.*;
+import java.io.IOException;
+import java.util.HashMap;
+
+import org.json.JSONException;
 import org.json.JSONObject;
+
+import com.simplicite.util.Grant;
+import com.simplicite.util.ObjectDB;
+import com.simplicite.util.Tool;
 
 /**
  * Business object MonHealth
  */
 public class MonHealth extends ObjectDB {
 	private static final long serialVersionUID = 1L;
+	private static final String ObjHealth = "MonHealth";
 	public static final HashMap<String, String> corresp = getMapOf(
 		"monHeaStatus", "platform.status",
 		"monHeaVersion", "platform.version",
@@ -31,14 +37,29 @@ public class MonHealth extends ObjectDB {
 		"monHeaMaxObjectCache", "cache.objectcachemax",
 		"monHeaDatabasePatchLevel", "database.dbpatchlevel"
 	);
-	
-	public void feedJson(JSONObject json){
+
+	public static MonHealth getHealth(String instanceBaseUrl, Grant g) throws JSONException, IOException {
+		JSONObject req = new JSONObject(Tool.readUrl(instanceBaseUrl+"/health?format=json"));
+		MonHealth health = (MonHealth) g.getTmpObject(ObjHealth);
+		synchronized(health){
+			health.resetValues();
+			health.setFieldValue("monHeaDate", Tool.getCurrentDateTime());
+			health.feedJson(req);
+		}
+		return health;
+	}
+
+	public boolean hasProblem() {
+		return !"OK".equals(getFieldValue("monHeaStatus"));
+	}
+
+	private void feedJson(JSONObject json){
 		corresp.forEach((attr, jsonField)->{
 			String[] f = jsonField.split("\\.");
 			setFieldValue(attr, json.getJSONObject(f[0]).get(f[1]));
 		});
 	}
-	
+
 	// Java 9 Map.of() polyfill
 	public static HashMap<String, String> getMapOf(String... args){
 		HashMap<String, String> mp = new HashMap<String, String>();

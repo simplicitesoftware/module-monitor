@@ -1,12 +1,13 @@
 package com.simplicite.objects.Monitor;
 
-import java.util.*;
-import com.simplicite.util.*;
-import com.simplicite.util.tools.*;
-import org.json.JSONObject;
-import com.simplicite.commons.Monitor.MailTool;
+import java.util.Date;
 
 import  org.quartz.CronExpression;
+
+import com.simplicite.commons.Monitor.MailTool;
+import com.simplicite.util.AppLog;
+import com.simplicite.util.ObjectDB;
+import com.simplicite.util.Tool;
 
 /**
  * Business object MonInstance
@@ -14,7 +15,7 @@ import  org.quartz.CronExpression;
 public class MonInstance extends ObjectDB {
 	private static final long serialVersionUID = 1L;
 	private static final String ObjHealth = "MonHealth";
-	
+
 	/**
 	 * Unit tests method
 	 */
@@ -27,7 +28,7 @@ public class MonInstance extends ObjectDB {
 			return e.getMessage();
 		}
 	}
-	
+
 	private static String getNextCronExec(String cronString, int depth){
 		try{
 			CronExpression cron = new CronExpression(cronString);
@@ -43,43 +44,39 @@ public class MonInstance extends ObjectDB {
 			return e.toString();
 		}
 	}
-	
+
 	public void callInstances(){
 		search().forEach(row->callSingleInstance(row[getFieldIndex("row_id")],row[getFieldIndex("monInstUrl")]));
 	}
-	
+
 	public void callInstance(){
 		callSingleInstance(getFieldValue("row_id"), getFieldValue("monInstUrl"));
 	}
-	
+
 	private void callSingleInstance(String instanceId, String instanceBaseUrl){
-		AppLog.info(getClass(), "callSingleInstance", "--- Checking instance :"+instanceBaseUrl, getGrant());
-		JSONObject req = null;
+		boolean notifyManager = false;
+
 		try{
-			req = new JSONObject(Tool.readUrl(instanceBaseUrl+"/health?format=json"));
-			boolean[] oldcrud = getGrant().changeAccess(ObjHealth, true,true,false,false);
-			MonHealth health = (MonHealth) getGrant().getTmpObject(ObjHealth);
-			synchronized(health){
-				health.resetValues();
-				health.setFieldValue("monHeaInstId", instanceId);
-				health.setFieldValue("monHeaDate", Tool.getCurrentDateTime());
-				health.feedJson(req);
-				health.create();
-			}
-			getGrant().changeAccess(ObjHealth, oldcrud);
+			boolean[] oldcrud = getGrant().changeAccess("MonHealth", true,true,false,false);
+			MonHealth health = MonHealth.getHealth(instanceBaseUrl, getGrant());
+			health.setFieldValue("monHeaInstId", instanceId);
+			health.create();
+			notifyManager = health.hasProblem();
+			getGrant().changeAccess("MonHealth", oldcrud);
 		}
 		catch(Exception e){
+			notifyManager = true;
 			AppLog.error(getClass(), "callSingleInstance", "Unable to request URL : "+instanceBaseUrl, e, getGrant());
 		}
-		
-		if(req==null || !"OK".equals(req.getJSONObject("platform").getString("status"))){
+
+		if(notifyManager){
 			AppLog.info(getClass(), "callSingleInstance", "--- Instance has problem, notifying : "+instanceBaseUrl, getGrant());
 			notifyContacts(instanceId, instanceBaseUrl);
 		}
 	}
-	
+
 	private void notifyContacts(String instanceId, String instanceBaseUrl){
-		String sqlEmails = 
+		String sqlEmails =
 			"select cnt.mon_cnt_email from mon_cnt_prj prj"
 			+ " inner join mon_contact cnt on cnt.row_id=prj.mon_cntprj_cnt_id"
 			+ " where prj.mon_cntprj_prj_id=(select mon_inst_prj_id from mon_instance where row_id="+instanceId+")";
