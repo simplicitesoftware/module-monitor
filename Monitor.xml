@@ -7,8 +7,15 @@
 		<mdl_name>Monitor</mdl_name>
 		<mdl_version>1</mdl_version>
 		<mdl_prefix>mon</mdl_prefix>
-		<mdl_url/>
-		<mdl_lastupd>2019-11-29 15:19:43</mdl_lastupd>
+		<mdl_url><![CDATA[{
+	"type": "git",
+	"origin": {
+		"uri": "https://portal.dev.simplicite.io/git/Monitor",
+		"username": "designer",
+		"password": "90384520a65c3d166553"
+	}
+}]]></mdl_url>
+		<mdl_lastupd>2019-12-02 14:40:40</mdl_lastupd>
 		<mdl_comment/>
 	</data>
 </object>
@@ -2252,7 +2259,7 @@
 		<obo_nosearch>1</obo_nosearch>
 		<obo_comment><![CDATA[Simplicité instance]]></obo_comment>
 		<obo_type>O</obo_type>
-		<obo_searchspec/>
+		<obo_searchspec><![CDATA[t.SND_SRV_ID is null]]></obo_searchspec>
 		<obo_delspec/>
 		<obo_exportorder/>
 		<obo_distinct>0</obo_distinct>
@@ -4007,7 +4014,7 @@
 	<action>upsert</action>
 	<data>
 		<crn_name>MonCallInstances</crn_name>
-		<crn_cronexpr>0 0 8 ? * *</crn_cronexpr>
+		<crn_cronexpr>0 0 3 ? * *</crn_cronexpr>
 		<crn_enabled>1</crn_enabled>
 		<crn_unique>1</crn_unique>
 		<crn_runas_id.usr_login>designer</crn_runas_id.usr_login>
