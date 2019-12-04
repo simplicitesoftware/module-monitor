@@ -34,18 +34,6 @@
 	</data>
 </object>
 <object>
-	<name>Model</name>
-	<action>upsert</action>
-	<data>
-		<mod_name>MonModel</mod_name>
-		<mod_template_id.mtp_name>ModelBusinessObject</mod_template_id.mtp_name>
-		<mod_doc>files/Model/MonModel.svg</mod_doc>
-		<mod_json/>
-		<mod_image>files/Model/MonModel.png</mod_image>
-		<row_module_id.mdl_name>Monitor</row_module_id.mdl_name>
-	</data>
-</object>
-<object>
 	<name>Group</name>
 	<action>upsert</action>
 	<data>
@@ -2259,7 +2247,7 @@
 		<obo_nosearch>1</obo_nosearch>
 		<obo_comment><![CDATA[Simplicité instance]]></obo_comment>
 		<obo_type>O</obo_type>
-		<obo_searchspec><![CDATA[t.SND_SRV_ID is null]]></obo_searchspec>
+		<obo_searchspec/>
 		<obo_delspec/>
 		<obo_exportorder/>
 		<obo_distinct>0</obo_distinct>

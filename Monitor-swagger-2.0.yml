@@ -1554,13 +1554,13 @@ definitions:
         description: Email
         type: string
       row_id:
-        description: Id
+        description: Unique technical row ID
         type: string
   MonProject:
     type: object
     properties:
       row_id:
-        description: Id
+        description: Unique technical row ID
         type: string
       monPrjName:
         description: Nom
@@ -1606,7 +1606,7 @@ definitions:
         description: mon cntprj cnt id
         type: string
       row_id:
-        description: Id
+        description: Unique technical row ID
         type: string
       monCntprjCntId__monCntEmail:
         description: Email mon cntprj cnt id
@@ -1741,7 +1741,7 @@ definitions:
         description: Instance
         type: string
       row_id:
-        description: Id
+        description: Unique technical row ID
         type: string
   MonInstance:
     type: object
@@ -1750,7 +1750,7 @@ definitions:
         description: URL
         type: string
       row_id:
-        description: Id
+        description: Unique technical row ID
         type: string
   Error400:
     type: object
@@ -1817,7 +1817,7 @@ definitions:
         description: Nom Projet
         type: string
       row_id:
-        description: Id
+        description: Unique technical row ID
         type: string
 swagger: '2.0'
 info:

@@ -23,13 +23,13 @@ components:
           description: Email
           type: string
         row_id:
-          description: Id
+          description: Unique technical row ID
           type: string
     MonProject:
       type: object
       properties:
         row_id:
-          description: Id
+          description: Unique technical row ID
           type: string
         monPrjName:
           description: Nom
@@ -75,7 +75,7 @@ components:
           description: mon cntprj cnt id
           type: string
         row_id:
-          description: Id
+          description: Unique technical row ID
           type: string
         monCntprjCntId__monCntEmail:
           description: Email mon cntprj cnt id
@@ -210,7 +210,7 @@ components:
           description: Instance
           type: string
         row_id:
-          description: Id
+          description: Unique technical row ID
           type: string
     MonInstance:
       type: object
@@ -219,7 +219,7 @@ components:
           description: URL
           type: string
         row_id:
-          description: Id
+          description: Unique technical row ID
           type: string
     Error400:
       type: object
@@ -286,7 +286,7 @@ components:
           description: Nom Projet
           type: string
         row_id:
-          description: Id
+          description: Unique technical row ID
           type: string
   securitySchemes:
     basicAuth:
