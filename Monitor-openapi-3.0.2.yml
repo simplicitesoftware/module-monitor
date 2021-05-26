@@ -2,7 +2,7 @@
 # / __(_)_ __  _ __| (_)__(_) |_ /_/
 # \__ \ | '  \| '_ \ | / _| |  _/ -_)
 # |___/_|_|_|_| .__/_|_\__|_|\__\___|
-#             |_| Module: Monitor 1
+#             |_| Module: Monitor 1.1
 components:
   schemas:
     Error404:
@@ -220,6 +220,9 @@ components:
         monInstUrl:
           description: URL
           type: string
+        monInstPollFreq:
+          description: Fréquence (min)
+          type: integer
         row_id:
           description: Unique technical row ID
           type: string
@@ -281,6 +284,9 @@ components:
         monInstUrl:
           description: URL
           type: string
+        monInstPollFreq:
+          description: Fréquence (min)
+          type: integer
         monInstPrjId:
           description: Projet
           type: string
@@ -1455,6 +1461,12 @@ paths:
         name: monInstUrl
         description: Search filter for URL
         required: false
+      - schema:
+          type: integer
+        in: query
+        name: monInstPollFreq
+        description: Search filter for Fréquence (min)
+        required: false
       tags:
       - MonInstance
   /rest/MonCntPrj:
@@ -1912,6 +1924,12 @@ paths:
         description: Search filter for URL
         required: false
       - schema:
+          type: integer
+        in: query
+        name: monInstPollFreq
+        description: Search filter for Fréquence (min)
+        required: false
+      - schema:
           type: string
         in: query
         name: monInstPrjId
@@ -2130,7 +2148,7 @@ info:
     email: contact@simplicitesoftware.com
   description: API for module Monitor
   title: Monitor
-  version: '1'
+  version: '1.1'
 tags:
 - name: MonCntPrj
   description: MonCntPrj

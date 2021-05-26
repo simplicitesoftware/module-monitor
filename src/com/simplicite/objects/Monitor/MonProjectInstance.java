@@ -15,7 +15,7 @@ public class MonProjectInstance extends MonInstance {
 		boolean notifyManager = false;
 		try{
 			createHealthRow(instanceId, instanceBaseUrl);
-			notifyManager = getLatestHealth().hasProblem();
+			notifyManager = getLatestHealth(instanceId).hasProblem();
 		}
 		catch(Exception e){
 			notifyManager = true;

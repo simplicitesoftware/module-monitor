@@ -73,7 +73,7 @@ public class MonHealth extends ObjectDB {
 			String[] f = jsonField.split("\\.");
 			try{
 				setFieldValue(attr, json.getJSONObject(f[0]).get(f[1]));
-				AppLog.info(getClass(), "feedJson", "Field "+attr+" populated : "+getFieldValue(attr), getGrant());
+				//AppLog.info(getClass(), "feedJson", "Field "+attr+" populated : "+getFieldValue(attr), getGrant());
 			} catch(JSONException e){
 				AppLog.error(getClass(), "feedJson", "Field not found : "+jsonField, e, getGrant());
 			}

@@ -51,7 +51,7 @@
 | _Ref. `monHeaInstId.monInstUrl`_                             | _url(100)_                               |          |           |          | -                                                                                |
 | `monHeaDate`                                                 | datetime                                 | yes*     |           |          | -                                                                                |
 | `monHeaStatus`                                               | enum(2) using `MONHEASTATUS` list        |          |           |          | -                                                                                |
-| `monHeaVersion`                                              | char(10)                                 |          |           |          | -                                                                                |
+| `monHeaVersion`                                              | char(100)                                |          |           |          | -                                                                                |
 | `monHeaBuiltOn`                                              | char(250)                                |          |           |          | -                                                                                |
 | `monHeaDatabasePatchLevel`                                   | char(100)                                |          |           |          | -                                                                                |
 | `monHeaAppVersion`                                           | char(10)                                 |          |           |          | -                                                                                |
@@ -102,6 +102,7 @@
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
 | ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
 | `monInstUrl`                                                 | url(100)                                 | yes*     | yes       |          | -                                                                                |
+| `monInstPollFreq`                                            | int(10)                                  |          | yes       |          | -                                                                                |
 
 `MonProject` business object definition
 ---------------------------------------

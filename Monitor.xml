@@ -5,7 +5,7 @@
 	<action>upsert</action>
 	<data>
 		<mdl_name>Monitor</mdl_name>
-		<mdl_version>1</mdl_version>
+		<mdl_version>1.1</mdl_version>
 		<mdl_prefix>mon</mdl_prefix>
 		<mdl_url><![CDATA[{
 	"type": "git",
@@ -270,7 +270,7 @@
 	<data>
 		<fld_name>monHeaAppVersion</fld_name>
 		<fld_dbname>mon_hea_app_version</fld_dbname>
-		<fld_visible>2</fld_visible>
+		<fld_visible>3</fld_visible>
 		<fld_updatable>0</fld_updatable>
 		<fld_required>0</fld_required>
 		<fld_fonctid>0</fld_fonctid>
@@ -1580,6 +1580,43 @@
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
+		<fld_size>100</fld_size>
+		<fld_minsize/>
+		<fld_precision/>
+		<fld_fromdate_id.fld_name/>
+		<fld_dfault/>
+		<fld_indexable>0</fld_indexable>
+		<fld_autocomp>0</fld_autocomp>
+		<fld_groupby>0</fld_groupby>
+		<fld_updall>1</fld_updall>
+		<fld_case/>
+		<fld_righttoleft>0</fld_righttoleft>
+		<fld_rendering/>
+		<fld_speech/>
+		<fld_calc/>
+		<fld_objlist/>
+		<fld_comment/>
+		<fld_classification/>
+		<row_module_id.mdl_name>Monitor</row_module_id.mdl_name>
+	</data>
+	<data>
+		<fld_name>monInstPollFreq</fld_name>
+		<fld_dbname>mon_inst_poll_freq</fld_dbname>
+		<fld_visible>3</fld_visible>
+		<fld_updatable>1</fld_updatable>
+		<fld_required>0</fld_required>
+		<fld_fonctid>0</fld_fonctid>
+		<fld_research>1</fld_research>
+		<fld_researchreq>0</fld_researchreq>
+		<fld_sort>C</fld_sort>
+		<fld_more>0</fld_more>
+		<fld_listmore>0</fld_listmore>
+		<fld_listsum/>
+		<fld_tray>0</fld_tray>
+		<fld_type>1</fld_type>
+		<fld_type_id.flt_code/>
+		<fld_list_id.lov_name/>
+		<fld_copy>1</fld_copy>
 		<fld_size>10</fld_size>
 		<fld_minsize/>
 		<fld_precision/>
@@ -1639,7 +1676,7 @@
 	<data>
 		<fld_name>monInstUrl</fld_name>
 		<fld_dbname>mon_inst_url</fld_dbname>
-		<fld_visible>2</fld_visible>
+		<fld_visible>3</fld_visible>
 		<fld_updatable>1</fld_updatable>
 		<fld_required>1</fld_required>
 		<fld_fonctid>1</fld_fonctid>
@@ -1749,14 +1786,16 @@
 	</data>
 	<data>
 		<tpl_name>MonInstance</tpl_name>
-		<tpl_ui><![CDATA[<div class="area" data-area="1"></div>]]></tpl_ui>
+		<tpl_ui><![CDATA[<div class="area" data-area="1"></div>
+]]></tpl_ui>
 		<tpl_min/>
 		<tpl_image/>
 		<row_module_id.mdl_name>Monitor</row_module_id.mdl_name>
 	</data>
 	<data>
 		<tpl_name>MonProject</tpl_name>
-		<tpl_ui><![CDATA[<div class="area" data-area="1"></div>]]></tpl_ui>
+		<tpl_ui><![CDATA[<div class="area" data-area="1"></div>
+]]></tpl_ui>
 		<tpl_min/>
 		<tpl_image/>
 		<row_module_id.mdl_name>Monitor</row_module_id.mdl_name>
@@ -1937,7 +1976,8 @@
 		<ofa_ui><![CDATA[<div>
   <div class="field" data-field="monPrjName"></div>
   <div class="area" data-area="MonCntPrj;monCntprjPrjId"></div>
-</div>]]></ofa_ui>
+</div>
+]]></ofa_ui>
 		<ofa_icon/>
 		<row_module_id.mdl_name>Monitor</row_module_id.mdl_name>
 	</data>
@@ -2409,7 +2449,7 @@
 		<obf_visible>1</obf_visible>
 		<obf_ref_export>1</obf_ref_export>
 		<obf_copy>0</obf_copy>
-		<obf_ref_order/>
+		<obf_ref_order>20</obf_ref_order>
 		<obf_fld_visible/>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
@@ -3613,6 +3653,35 @@
 		<row_module_id.mdl_name>Monitor</row_module_id.mdl_name>
 	</data>
 	<data>
+		<obf_object_id.obo_name>MonInstance</obf_object_id.obo_name>
+		<obf_field_id.fld_name>monInstPollFreq</obf_field_id.fld_name>
+		<obf_field_id.fld_type>1</obf_field_id.fld_type>
+		<obf_order>20</obf_order>
+		<obf_group_by/>
+		<obf_dfault_order/>
+		<obf_input/>
+		<obf_ref_field_id.fld_name/>
+		<obf_ref_object_id.obo_name/>
+		<obf_cascad/>
+		<obf_card/>
+		<obf_visible/>
+		<obf_ref_export>1</obf_ref_export>
+		<obf_copy/>
+		<obf_ref_order/>
+		<obf_fld_visible/>
+		<obf_fld_required/>
+		<obf_fld_updatable/>
+		<obf_fld_research/>
+		<obf_fld_more/>
+		<obf_fld_listmore/>
+		<obf_fld_researchreq/>
+		<obf_fld_dfault/>
+		<obf_field_id.fld_dfault/>
+		<obf_area_id.ofa_name/>
+		<obf_area_id.ofa_position/>
+		<row_module_id.mdl_name>Monitor</row_module_id.mdl_name>
+	</data>
+	<data>
 		<obf_object_id.obo_name>MonProject</obf_object_id.obo_name>
 		<obf_field_id.fld_name>monPrjName</obf_field_id.fld_name>
 		<obf_field_id.fld_type>3</obf_field_id.fld_type>
@@ -3782,30 +3851,6 @@
 	</data>
 	<data>
 		<obf_ref_object_id.obo_name>MonProject</obf_ref_object_id.obo_name>
-		<obf_order>200</obf_order>
-		<obf_ref_order/>
-		<obf_object_id.obj_name>MonCntPrj</obf_object_id.obj_name>
-		<obf_field_id.fld_name>monCntprjPrjId</obf_field_id.fld_name>
-		<obf_field_id.fld_dbname>mon_cntprj_prj_id</obf_field_id.fld_dbname>
-		<obf_field_id.fld_updatable>1</obf_field_id.fld_updatable>
-		<obf_field_id.fld_required>1</obf_field_id.fld_required>
-		<obf_field_id.fld_fonctid>1</obf_field_id.fld_fonctid>
-		<obf_cascad>C</obf_cascad>
-		<obf_card>0,n</obf_card>
-		<obf_query/>
-		<obf_visible>1</obf_visible>
-		<obf_ref_export>1</obf_ref_export>
-		<obf_copy>0</obf_copy>
-		<obf_associate/>
-		<obf_inline>0</obf_inline>
-		<obf_rendering>C</obf_rendering>
-		<obf_treedepth/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
-		<row_module_id.mdl_name>Monitor</row_module_id.mdl_name>
-	</data>
-	<data>
-		<obf_ref_object_id.obo_name>MonProject</obf_ref_object_id.obo_name>
 		<obf_order>100</obf_order>
 		<obf_ref_order/>
 		<obf_object_id.obj_name>MonProjectInstance</obf_object_id.obj_name>
@@ -3826,6 +3871,30 @@
 		<obf_treedepth/>
 		<obf_area_id.ofa_name>MonInstance-1</obf_area_id.ofa_name>
 		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
+		<row_module_id.mdl_name>Monitor</row_module_id.mdl_name>
+	</data>
+	<data>
+		<obf_ref_object_id.obo_name>MonProject</obf_ref_object_id.obo_name>
+		<obf_order>200</obf_order>
+		<obf_ref_order>20</obf_ref_order>
+		<obf_object_id.obj_name>MonCntPrj</obf_object_id.obj_name>
+		<obf_field_id.fld_name>monCntprjPrjId</obf_field_id.fld_name>
+		<obf_field_id.fld_dbname>mon_cntprj_prj_id</obf_field_id.fld_dbname>
+		<obf_field_id.fld_updatable>1</obf_field_id.fld_updatable>
+		<obf_field_id.fld_required>1</obf_field_id.fld_required>
+		<obf_field_id.fld_fonctid>1</obf_field_id.fld_fonctid>
+		<obf_cascad>C</obf_cascad>
+		<obf_card>0,n</obf_card>
+		<obf_query/>
+		<obf_visible>1</obf_visible>
+		<obf_ref_export>1</obf_ref_export>
+		<obf_copy>0</obf_copy>
+		<obf_associate/>
+		<obf_inline>0</obf_inline>
+		<obf_rendering>C</obf_rendering>
+		<obf_treedepth/>
+		<obf_area_id.ofa_name/>
+		<obf_area_id.ofa_position/>
 		<row_module_id.mdl_name>Monitor</row_module_id.mdl_name>
 	</data>
 </object>
@@ -4036,7 +4105,7 @@
 	<action>upsert</action>
 	<data>
 		<crn_name>MonCallInstances</crn_name>
-		<crn_cronexpr>0 0 3 ? * *</crn_cronexpr>
+		<crn_cronexpr>0 * * * * ?</crn_cronexpr>
 		<crn_enabled>1</crn_enabled>
 		<crn_unique>1</crn_unique>
 		<crn_runas_id.usr_login>designer</crn_runas_id.usr_login>
@@ -4618,6 +4687,18 @@
 	</data>
 	<data>
 		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>monInstPollFreq</tsl_id.fld_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Polling frequency</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>Monitor</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
 		<tsl_id.fld_name>monInstPrjId</tsl_id.fld_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>Project</tsl_value>
@@ -5136,6 +5217,18 @@
 	</data>
 	<data>
 		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>monInstPollFreq</tsl_id.fld_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Fréquence (min)</tsl_value>
+		<tsl_simplehelp><![CDATA[<p>Fr&eacute;quence &agrave; laquelle le /health est interrog&eacute;, en minutes. D&eacute;faut = 1440 (24h)</p>]]></tsl_simplehelp>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>Monitor</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
 		<tsl_id.fld_name>monInstPrjId</tsl_id.fld_name>
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Projet</tsl_value>
@@ -5424,6 +5517,20 @@
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Instance|Instances</tsl_value>
 		<tsl_help/>
+		<row_module_id.mdl_name>Monitor</row_module_id.mdl_name>
+	</data>
+</object>
+<object>
+	<name>TranslateLink</name>
+	<action>upsert</action>
+	<data>
+		<tsl_typeLink>K</tsl_typeLink>
+		<tsl_id.obf_object_id.obj_name>MonCntPrj</tsl_id.obf_object_id.obj_name>
+		<tsl_id.obf_field_id.fld_name>monCntprjPrjId</tsl_id.obf_field_id.fld_name>
+		<tsl_id.obf_order>200</tsl_id.obf_order>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Contacts</tsl_value>
+		<tsl_simplehelp/>
 		<row_module_id.mdl_name>Monitor</row_module_id.mdl_name>
 	</data>
 </object>
