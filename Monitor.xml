@@ -10,12 +10,10 @@
 		<mdl_url><![CDATA[{
 	"type": "git",
 	"origin": {
-		"uri": "https://portal.dev.simplicite.io/git/Monitor",
-		"username": "designer",
-		"password": "90384520a65c3d166553"
+		"uri": "https://github.com/simplicitesoftware/module-monitor.git"
 	}
 }]]></mdl_url>
-		<mdl_lastupd>2019-12-02 14:40:40</mdl_lastupd>
+		<mdl_lastupd>2020-02-11 14:17:22</mdl_lastupd>
 		<mdl_comment/>
 	</data>
 </object>
@@ -25,12 +23,13 @@
 	<data>
 		<viw_name>MonitorScope</viw_name>
 		<viw_ui/>
-		<viw_order>1</viw_order>
+		<viw_order>30</viw_order>
 		<viw_icon>img/color/line_chart</viw_icon>
 		<viw_disp_id.dis_code/>
 		<viw_scope>MonitorScope</viw_scope>
 		<row_module_id.mdl_name>Monitor</row_module_id.mdl_name>
 		<viw_theme_id.thm_name/>
+		<viw_lang/>
 	</data>
 </object>
 <object>
@@ -42,18 +41,6 @@
 		<grp_type>G</grp_type>
 		<grp_parent_id.grp_name/>
 		<grp_home_id.viw_name>MonitorScope</grp_home_id.viw_name>
-		<row_module_id.mdl_name>Monitor</row_module_id.mdl_name>
-	</data>
-</object>
-<object>
-	<name>Responsability</name>
-	<action>upsert</action>
-	<data>
-		<rsp_login_id.usr_login>designer</rsp_login_id.usr_login>
-		<rsp_group_id.grp_name>MON_ADMIN</rsp_group_id.grp_name>
-		<rsp_start_dt>2019-01-01</rsp_start_dt>
-		<rsp_end_dt/>
-		<rsp_activ>1</rsp_activ>
 		<row_module_id.mdl_name>Monitor</row_module_id.mdl_name>
 	</data>
 </object>
@@ -145,9 +132,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>12</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>100</fld_size>
@@ -162,6 +149,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -181,9 +169,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>0</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>11</fld_size>
@@ -198,6 +186,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -217,9 +206,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>0</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>11</fld_size>
@@ -234,6 +223,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -253,9 +243,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>5</fld_size>
@@ -270,6 +260,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -289,9 +280,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>10</fld_size>
@@ -306,6 +297,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -325,9 +317,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>5</fld_size>
@@ -342,6 +334,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -361,9 +354,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>1</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>250</fld_size>
@@ -378,6 +371,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -397,9 +391,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>5</fld_size>
@@ -414,6 +408,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -433,9 +428,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>5</fld_size>
@@ -450,6 +445,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -469,9 +465,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>100</fld_size>
@@ -486,6 +482,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -505,9 +502,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>5</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>19</fld_size>
@@ -522,6 +519,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -541,9 +539,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>2</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>5</fld_size>
@@ -558,6 +556,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering>BAR</fld_rendering>
+		<fld_speech/>
 		<fld_calc><![CDATA[1-([VALUE:monHeaUsableDisk]/[VALUE:monHeaTotalDisk])]]></fld_calc>
 		<fld_objlist/>
 		<fld_comment/>
@@ -577,9 +576,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>10</fld_size>
@@ -594,6 +593,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -613,9 +613,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>10</fld_size>
@@ -630,6 +630,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -649,9 +650,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>10</fld_size>
@@ -666,6 +667,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -685,9 +687,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>5</fld_size>
@@ -702,6 +704,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -721,9 +724,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>1</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>10</fld_size>
@@ -738,6 +741,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -757,9 +761,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>2</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>5</fld_size>
@@ -774,6 +778,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering>BAR</fld_rendering>
+		<fld_speech/>
 		<fld_calc><![CDATA[[VALUE:monHeaMaxGrantCache]==0?0:[VALUE:monHeaGrantCache]/[VALUE:monHeaMaxGrantCache]]]></fld_calc>
 		<fld_objlist/>
 		<fld_comment/>
@@ -793,9 +798,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>5</fld_size>
@@ -810,6 +815,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -829,9 +835,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>10</fld_size>
@@ -846,6 +852,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -865,9 +872,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>2</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>5</fld_size>
@@ -882,6 +889,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering>BAR</fld_rendering>
+		<fld_speech/>
 		<fld_calc><![CDATA[1-([VALUE:monHeaTotalFreeSize]/[VALUE:monHeaMaxHeapSize])]]></fld_calc>
 		<fld_objlist/>
 		<fld_comment/>
@@ -901,9 +909,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>0</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>11</fld_size>
@@ -918,6 +926,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -937,9 +946,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>5</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>19</fld_size>
@@ -954,6 +963,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -973,9 +983,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>10</fld_size>
@@ -990,6 +1000,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -1009,9 +1020,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>10</fld_size>
@@ -1026,6 +1037,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -1045,9 +1057,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>10</fld_size>
@@ -1062,6 +1074,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -1081,9 +1094,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>1</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>10</fld_size>
@@ -1098,6 +1111,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -1117,9 +1131,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>2</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>5</fld_size>
@@ -1134,6 +1148,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering>BAR</fld_rendering>
+		<fld_speech/>
 		<fld_calc><![CDATA[[VALUE:monHeaMaxObjectCache]==0?0:[VALUE:monHeaObjectCache]/[VALUE:monHeaMaxObjectCache]]]></fld_calc>
 		<fld_objlist/>
 		<fld_comment/>
@@ -1153,9 +1168,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>5</fld_size>
@@ -1170,6 +1185,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -1189,9 +1205,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>5</fld_size>
@@ -1206,6 +1222,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -1225,9 +1242,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>5</fld_size>
@@ -1242,6 +1259,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -1261,9 +1279,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>10</fld_size>
@@ -1278,6 +1296,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -1297,9 +1316,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>5</fld_size>
@@ -1314,6 +1333,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -1333,9 +1353,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>7</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist>MONHEASTATUS</fld_enumlist>
 		<fld_list_id.lov_name>MONHEASTATUS</fld_list_id.lov_name>
 		<fld_copy>1</fld_copy>
 		<fld_size>2</fld_size>
@@ -1350,6 +1370,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -1369,9 +1390,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>5</fld_size>
@@ -1386,6 +1407,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -1405,9 +1427,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>10</fld_size>
@@ -1422,6 +1444,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -1441,9 +1464,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>10</fld_size>
@@ -1458,6 +1481,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -1477,9 +1501,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>10</fld_size>
@@ -1494,6 +1518,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -1513,9 +1538,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>10</fld_size>
@@ -1530,6 +1555,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -1549,9 +1575,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>10</fld_size>
@@ -1566,6 +1592,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -1585,9 +1612,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>0</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>11</fld_size>
@@ -1602,6 +1629,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -1611,7 +1639,7 @@
 	<data>
 		<fld_name>monInstUrl</fld_name>
 		<fld_dbname>mon_inst_url</fld_dbname>
-		<fld_visible>3</fld_visible>
+		<fld_visible>2</fld_visible>
 		<fld_updatable>1</fld_updatable>
 		<fld_required>1</fld_required>
 		<fld_fonctid>1</fld_fonctid>
@@ -1621,9 +1649,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray>0</fld_tray>
 		<fld_type>10</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>100</fld_size>
@@ -1638,6 +1666,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -1657,9 +1686,9 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>50</fld_size>
@@ -1674,6 +1703,7 @@
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -1712,8 +1742,7 @@
     <div class="col-sm-3"></div>
     <div class="col-sm-6"></div>
   </div>
-</div>
-]]></tpl_ui>
+</div>]]></tpl_ui>
 		<tpl_min/>
 		<tpl_image/>
 		<row_module_id.mdl_name>Monitor</row_module_id.mdl_name>
@@ -1751,8 +1780,7 @@
 		<ofa_ui><![CDATA[<div>
   <div class="field" data-field="monHeaDate"></div>
   <div class="field" data-field="monHeaInstId__monInstUrl"></div>
-</div>
-]]></ofa_ui>
+</div>]]></ofa_ui>
 		<ofa_icon><![CDATA[[EXPR:[OBJECTICON:MonHealth]]]]></ofa_icon>
 		<row_module_id.mdl_name>Monitor</row_module_id.mdl_name>
 	</data>
@@ -1773,8 +1801,7 @@
     </div>
   </div>
   <div class="field" data-field="monHeaBuiltOn"></div>
-</div>
-]]></ofa_ui>
+</div>]]></ofa_ui>
 		<ofa_icon>img/color/individual_server</ofa_icon>
 		<row_module_id.mdl_name>Monitor</row_module_id.mdl_name>
 	</data>
@@ -1798,8 +1825,7 @@
     </div>
   </div>
   <div class="field" data-field="monHeaLastLogin"></div>
-</div>
-]]></ofa_ui>
+</div>]]></ofa_ui>
 		<ofa_icon>img/color/workflow</ofa_icon>
 		<row_module_id.mdl_name>Monitor</row_module_id.mdl_name>
 	</data>
@@ -1820,8 +1846,7 @@
     </div>
   </div>
   <div class="field" data-field="monHeaDiskUsage"></div>
-</div>
-]]></ofa_ui>
+</div>]]></ofa_ui>
 		<ofa_icon>img/color/storage</ofa_icon>
 		<row_module_id.mdl_name>Monitor</row_module_id.mdl_name>
 	</data>
@@ -1845,8 +1870,7 @@
     </div>
   </div>
   <div class="field" data-field="monHeaHeapUsage"></div>
-</div>
-]]></ofa_ui>
+</div>]]></ofa_ui>
 		<ofa_icon>img/color/cafe</ofa_icon>
 		<row_module_id.mdl_name>Monitor</row_module_id.mdl_name>
 	</data>
@@ -1865,8 +1889,7 @@
     <div class="field" data-field="monHeaMaxObjectCache"></div>
     <div class="field" data-field="monHeaObjectCacheRatio"></div>
   </div>
-</div>
-]]></ofa_ui>
+</div>]]></ofa_ui>
 		<ofa_icon>img/color/data_backup</ofa_icon>
 		<row_module_id.mdl_name>Monitor</row_module_id.mdl_name>
 	</data>
@@ -1892,8 +1915,7 @@
     <div class="field" data-field="monHeaActions"></div>
     <div class="field" data-field="monHeaPublications"></div>
   </div>
-</div>
-]]></ofa_ui>
+</div>]]></ofa_ui>
 		<ofa_icon>img/color/innovation</ofa_icon>
 		<row_module_id.mdl_name>Monitor</row_module_id.mdl_name>
 	</data>
@@ -1929,7 +1951,7 @@
 		<obd_type>D</obd_type>
 		<obd_view_id.viw_name/>
 		<obd_nohome>1</obd_nohome>
-		<obd_icon>img/color/graph</obd_icon>
+		<obd_icon>img/color/monitoring</obd_icon>
 		<obd_order>83000</obd_order>
 		<obd_domain_id.obd_name/>
 		<row_module_id.mdl_name>Monitor</row_module_id.mdl_name>
@@ -1997,6 +2019,8 @@
 		<obo_dashboard>1</obo_dashboard>
 		<obo_prefix>cntprj</obo_prefix>
 		<obo_search_ts/>
+		<obo_minrows/>
+		<obo_maxrows/>
 	</data>
 	<data>
 		<obo_name>MonContact</obo_name>
@@ -2057,6 +2081,8 @@
 		<obo_dashboard>1</obo_dashboard>
 		<obo_prefix>cnt</obo_prefix>
 		<obo_search_ts/>
+		<obo_minrows/>
+		<obo_maxrows/>
 	</data>
 	<data>
 		<obo_name>MonHealth</obo_name>
@@ -2117,6 +2143,8 @@
 		<obo_dashboard>1</obo_dashboard>
 		<obo_prefix>hea</obo_prefix>
 		<obo_search_ts/>
+		<obo_minrows/>
+		<obo_maxrows/>
 	</data>
 	<data>
 		<obo_name>MonInstance</obo_name>
@@ -2177,6 +2205,8 @@
 		<obo_dashboard>1</obo_dashboard>
 		<obo_prefix>inst</obo_prefix>
 		<obo_search_ts/>
+		<obo_minrows/>
+		<obo_maxrows/>
 	</data>
 	<data>
 		<obo_name>MonProject</obo_name>
@@ -2237,6 +2267,8 @@
 		<obo_dashboard>1</obo_dashboard>
 		<obo_prefix>prj</obo_prefix>
 		<obo_search_ts/>
+		<obo_minrows/>
+		<obo_maxrows/>
 	</data>
 	<data>
 		<obo_name>MonProjectInstance</obo_name>
@@ -2297,6 +2329,8 @@
 		<obo_dashboard>1</obo_dashboard>
 		<obo_prefix>inst</obo_prefix>
 		<obo_search_ts/>
+		<obo_minrows/>
+		<obo_maxrows/>
 	</data>
 </object>
 <object>
@@ -5092,7 +5126,7 @@
 		<tsl_typeField>F</tsl_typeField>
 		<tsl_id.fld_name>monHeaVersion</tsl_id.fld_name>
 		<tsl_lang>FRA</tsl_lang>
-		<tsl_value>Version Platforme</tsl_value>
+		<tsl_value>Version Plateforme</tsl_value>
 		<tsl_simplehelp/>
 		<tsl_short_value/>
 		<tsl_placeholder/>
@@ -5228,7 +5262,7 @@
 		<tsl_typeFieldArea>Z</tsl_typeFieldArea>
 		<tsl_id.ofa_name>MonHealth-2</tsl_id.ofa_name>
 		<tsl_lang>FRA</tsl_lang>
-		<tsl_value>Platforme</tsl_value>
+		<tsl_value>Plateforme</tsl_value>
 		<row_module_id.mdl_name>Monitor</row_module_id.mdl_name>
 	</data>
 	<data>

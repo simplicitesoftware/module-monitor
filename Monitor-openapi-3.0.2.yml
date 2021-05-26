@@ -141,7 +141,7 @@ components:
           description: Utilisation Espace
           type: number
         monHeaVersion:
-          description: Version Platforme
+          description: Version Plateforme
           type: string
         monHeaGroups:
           description: Groupes
@@ -161,6 +161,7 @@ components:
         monHeaDate:
           description: Date
           type: string
+          example: yyyy-MM-dd HH:mm:ss
         monHeaTotalDisk:
           description: Espace total
           type: integer
@@ -200,6 +201,7 @@ components:
         monHeaLastLogin:
           description: Dernière Connexion
           type: string
+          example: yyyy-MM-dd HH:mm:ss
         monHeaTemplates:
           description: Templates
           type: integer
@@ -339,7 +341,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - MonCntPrj
@@ -378,7 +380,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -439,7 +441,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - MonCntPrj
@@ -489,7 +491,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - MonCntPrj
@@ -637,7 +639,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - MonInstance
@@ -676,7 +678,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -737,7 +739,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - MonInstance
@@ -787,7 +789,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - MonInstance
@@ -858,7 +860,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - MonHealth
@@ -897,7 +899,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -958,7 +960,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - MonHealth
@@ -1008,7 +1010,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - MonHealth
@@ -1053,7 +1055,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - MonProjectInstance
@@ -1092,7 +1094,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -1153,7 +1155,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - MonProjectInstance
@@ -1203,7 +1205,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - MonProjectInstance
@@ -1248,7 +1250,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - MonContact
@@ -1287,7 +1289,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -1348,7 +1350,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - MonContact
@@ -1398,7 +1400,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - MonContact
@@ -1602,7 +1604,7 @@ paths:
           type: string
         in: query
         name: monHeaVersion
-        description: Search filter for Version Platforme
+        description: Search filter for Version Plateforme
         required: false
       - schema:
           type: string
@@ -1964,7 +1966,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - MonProject
@@ -2003,7 +2005,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -2064,7 +2066,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - MonProject
@@ -2114,7 +2116,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - MonProject

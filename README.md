@@ -27,10 +27,6 @@
 | `monCntprjPrjId` link to **`MonProject`**                    | id                                       | yes*     | yes       |          | -                                                                                |
 | _Ref. `monCntprjPrjId.monPrjName`_                           | _char(50)_                               |          |           |          | -                                                                                |
 
-### Custom actions
-
-No custom action
-
 `MonContact` business object definition
 ---------------------------------------
 
@@ -41,10 +37,6 @@ No custom action
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
 | ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
 | `monCntEmail`                                                | email(100)                               | yes*     | yes       |          | -                                                                                |
-
-### Custom actions
-
-No custom action
 
 `MonHealth` business object definition
 --------------------------------------
@@ -58,7 +50,7 @@ No custom action
 | `monHeaInstId` link to **`MonInstance`**                     | id                                       | yes*     | yes       |          | -                                                                                |
 | _Ref. `monHeaInstId.monInstUrl`_                             | _url(100)_                               |          |           |          | -                                                                                |
 | `monHeaDate`                                                 | datetime                                 | yes*     |           |          | -                                                                                |
-| `monHeaStatus`                                               | enum(7) using `MONHEASTATUS` list        |          |           |          | -                                                                                |
+| `monHeaStatus`                                               | enum(2) using `MONHEASTATUS` list        |          |           |          | -                                                                                |
 | `monHeaVersion`                                              | char(10)                                 |          |           |          | -                                                                                |
 | `monHeaBuiltOn`                                              | char(250)                                |          |           |          | -                                                                                |
 | `monHeaDatabasePatchLevel`                                   | char(100)                                |          |           |          | -                                                                                |
@@ -100,10 +92,6 @@ No custom action
     - `OK` OK
     - `KO` KO
 
-### Custom actions
-
-No custom action
-
 `MonInstance` business object definition
 ----------------------------------------
 
@@ -115,10 +103,6 @@ No custom action
 | ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
 | `monInstUrl`                                                 | url(100)                                 | yes*     | yes       |          | -                                                                                |
 
-### Custom actions
-
-No custom action
-
 `MonProject` business object definition
 ---------------------------------------
 
@@ -129,10 +113,6 @@ No custom action
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
 | ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
 | `monPrjName`                                                 | char(50)                                 | yes*     | yes       |          | -                                                                                |
-
-### Custom actions
-
-No custom action
 
 `MonProjectInstance` business object definition
 -----------------------------------------------

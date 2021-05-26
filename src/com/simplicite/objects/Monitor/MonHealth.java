@@ -16,7 +16,9 @@ import com.simplicite.util.Tool;
  */
 public class MonHealth extends ObjectDB {
 	private static final long serialVersionUID = 1L;
+	
 	private static final String ObjHealth = "MonHealth";
+	
 	public static final HashMap<String, String> corresp = getMapOf(
 		"monHeaStatus", "platform.status",
 		"monHeaVersion", "platform.version",

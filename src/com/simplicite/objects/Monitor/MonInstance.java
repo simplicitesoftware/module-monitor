@@ -14,6 +14,7 @@ public class MonInstance extends ObjectDB {
 	private static final long serialVersionUID = 1L;
 
 	public void callInstances(){
+		//Shouldn't there be a getGrant().getObject("toto", "tutu").resetFilters(); before calling search() ? 
 		search().forEach(row->callSingleInstance(row[getFieldIndex("row_id")],row[getFieldIndex("monInstUrl")]));
 	}
 
@@ -22,16 +23,16 @@ public class MonInstance extends ObjectDB {
 	}
 
 	protected void callSingleInstance(String instanceId, String instanceBaseUrl){
-		try{
+		try {
 			createHealthRow(instanceId, instanceBaseUrl);
 		}
-		catch(Exception e){
-			AppLog.error(getClass(), "callSingleInstance", "Unable to request URL : "+instanceBaseUrl, e, getGrant());
+		catch(Exception e) {
+			AppLog.error(getClass(), "callSingleInstance", "Unable to request URL : " + instanceBaseUrl, e, getGrant());
 		}
 	}
 
 	protected void createHealthRow(String instanceId, String instanceBaseUrl) throws JSONException, IOException {
-		boolean[] oldcrud = getGrant().changeAccess("MonHealth", true,true,false,false);
+		boolean[] oldcrud = getGrant().changeAccess("MonHealth", true, true, false, false);
 		MonHealth health = MonHealth.getHealth(instanceBaseUrl, getGrant());
 		health.setFieldValue("monHeaInstId", instanceId);
 		health.create();
