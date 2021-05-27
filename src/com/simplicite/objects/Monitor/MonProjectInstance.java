@@ -19,23 +19,24 @@ public class MonProjectInstance extends MonInstance {
 		}
 		catch(Exception e){
 			notifyManager = true;
-			AppLog.error(getClass(), "callSingleInstance", "Unable to request URL : "+instanceBaseUrl, e, getGrant());
+			//AppLog.error(getClass(), "callSingleInstance", "Unable to request URL : "+instanceBaseUrl, e, getGrant());
 		}
-		if(notifyManager){
-			AppLog.info(getClass(), "callSingleInstance", "--- Instance has problem, notifying : "+instanceBaseUrl, getGrant());
-			notifyContacts(instanceId, instanceBaseUrl);
-		}
+		
+		if(notifyManager) notifyContacts(instanceId, instanceBaseUrl);
 	}
 
 	private void notifyContacts(String instanceId, String instanceBaseUrl){
-		String sqlEmails =
+		String[] emails = Tool.getColumnOfMatrixAsArray(getGrant().query(
 			"select cnt.mon_cnt_email from mon_cnt_prj prj"
 			+ " inner join mon_contact cnt on cnt.row_id=prj.mon_cntprj_cnt_id"
-			+ " where prj.mon_cntprj_prj_id=(select mon_inst_prj_id from mon_instance where row_id="+instanceId+")";
-		MailTool mail = new MailTool();
-		mail.setSubject("Instance Monitor Alert");
-		mail.addRcpt(Tool.getColumnOfMatrixAsArray(getGrant().query(sqlEmails), 0));
-		mail.setContent("<p>Something fishy is going on with instance <a href='"+instanceBaseUrl+"'>"+instanceBaseUrl+"</a></p>");
-		mail.send();
+			+ " where prj.mon_cntprj_prj_id=(select mon_inst_prj_id from mon_instance where row_id="+instanceId+")"
+		), 0);
+		if(emails.length>0){
+			MailTool mail = new MailTool();
+			mail.setSubject("Instance Monitor Alert");
+			mail.addRcpt(emails);
+			mail.setContent("<p>Something fishy is going on with instance <a href='"+instanceBaseUrl+"'>"+instanceBaseUrl+"</a></p>");
+			mail.send();
+		}	
 	}
 }
