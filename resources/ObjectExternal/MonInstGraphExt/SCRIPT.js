@@ -12,7 +12,6 @@ var MonInstGraphExt = (function() {
     function getHealthData(cb){
 		var health = $ui.getAjax().getBusinessObject("MonHealth");
 		health.search(function(rows){
-			var datesData = [];
 			var diskData = [];
 			var heapData = [];
 			rows.forEach(row => {
@@ -25,13 +24,10 @@ var MonInstGraphExt = (function() {
 					y: row.monHeaHeapUsage*100
 				});
 				datesData.push(row.monHeaDate);
-				/*diskData.push(row.monHeaDiskUsage);
-				heapData.push(row.monHeaHeapUsage);*/
 			});
 			cb({
 				type: 'line',
 				data: {
-					//labels: datesData,
 					datasets:[{
 						label: 'Disk',
 						data: diskData,
@@ -64,11 +60,7 @@ var MonInstGraphExt = (function() {
 							}
 						}],
 						xAxes: [{
-							type: 'time'/*,
-                			distribution: 'linear',
-                			time: {
-                				round: 'day'
-                			}*/
+							type: 'time'
 						}]
 					}
 				}
