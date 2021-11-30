@@ -4195,7 +4195,7 @@
 	<data>
 		<crn_name>MonCallInstances</crn_name>
 		<crn_cronexpr>0 * * * * ?</crn_cronexpr>
-		<crn_enabled>1</crn_enabled>
+		<crn_enabled>0</crn_enabled>
 		<crn_unique>1</crn_unique>
 		<crn_runas_id.usr_login>designer</crn_runas_id.usr_login>
 		<crn_job_depth>-14</crn_job_depth>
