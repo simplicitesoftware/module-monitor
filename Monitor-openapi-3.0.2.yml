@@ -336,6 +336,8 @@ components:
       bearerFormat: Simplicite token
       scheme: bearer
       type: http
+servers:
+- url: /api
 openapi: 3.0.2
 paths:
   /rest/MonCntPrj/{row_id}:
@@ -583,6 +585,53 @@ paths:
                 $ref: '#/components/schemas/Error401'
       tags:
       - session
+  /rest/MonProjectInstance/{row_id}/action:callInstance:
+    get:
+      summary: Call a custom action for a MonProjectInstance business object record
+        or for all records
+      security:
+      - bearerAuth: []
+      operationId: obj-monprojectinstance-action-callinstance
+      responses:
+        '200':
+          description: Success in calling the custom action
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ActionResult'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - MonProjectInstance
   /rest/MonContact:
     get:
       summary: Search MonContact business object records or get contextualized metadata
@@ -1214,6 +1263,53 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/MonProjectInstance'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - MonProjectInstance
+  /rest/MonProjectInstance/{row_id}/action:callInstances:
+    get:
+      summary: Call a custom action for a MonProjectInstance business object record
+        or for all records
+      security:
+      - bearerAuth: []
+      operationId: obj-monprojectinstance-action-callinstances
+      responses:
+        '200':
+          description: Success in calling the custom action
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ActionResult'
         '400':
           description: Bad request
           content:
