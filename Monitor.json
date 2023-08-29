@@ -4,7 +4,7 @@
  "item": {
   "mdl_name": "Monitor",
   "mdl_prefix": "mon",
-  "mdl_version": "1.1",
+  "mdl_version": "1.2",
   "mdl_type": null,
   "mdl_url": "{\n\t\"type\": \"git\",\n\t\"origin\": {\n\t\t\"uri\": \"https://github.com/simplicitesoftware/module-monitor.git\"\n\t}\n}",
   "mdl_comment": null
