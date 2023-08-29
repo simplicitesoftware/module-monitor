@@ -7,7 +7,7 @@ basePath: /api
 paths:
   /rest/MonCntPrj/{row_id}:
     post:
-      summary: Create a new MonCntPrjbusiness object record
+      summary: Create a new MonCntPrj business object record
       security:
       - bearerAuth: []
       produces:
@@ -126,7 +126,7 @@ paths:
       tags:
       - MonCntPrj
     put:
-      summary: Update a MonCntPrjbusiness object record
+      summary: Update a MonCntPrj business object record
       security:
       - bearerAuth: []
       produces:
@@ -212,44 +212,6 @@ paths:
           description: Unauthorized
       tags:
       - session
-  /rest/MonProjectInstance/{row_id}/action:callInstance:
-    get:
-      summary: Call a custom action for a MonProjectInstance business object record
-        or for all records
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-monprojectinstance-action-callinstance
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/ActionResult'
-          description: Success in calling the custom action
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      tags:
-      - MonProjectInstance
   /rest/MonContact:
     get:
       summary: Search MonContact business object records or get contextualized metadata
@@ -297,7 +259,7 @@ paths:
       - MonContact
   /rest/MonInstance/{row_id}:
     post:
-      summary: Create a new MonInstancebusiness object record
+      summary: Create a new MonInstance business object record
       security:
       - bearerAuth: []
       produces:
@@ -416,7 +378,7 @@ paths:
       tags:
       - MonInstance
     put:
-      summary: Update a MonInstancebusiness object record
+      summary: Update a MonInstance business object record
       security:
       - bearerAuth: []
       produces:
@@ -482,7 +444,7 @@ paths:
       - session
   /rest/MonHealth/{row_id}:
     post:
-      summary: Create a new MonHealthbusiness object record
+      summary: Create a new MonHealth business object record
       security:
       - bearerAuth: []
       produces:
@@ -601,7 +563,7 @@ paths:
       tags:
       - MonHealth
     put:
-      summary: Update a MonHealthbusiness object record
+      summary: Update a MonHealth business object record
       security:
       - bearerAuth: []
       produces:
@@ -644,7 +606,7 @@ paths:
       - application/json
   /rest/MonProjectInstance/{row_id}:
     post:
-      summary: Create a new MonProjectInstancebusiness object record
+      summary: Create a new MonProjectInstance business object record
       security:
       - bearerAuth: []
       produces:
@@ -763,7 +725,7 @@ paths:
       tags:
       - MonProjectInstance
     put:
-      summary: Update a MonProjectInstancebusiness object record
+      summary: Update a MonProjectInstance business object record
       security:
       - bearerAuth: []
       produces:
@@ -804,47 +766,9 @@ paths:
       - MonProjectInstance
       consumes:
       - application/json
-  /rest/MonProjectInstance/{row_id}/action:callInstances:
-    get:
-      summary: Call a custom action for a MonProjectInstance business object record
-        or for all records
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-monprojectinstance-action-callinstances
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/ActionResult'
-          description: Success in calling the custom action
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      tags:
-      - MonProjectInstance
   /rest/MonContact/{row_id}:
     post:
-      summary: Create a new MonContactbusiness object record
+      summary: Create a new MonContact business object record
       security:
       - bearerAuth: []
       produces:
@@ -963,7 +887,7 @@ paths:
       tags:
       - MonContact
     put:
-      summary: Update a MonContactbusiness object record
+      summary: Update a MonContact business object record
       security:
       - bearerAuth: []
       produces:
@@ -1049,7 +973,7 @@ paths:
         required: false
       - in: query
         name: monInstPollFreq
-        description: Search filter for Fréquence (min)
+        description: Search filter for Polling frequency
         type: integer
         required: false
       tags:
@@ -1099,7 +1023,7 @@ paths:
         required: false
       - in: query
         name: monCntprjCntId__monCntEmail
-        description: Search filter for Email mon cntprj cnt id
+        description: Search filter for mon cntprj cnt id Email
         type: string
         required: false
       - in: query
@@ -1109,7 +1033,7 @@ paths:
         required: false
       - in: query
         name: monCntprjPrjId__monPrjName
-        description: Search filter for Nom mon cntprj prj id
+        description: Search filter for mon cntprj prj id Name
         type: string
         required: false
       tags:
@@ -1159,7 +1083,7 @@ paths:
         required: false
       - in: query
         name: monHeaInstId__monInstUrl
-        description: Search filter for URL Instance
+        description: Search filter for Instance URL
         type: string
         required: false
       - in: query
@@ -1169,7 +1093,7 @@ paths:
         required: false
       - in: query
         name: monHeaStatus
-        description: Search filter for Statut
+        description: Search filter for Status
         type: string
         required: false
         enum:
@@ -1177,22 +1101,22 @@ paths:
         - KO
       - in: query
         name: monHeaVersion
-        description: Search filter for Version Plateforme
+        description: Search filter for Platform Version
         type: string
         required: false
       - in: query
         name: monHeaBuiltOn
-        description: Search filter for Compilé le
+        description: Search filter for Built On
         type: string
         required: false
       - in: query
         name: monHeaDatabasePatchLevel
-        description: Search filter for Niveau patch BDD
+        description: Search filter for Database Patch Level
         type: string
         required: false
       - in: query
         name: monHeaAppVersion
-        description: Search filter for Version Applicative
+        description: Search filter for App Version
         type: string
         required: false
       - in: query
@@ -1202,47 +1126,47 @@ paths:
         required: false
       - in: query
         name: monHeaEnabledUsers
-        description: Search filter for Utilisateurs actifs
+        description: Search filter for Enabled Users
         type: integer
         required: false
       - in: query
         name: monHeaTotalUsers
-        description: Search filter for Total utilisateurs
+        description: Search filter for Total Users
         type: integer
         required: false
       - in: query
         name: monHeaFreeDisk
-        description: Search filter for Espace libre
+        description: Search filter for Free Disk
         type: integer
         required: false
       - in: query
         name: monHeaUsableDisk
-        description: Search filter for Espace utilisable
+        description: Search filter for Usable Disk
         type: integer
         required: false
       - in: query
         name: monHeaTotalDisk
-        description: Search filter for Espace total
+        description: Search filter for Total Disk
         type: integer
         required: false
       - in: query
         name: monHeaDiskUsage
-        description: Search filter for Utilisation Espace
+        description: Search filter for Disk Usage
         type: number
         required: false
       - in: query
         name: monHeaFreeHeap
-        description: Search filter for Heap libre
+        description: Search filter for Free Heap
         type: integer
         required: false
       - in: query
         name: monHeaHeapSize
-        description: Search filter for Taille heap
+        description: Search filter for Heap Size
         type: integer
         required: false
       - in: query
         name: monHeaMaxHeapSize
-        description: Search filter for Heap max
+        description: Search filter for Max Heap Size
         type: integer
         required: false
       - in: query
@@ -1252,7 +1176,7 @@ paths:
         required: false
       - in: query
         name: monHeaHeapUsage
-        description: Search filter for Utilisation Heap
+        description: Search filter for Heap Usage
         type: number
         required: false
       - in: query
@@ -1262,87 +1186,87 @@ paths:
         required: false
       - in: query
         name: monHeaMaxGrantCache
-        description: Search filter for Grant Cache Max
+        description: Search filter for Max Grant Cache
         type: integer
         required: false
       - in: query
         name: monHeaGrantCacheRatio
-        description: Search filter for Utilisation Grant Cache
+        description: Search filter for Grant Cache Usage
         type: number
         required: false
       - in: query
         name: monHeaObjectCache
-        description: Search filter for Cache Objet
+        description: Search filter for Object Cache
         type: integer
         required: false
       - in: query
         name: monHeaMaxObjectCache
-        description: Search filter for Cache Objet Max
+        description: Search filter for Max Object Cache
         type: integer
         required: false
       - in: query
         name: monHeaObjectCacheRatio
-        description: Search filter for Utilisation Cache Objet
+        description: Search filter for Object Cache Usage
         type: number
         required: false
       - in: query
         name: monHeaObjects
-        description: Search filter for Objets
+        description: Search filter for mon hea objects
         type: integer
         required: false
       - in: query
         name: monHeaAttributes
-        description: Search filter for Attributs
+        description: Search filter for mon hea attributes
         type: integer
         required: false
       - in: query
         name: monHeaFunctions
-        description: Search filter for Fonctions
+        description: Search filter for mon hea functions
         type: integer
         required: false
       - in: query
         name: monHeaGroups
-        description: Search filter for Groupes
+        description: Search filter for mon hea groups
         type: integer
         required: false
       - in: query
         name: monHeaStates
-        description: Search filter for États
+        description: Search filter for mon hea states
         type: integer
         required: false
       - in: query
         name: monHeaConstraints
-        description: Search filter for Contraintes
+        description: Search filter for mon hea constraints
         type: integer
         required: false
       - in: query
         name: monHeaCrosstables
-        description: Search filter for Tableaux croisés
+        description: Search filter for mon hea crosstables
         type: integer
         required: false
       - in: query
         name: monHeaTemplates
-        description: Search filter for Templates
+        description: Search filter for mon hea templates
         type: integer
         required: false
       - in: query
         name: monHeaScripts
-        description: Search filter for Scripts
+        description: Search filter for mon hea scripts
         type: integer
         required: false
       - in: query
         name: monHeaActions
-        description: Search filter for Actions
+        description: Search filter for mon hea actions
         type: integer
         required: false
       - in: query
         name: monHeaPublications
-        description: Search filter for Publications
+        description: Search filter for mon hea publications
         type: integer
         required: false
       - in: query
         name: monHeaLastLogin
-        description: Search filter for Dernière Connexion
+        description: Search filter for mon hea last login
         type: string
         required: false
       tags:
@@ -1387,7 +1311,7 @@ paths:
         required: false
       - in: query
         name: monPrjName
-        description: Search filter for Nom
+        description: Search filter for Name
         type: string
         required: false
       tags:
@@ -1438,24 +1362,24 @@ paths:
         required: false
       - in: query
         name: monInstPollFreq
-        description: Search filter for Fréquence (min)
+        description: Search filter for Polling frequency
         type: integer
         required: false
       - in: query
         name: monInstPrjId
-        description: Search filter for Projet
+        description: Search filter for Project
         type: string
         required: false
       - in: query
         name: monInstPrjId__monPrjName
-        description: Search filter for Nom Projet
+        description: Search filter for Project Name
         type: string
         required: false
       tags:
       - MonProjectInstance
   /rest/MonProject/{row_id}:
     post:
-      summary: Create a new MonProjectbusiness object record
+      summary: Create a new MonProject business object record
       security:
       - bearerAuth: []
       produces:
@@ -1574,7 +1498,7 @@ paths:
       tags:
       - MonProject
     put:
-      summary: Update a MonProjectbusiness object record
+      summary: Update a MonProject business object record
       security:
       - bearerAuth: []
       produces:
@@ -1650,7 +1574,7 @@ definitions:
         description: Unique technical row ID
         type: string
       monPrjName:
-        description: Nom
+        description: Name
         type: string
   ArrayOfMonProjectInstance:
     type: array
@@ -1719,7 +1643,7 @@ definitions:
     type: object
     properties:
       monCntprjPrjId__monPrjName:
-        description: Nom mon cntprj prj id
+        description: mon cntprj prj id Name
         type: string
       monCntprjCntId:
         description: mon cntprj cnt id
@@ -1728,7 +1652,7 @@ definitions:
         description: Unique technical row ID
         type: string
       monCntprjCntId__monCntEmail:
-        description: Email mon cntprj cnt id
+        description: mon cntprj cnt id Email
         type: string
       monCntprjPrjId:
         description: mon cntprj prj id
@@ -1743,120 +1667,120 @@ definitions:
     type: object
     properties:
       monHeaTotalUsers:
-        description: Total utilisateurs
+        description: Total Users
         type: integer
       monHeaFreeHeap:
-        description: Heap libre
+        description: Free Heap
         type: integer
       monHeaActions:
-        description: Actions
+        description: mon hea actions
         type: integer
       monHeaAppVersion:
-        description: Version Applicative
+        description: App Version
         type: string
       monHeaObjects:
-        description: Objets
+        description: mon hea objects
         type: integer
       monHeaStatus:
-        description: Statut
+        description: Status
         type: string
         enum:
         - OK
         - KO
       monHeaHeapSize:
-        description: Taille heap
+        description: Heap Size
         type: integer
       monHeaScripts:
-        description: Scripts
+        description: mon hea scripts
         type: integer
       monHeaBuiltOn:
-        description: Compilé le
+        description: Built On
         type: string
       monHeaFreeDisk:
-        description: Espace libre
+        description: Free Disk
         type: integer
       monHeaObjectCacheRatio:
-        description: Utilisation Cache Objet
+        description: Object Cache Usage
         type: number
       monHeaTotalFreeSize:
         description: Total Free Size
         type: integer
       monHeaFunctions:
-        description: Fonctions
+        description: mon hea functions
         type: integer
       monHeaStates:
-        description: États
+        description: mon hea states
         type: integer
       monHeaDiskUsage:
-        description: Utilisation Espace
+        description: Disk Usage
         type: number
       monHeaVersion:
-        description: Version Plateforme
+        description: Platform Version
         type: string
       monHeaGroups:
-        description: Groupes
+        description: mon hea groups
         type: integer
       monHeaUsableDisk:
-        description: Espace utilisable
+        description: Usable Disk
         type: integer
       monHeaInstId__monInstUrl:
-        description: URL Instance
+        description: Instance URL
         type: string
       monHeaConstraints:
-        description: Contraintes
+        description: mon hea constraints
         type: integer
       monHeaHeapUsage:
-        description: Utilisation Heap
+        description: Heap Usage
         type: number
       monHeaDate:
         description: Date
         type: string
         example: yyyy-MM-dd HH:mm:ss
       monHeaTotalDisk:
-        description: Espace total
+        description: Total Disk
         type: integer
       monHeaEnabledUsers:
-        description: Utilisateurs actifs
+        description: Enabled Users
         type: integer
       monHeaDatabasePatchLevel:
-        description: Niveau patch BDD
+        description: Database Patch Level
         type: string
       monHeaMaxGrantCache:
-        description: Grant Cache Max
+        description: Max Grant Cache
         type: integer
       monHeaAttributes:
-        description: Attributs
+        description: mon hea attributes
         type: integer
       monHeaPublications:
-        description: Publications
+        description: mon hea publications
         type: integer
       monHeaCrosstables:
-        description: Tableaux croisés
+        description: mon hea crosstables
         type: integer
       monHeaSessions:
         description: Sessions
         type: integer
       monHeaMaxObjectCache:
-        description: Cache Objet Max
+        description: Max Object Cache
         type: integer
       monHeaGrantCache:
         description: Grant Cache
         type: integer
       monHeaMaxHeapSize:
-        description: Heap max
+        description: Max Heap Size
         type: integer
       monHeaGrantCacheRatio:
-        description: Utilisation Grant Cache
+        description: Grant Cache Usage
         type: number
       monHeaLastLogin:
-        description: Dernière Connexion
+        description: mon hea last login
         type: string
         example: yyyy-MM-dd HH:mm:ss
       monHeaTemplates:
-        description: Templates
+        description: mon hea templates
         type: integer
       monHeaObjectCache:
-        description: Cache Objet
+        description: Object Cache
         type: integer
       monHeaInstId:
         description: Instance
@@ -1871,7 +1795,7 @@ definitions:
         description: URL
         type: string
       monInstPollFreq:
-        description: Fréquence (min)
+        description: Polling frequency
         type: integer
       row_id:
         description: Unique technical row ID
@@ -1935,13 +1859,13 @@ definitions:
         description: URL
         type: string
       monInstPollFreq:
-        description: Fréquence (min)
+        description: Polling frequency
         type: integer
       monInstPrjId:
-        description: Projet
+        description: Project
         type: string
       monInstPrjId__monPrjName:
-        description: Nom Projet
+        description: Project Name
         type: string
       row_id:
         description: Unique technical row ID
@@ -1960,14 +1884,14 @@ info:
   version: '1.1'
 tags:
 - name: MonCntPrj
-  description: MonCntPrj
+  description: To contact in case of problem
 - name: MonContact
-  description: Responsable
+  description: Manager
 - name: MonHealth
-  description: Santé
+  description: Health
 - name: MonInstance
   description: Instance
 - name: MonProject
-  description: Projet
+  description: Project
 - name: MonProjectInstance
   description: Instance
