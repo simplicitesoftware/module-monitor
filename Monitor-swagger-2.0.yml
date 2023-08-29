@@ -212,6 +212,44 @@ paths:
           description: Unauthorized
       tags:
       - session
+  /rest/MonProjectInstance/{row_id}/action:callInstance:
+    get:
+      summary: Call a custom action for a MonProjectInstance business object record
+        or for all records
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-monprojectinstance-action-callinstance
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/ActionResult'
+          description: Success in calling the custom action
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      tags:
+      - MonProjectInstance
   /rest/MonContact:
     get:
       summary: Search MonContact business object records or get contextualized metadata
@@ -766,6 +804,44 @@ paths:
       - MonProjectInstance
       consumes:
       - application/json
+  /rest/MonProjectInstance/{row_id}/action:callInstances:
+    get:
+      summary: Call a custom action for a MonProjectInstance business object record
+        or for all records
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-monprojectinstance-action-callinstances
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/ActionResult'
+          description: Success in calling the custom action
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      tags:
+      - MonProjectInstance
   /rest/MonContact/{row_id}:
     post:
       summary: Create a new MonContact business object record
@@ -973,7 +1049,7 @@ paths:
         required: false
       - in: query
         name: monInstPollFreq
-        description: Search filter for Polling frequency
+        description: Search filter for Polling frequency (min)
         type: integer
         required: false
       tags:
@@ -1211,62 +1287,62 @@ paths:
         required: false
       - in: query
         name: monHeaObjects
-        description: Search filter for mon hea objects
+        description: Search filter for Objects
         type: integer
         required: false
       - in: query
         name: monHeaAttributes
-        description: Search filter for mon hea attributes
+        description: Search filter for Attributes
         type: integer
         required: false
       - in: query
         name: monHeaFunctions
-        description: Search filter for mon hea functions
+        description: Search filter for Functions
         type: integer
         required: false
       - in: query
         name: monHeaGroups
-        description: Search filter for mon hea groups
+        description: Search filter for Groups
         type: integer
         required: false
       - in: query
         name: monHeaStates
-        description: Search filter for mon hea states
+        description: Search filter for States
         type: integer
         required: false
       - in: query
         name: monHeaConstraints
-        description: Search filter for mon hea constraints
+        description: Search filter for Constraints
         type: integer
         required: false
       - in: query
         name: monHeaCrosstables
-        description: Search filter for mon hea crosstables
+        description: Search filter for Crosstables
         type: integer
         required: false
       - in: query
         name: monHeaTemplates
-        description: Search filter for mon hea templates
+        description: Search filter for Templates
         type: integer
         required: false
       - in: query
         name: monHeaScripts
-        description: Search filter for mon hea scripts
+        description: Search filter for Scripts
         type: integer
         required: false
       - in: query
         name: monHeaActions
-        description: Search filter for mon hea actions
+        description: Search filter for Actions
         type: integer
         required: false
       - in: query
         name: monHeaPublications
-        description: Search filter for mon hea publications
+        description: Search filter for Publications
         type: integer
         required: false
       - in: query
         name: monHeaLastLogin
-        description: Search filter for mon hea last login
+        description: Search filter for Last login
         type: string
         required: false
       tags:
@@ -1362,7 +1438,7 @@ paths:
         required: false
       - in: query
         name: monInstPollFreq
-        description: Search filter for Polling frequency
+        description: Search filter for Polling frequency (min)
         type: integer
         required: false
       - in: query
@@ -1673,13 +1749,13 @@ definitions:
         description: Free Heap
         type: integer
       monHeaActions:
-        description: mon hea actions
+        description: Actions
         type: integer
       monHeaAppVersion:
         description: App Version
         type: string
       monHeaObjects:
-        description: mon hea objects
+        description: Objects
         type: integer
       monHeaStatus:
         description: Status
@@ -1691,7 +1767,7 @@ definitions:
         description: Heap Size
         type: integer
       monHeaScripts:
-        description: mon hea scripts
+        description: Scripts
         type: integer
       monHeaBuiltOn:
         description: Built On
@@ -1706,10 +1782,10 @@ definitions:
         description: Total Free Size
         type: integer
       monHeaFunctions:
-        description: mon hea functions
+        description: Functions
         type: integer
       monHeaStates:
-        description: mon hea states
+        description: States
         type: integer
       monHeaDiskUsage:
         description: Disk Usage
@@ -1718,7 +1794,7 @@ definitions:
         description: Platform Version
         type: string
       monHeaGroups:
-        description: mon hea groups
+        description: Groups
         type: integer
       monHeaUsableDisk:
         description: Usable Disk
@@ -1727,7 +1803,7 @@ definitions:
         description: Instance URL
         type: string
       monHeaConstraints:
-        description: mon hea constraints
+        description: Constraints
         type: integer
       monHeaHeapUsage:
         description: Heap Usage
@@ -1749,13 +1825,13 @@ definitions:
         description: Max Grant Cache
         type: integer
       monHeaAttributes:
-        description: mon hea attributes
+        description: Attributes
         type: integer
       monHeaPublications:
-        description: mon hea publications
+        description: Publications
         type: integer
       monHeaCrosstables:
-        description: mon hea crosstables
+        description: Crosstables
         type: integer
       monHeaSessions:
         description: Sessions
@@ -1773,11 +1849,11 @@ definitions:
         description: Grant Cache Usage
         type: number
       monHeaLastLogin:
-        description: mon hea last login
+        description: Last login
         type: string
         example: yyyy-MM-dd HH:mm:ss
       monHeaTemplates:
-        description: mon hea templates
+        description: Templates
         type: integer
       monHeaObjectCache:
         description: Object Cache
@@ -1795,7 +1871,7 @@ definitions:
         description: URL
         type: string
       monInstPollFreq:
-        description: Polling frequency
+        description: Polling frequency (min)
         type: integer
       row_id:
         description: Unique technical row ID
@@ -1859,7 +1935,7 @@ definitions:
         description: URL
         type: string
       monInstPollFreq:
-        description: Polling frequency
+        description: Polling frequency (min)
         type: integer
       monInstPrjId:
         description: Project

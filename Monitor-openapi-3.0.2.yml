@@ -131,13 +131,13 @@ components:
           description: Free Heap
           type: integer
         monHeaActions:
-          description: mon hea actions
+          description: Actions
           type: integer
         monHeaAppVersion:
           description: App Version
           type: string
         monHeaObjects:
-          description: mon hea objects
+          description: Objects
           type: integer
         monHeaStatus:
           description: Status
@@ -149,7 +149,7 @@ components:
           description: Heap Size
           type: integer
         monHeaScripts:
-          description: mon hea scripts
+          description: Scripts
           type: integer
         monHeaBuiltOn:
           description: Built On
@@ -164,10 +164,10 @@ components:
           description: Total Free Size
           type: integer
         monHeaFunctions:
-          description: mon hea functions
+          description: Functions
           type: integer
         monHeaStates:
-          description: mon hea states
+          description: States
           type: integer
         monHeaDiskUsage:
           description: Disk Usage
@@ -176,7 +176,7 @@ components:
           description: Platform Version
           type: string
         monHeaGroups:
-          description: mon hea groups
+          description: Groups
           type: integer
         monHeaUsableDisk:
           description: Usable Disk
@@ -185,7 +185,7 @@ components:
           description: Instance URL
           type: string
         monHeaConstraints:
-          description: mon hea constraints
+          description: Constraints
           type: integer
         monHeaHeapUsage:
           description: Heap Usage
@@ -207,13 +207,13 @@ components:
           description: Max Grant Cache
           type: integer
         monHeaAttributes:
-          description: mon hea attributes
+          description: Attributes
           type: integer
         monHeaPublications:
-          description: mon hea publications
+          description: Publications
           type: integer
         monHeaCrosstables:
-          description: mon hea crosstables
+          description: Crosstables
           type: integer
         monHeaSessions:
           description: Sessions
@@ -231,11 +231,11 @@ components:
           description: Grant Cache Usage
           type: number
         monHeaLastLogin:
-          description: mon hea last login
+          description: Last login
           type: string
           example: yyyy-MM-dd HH:mm:ss
         monHeaTemplates:
-          description: mon hea templates
+          description: Templates
           type: integer
         monHeaObjectCache:
           description: Object Cache
@@ -253,7 +253,7 @@ components:
           description: URL
           type: string
         monInstPollFreq:
-          description: Polling frequency
+          description: Polling frequency (min)
           type: integer
         row_id:
           description: Unique technical row ID
@@ -317,7 +317,7 @@ components:
           description: URL
           type: string
         monInstPollFreq:
-          description: Polling frequency
+          description: Polling frequency (min)
           type: integer
         monInstPrjId:
           description: Project
@@ -585,6 +585,53 @@ paths:
                 $ref: '#/components/schemas/Error401'
       tags:
       - session
+  /rest/MonProjectInstance/{row_id}/action:callInstance:
+    get:
+      summary: Call a custom action for a MonProjectInstance business object record
+        or for all records
+      security:
+      - bearerAuth: []
+      operationId: obj-monprojectinstance-action-callinstance
+      responses:
+        '200':
+          description: Success in calling the custom action
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ActionResult'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - MonProjectInstance
   /rest/MonContact:
     get:
       summary: Search MonContact business object records or get contextualized metadata
@@ -1249,6 +1296,53 @@ paths:
         required: true
       tags:
       - MonProjectInstance
+  /rest/MonProjectInstance/{row_id}/action:callInstances:
+    get:
+      summary: Call a custom action for a MonProjectInstance business object record
+        or for all records
+      security:
+      - bearerAuth: []
+      operationId: obj-monprojectinstance-action-callinstances
+      responses:
+        '200':
+          description: Success in calling the custom action
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ActionResult'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - MonProjectInstance
   /rest/MonContact/{row_id}:
     post:
       summary: Create a new MonContact business object record
@@ -1499,7 +1593,7 @@ paths:
           type: integer
         in: query
         name: monInstPollFreq
-        description: Search filter for Polling frequency
+        description: Search filter for Polling frequency (min)
         required: false
       tags:
       - MonInstance
@@ -1782,73 +1876,73 @@ paths:
           type: integer
         in: query
         name: monHeaObjects
-        description: Search filter for mon hea objects
+        description: Search filter for Objects
         required: false
       - schema:
           type: integer
         in: query
         name: monHeaAttributes
-        description: Search filter for mon hea attributes
+        description: Search filter for Attributes
         required: false
       - schema:
           type: integer
         in: query
         name: monHeaFunctions
-        description: Search filter for mon hea functions
+        description: Search filter for Functions
         required: false
       - schema:
           type: integer
         in: query
         name: monHeaGroups
-        description: Search filter for mon hea groups
+        description: Search filter for Groups
         required: false
       - schema:
           type: integer
         in: query
         name: monHeaStates
-        description: Search filter for mon hea states
+        description: Search filter for States
         required: false
       - schema:
           type: integer
         in: query
         name: monHeaConstraints
-        description: Search filter for mon hea constraints
+        description: Search filter for Constraints
         required: false
       - schema:
           type: integer
         in: query
         name: monHeaCrosstables
-        description: Search filter for mon hea crosstables
+        description: Search filter for Crosstables
         required: false
       - schema:
           type: integer
         in: query
         name: monHeaTemplates
-        description: Search filter for mon hea templates
+        description: Search filter for Templates
         required: false
       - schema:
           type: integer
         in: query
         name: monHeaScripts
-        description: Search filter for mon hea scripts
+        description: Search filter for Scripts
         required: false
       - schema:
           type: integer
         in: query
         name: monHeaActions
-        description: Search filter for mon hea actions
+        description: Search filter for Actions
         required: false
       - schema:
           type: integer
         in: query
         name: monHeaPublications
-        description: Search filter for mon hea publications
+        description: Search filter for Publications
         required: false
       - schema:
           type: string
         in: query
         name: monHeaLastLogin
-        description: Search filter for mon hea last login
+        description: Search filter for Last login
         required: false
       tags:
       - MonHealth
@@ -1961,7 +2055,7 @@ paths:
           type: integer
         in: query
         name: monInstPollFreq
-        description: Search filter for Polling frequency
+        description: Search filter for Polling frequency (min)
         required: false
       - schema:
           type: string
