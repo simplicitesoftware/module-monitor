@@ -7,7 +7,7 @@ basePath: /api
 paths:
   /rest/MonCntPrj/{row_id}:
     post:
-      summary: Create a new MonCntPrjbusiness object record
+      summary: Create a new MonCntPrj business object record
       security:
       - bearerAuth: []
       produces:
@@ -126,7 +126,7 @@ paths:
       tags:
       - MonCntPrj
     put:
-      summary: Update a MonCntPrjbusiness object record
+      summary: Update a MonCntPrj business object record
       security:
       - bearerAuth: []
       produces:
@@ -297,7 +297,7 @@ paths:
       - MonContact
   /rest/MonInstance/{row_id}:
     post:
-      summary: Create a new MonInstancebusiness object record
+      summary: Create a new MonInstance business object record
       security:
       - bearerAuth: []
       produces:
@@ -416,7 +416,7 @@ paths:
       tags:
       - MonInstance
     put:
-      summary: Update a MonInstancebusiness object record
+      summary: Update a MonInstance business object record
       security:
       - bearerAuth: []
       produces:
@@ -482,7 +482,7 @@ paths:
       - session
   /rest/MonHealth/{row_id}:
     post:
-      summary: Create a new MonHealthbusiness object record
+      summary: Create a new MonHealth business object record
       security:
       - bearerAuth: []
       produces:
@@ -601,7 +601,7 @@ paths:
       tags:
       - MonHealth
     put:
-      summary: Update a MonHealthbusiness object record
+      summary: Update a MonHealth business object record
       security:
       - bearerAuth: []
       produces:
@@ -644,7 +644,7 @@ paths:
       - application/json
   /rest/MonProjectInstance/{row_id}:
     post:
-      summary: Create a new MonProjectInstancebusiness object record
+      summary: Create a new MonProjectInstance business object record
       security:
       - bearerAuth: []
       produces:
@@ -763,7 +763,7 @@ paths:
       tags:
       - MonProjectInstance
     put:
-      summary: Update a MonProjectInstancebusiness object record
+      summary: Update a MonProjectInstance business object record
       security:
       - bearerAuth: []
       produces:
@@ -844,7 +844,7 @@ paths:
       - MonProjectInstance
   /rest/MonContact/{row_id}:
     post:
-      summary: Create a new MonContactbusiness object record
+      summary: Create a new MonContact business object record
       security:
       - bearerAuth: []
       produces:
@@ -963,7 +963,7 @@ paths:
       tags:
       - MonContact
     put:
-      summary: Update a MonContactbusiness object record
+      summary: Update a MonContact business object record
       security:
       - bearerAuth: []
       produces:
@@ -1455,7 +1455,7 @@ paths:
       - MonProjectInstance
   /rest/MonProject/{row_id}:
     post:
-      summary: Create a new MonProjectbusiness object record
+      summary: Create a new MonProject business object record
       security:
       - bearerAuth: []
       produces:
@@ -1574,7 +1574,7 @@ paths:
       tags:
       - MonProject
     put:
-      summary: Update a MonProjectbusiness object record
+      summary: Update a MonProject business object record
       security:
       - bearerAuth: []
       produces:

@@ -4998,7 +4998,7 @@
     "item": {
      "crn_name": "MonCallInstances",
      "crn_cronexpr": "0 * * * * ?",
-     "crn_enabled": false,
+     "crn_enabled": true,
      "crn_unique": true,
      "crn_runas_id__usr_login": "designer",
      "crn_job_depth": -14,
