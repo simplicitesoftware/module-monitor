@@ -5,7 +5,7 @@
 |___/_|_|_|_| .__/_|_\__|_|\__\___|
             |_| 
 -->
-![](https://docs.simplicite.io//logos/logo250.png)
+![](https://platform.simplicite.io/logos/standard/logo250.png)
 * * *
 
 `Monitor` module definition
@@ -54,22 +54,16 @@
 | `monHeaVersion`                                              | char(100)                                |          |           |          | -                                                                                |
 | `monHeaBuiltOn`                                              | char(250)                                |          |           |          | -                                                                                |
 | `monHeaDatabasePatchLevel`                                   | char(100)                                |          |           |          | -                                                                                |
-| `monHeaAppVersion`                                           | text(1000)                               |          |           |          | -                                                                                |
+| `monHeaAppVersion`                                           | char(255)                                |          |           |          | -                                                                                |
 | `monHeaSessions`                                             | int(10)                                  |          |           |          | -                                                                                |
 | `monHeaEnabledUsers`                                         | int(10)                                  |          |           |          | -                                                                                |
 | `monHeaTotalUsers`                                           | int(10)                                  |          |           |          | -                                                                                |
-| `monHeaFreeDisk`                                             | int(10)                                  |          |           |          | -                                                                                |
-| `monHeaUsableDisk`                                           | int(10)                                  |          |           |          | -                                                                                |
-| `monHeaTotalDisk`                                            | int(10)                                  |          |           |          | -                                                                                |
-| `monHeaDiskUsage`                                            | float(5, 2)                              |          |           |          | -                                                                                |
 | `monHeaFreeHeap`                                             | int(10)                                  |          |           |          | -                                                                                |
 | `monHeaHeapSize`                                             | int(10)                                  |          |           |          | -                                                                                |
 | `monHeaMaxHeapSize`                                          | int(10)                                  |          |           |          | -                                                                                |
 | `monHeaTotalFreeSize`                                        | int(10)                                  |          |           |          | -                                                                                |
 | `monHeaHeapUsage`                                            | float(5, 2)                              |          | yes       |          | -                                                                                |
 | `monHeaGrantCache`                                           | int(10)                                  |          |           |          | -                                                                                |
-| `monHeaMaxGrantCache`                                        | int(10)                                  |          |           |          | -                                                                                |
-| `monHeaGrantCacheRatio`                                      | float(5, 2)                              |          |           |          | -                                                                                |
 | `monHeaObjectCache`                                          | int(10)                                  |          |           |          | -                                                                                |
 | `monHeaMaxObjectCache`                                       | int(10)                                  |          |           |          | -                                                                                |
 | `monHeaObjectCacheRatio`                                     | float(5, 2)                              |          |           |          | -                                                                                |
@@ -85,6 +79,10 @@
 | `monHeaActions`                                              | int(5)                                   |          |           |          | -                                                                                |
 | `monHeaPublications`                                         | int(5)                                   |          |           |          | -                                                                                |
 | `monHeaLastLogin`                                            | datetime                                 |          |           |          | -                                                                                |
+| `monHeaActiveUsers`                                          | int(10)                                  |          | yes       |          | -                                                                                |
+| `monHeaInactiveUsers`                                        | int(10)                                  |          | yes       |          | -                                                                                |
+| `monHeaPendingUsers`                                         | int(10)                                  |          | yes       |          | -                                                                                |
+| `monHeaWebserviceUsers`                                      | int(10)                                  |          | yes       |          | -                                                                                |
 
 ### Lists
 

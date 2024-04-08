@@ -7,6 +7,7 @@ import org.json.JSONException;
 import java.util.*;
 import com.simplicite.util.*;
 import com.simplicite.util.tools.*;
+import com.simplicite.util.exceptions.*;
 
 /**
  * Business object MonInstance
@@ -51,12 +52,8 @@ public class MonInstance extends ObjectDB {
 		}
 	}
 
-	protected void createHealthRow(String instanceId, String instanceBaseUrl) throws JSONException, IOException {
-		boolean[] oldcrud = getGrant().changeAccess("MonHealth", true, true, false, false);
-		MonHealth health = MonHealth.getHealth(instanceBaseUrl, getGrant());
-		health.setFieldValue("monHeaInstId", instanceId);
-		health.create();
-		getGrant().changeAccess("MonHealth", oldcrud);
+	protected void createHealthRow(String instanceId, String instanceBaseUrl) throws JSONException, ValidateException, CreateException, IOException {
+		MonHealth.createHealthRow(instanceId, instanceBaseUrl, getGrant());
 	}
 	
 	protected MonHealth getLatestHealth(){

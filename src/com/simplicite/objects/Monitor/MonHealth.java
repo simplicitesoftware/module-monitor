@@ -10,6 +10,7 @@ import com.simplicite.util.AppLog;
 import com.simplicite.util.Grant;
 import com.simplicite.util.ObjectDB;
 import com.simplicite.util.Tool;
+import com.simplicite.util.exceptions.*;
 
 /**
  * Business object MonHealth
@@ -26,17 +27,17 @@ public class MonHealth extends ObjectDB {
 		"monHeaAppVersion", "application.applicationversion",
 		"monHeaSessions", "application.activesessions",
 		"monHeaEnabledUsers", "application.enabledusers",
+		"monHeaActiveUsers", "application.totalactiveusers",
+		"monHeaInactiveUsers", "application.totalinactiveusers",
+		"monHeaPendingUsers", "application.totalpendingusers",
+		"monHeaWebserviceUsers", "application.totalwebservicesusers",
 		"monHeaTotalUsers", "application.totalusers",
 		"monHeaLastLogin", "application.lastlogindate",
-		"monHeaFreeDisk", "disk.diskfree",
-		"monHeaUsableDisk", "disk.diskusable",
-		"monHeaTotalDisk", "disk.disktotal",
 		"monHeaFreeHeap", "javavm.heapfree",
 		"monHeaHeapSize", "javavm.heapsize",
 		"monHeaMaxHeapSize", "javavm.heapmaxsize",
 		"monHeaTotalFreeSize", "javavm.totalfreesize",
 		"monHeaGrantCache", "cache.apigrantcache",
-		"monHeaMaxGrantCache", "cache.grantcachemax",
 		"monHeaObjectCache", "cache.objectcache",
 		"monHeaMaxObjectCache", "cache.objectcachemax",
 		"monHeaDatabasePatchLevel", "database.dbpatchlevel",
@@ -52,16 +53,23 @@ public class MonHealth extends ObjectDB {
 		"monHeaActions", "userconfiguration.m_action",
 		"monHeaPublications", "userconfiguration.m_printtemplate"
 	);
-
-	public static MonHealth getHealth(String instanceBaseUrl, Grant g) throws JSONException, IOException {
+	
+	public static void createHealthRow(String instanceId, String instanceBaseUrl, Grant g) throws JSONException, ValidateException, CreateException, IOException
+	{
 		JSONObject req = new JSONObject(Tool.readUrl(instanceBaseUrl+"/health?format=json&full=true"));
+		boolean[] oldcrud = g.changeAccess("MonHealth", true, true, false, false);
+		
 		MonHealth health = (MonHealth) g.getTmpObject(ObjHealth);
-		synchronized(health){
+		synchronized(health.getLock()){
 			health.resetValues();
 			health.setFieldValue("monHeaDate", Tool.getCurrentDateTime());
+			health.setFieldValue("monHeaInstId", instanceId);
 			health.feedJson(req);
+			health.populate(false);
+			health.getTool().validateAndCreate();
 		}
-		return health;
+		
+		g.changeAccess("MonHealth", oldcrud);
 	}
 
 	public boolean hasProblem() {
@@ -74,7 +82,7 @@ public class MonHealth extends ObjectDB {
 			try{
 				setFieldValue(attr, json.getJSONObject(f[0]).get(f[1]));
 			} catch(JSONException e){
-				AppLog.warning("Field not found : "+jsonField, e, getGrant());
+				AppLog.warning("Field not found : "+jsonField, null, getGrant());
 			}
 		});
 	}
