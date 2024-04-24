@@ -15,12 +15,6 @@ import com.simplicite.util.exceptions.*;
 public class MonInstance extends ObjectDB {
 	private static final long serialVersionUID = 1L;
 
-	public void callInstancesOld(){
-		//Shouldn't there be a getGrant().getObject("toto", "tutu").resetFilters(); before calling search() ? 
-		// get all instances for which date() - lastPollDate() > pollFreq
-		search().forEach(row->callSingleInstance(row[getFieldIndex("row_id")],row[getFieldIndex("monInstUrl")]));
-	}
-	
 	public void callInstances(){
 		String sql = 
 			"select inst.row_id, inst.mon_inst_url, inst.mon_inst_poll_freq, hlth.mon_hea_date"
@@ -45,15 +39,11 @@ public class MonInstance extends ObjectDB {
 
 	protected void callSingleInstance(String instanceId, String instanceBaseUrl){
 		try {
-			createHealthRow(instanceId, instanceBaseUrl);
+			MonHealth.createHealthRow(instanceId, instanceBaseUrl, getGrant());
 		}
 		catch(Exception e) {
 			AppLog.error(getClass(), "callSingleInstance", "Unable to request URL : " + instanceBaseUrl, e, getGrant());
 		}
-	}
-
-	protected void createHealthRow(String instanceId, String instanceBaseUrl) throws JSONException, ValidateException, CreateException, IOException {
-		MonHealth.createHealthRow(instanceId, instanceBaseUrl, getGrant());
 	}
 	
 	protected MonHealth getLatestHealth(){

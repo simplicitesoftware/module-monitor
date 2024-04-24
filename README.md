@@ -101,6 +101,18 @@
 |--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
 | `monInstUrl`                                                 | url(100)                                 | yes*     | yes       |          | -                                                                                |
 | `monInstPollFreq`                                            | int(10)                                  |          | yes       |          | -                                                                                |
+| `monInstMemoryUsage`                                         | enum(3) using `MON_INST_USAGE_SIZE` list |          |           |          | -                                                                                |
+| `monInstUserUsage`                                           | enum(3) using `MON_INST_USAGE_SIZE` list |          |           |          | -                                                                                |
+| `monInstModelSize`                                           | enum(3) using `MON_INST_USAGE_SIZE` list |          |           |          | -                                                                                |
+
+### Lists
+
+* `MON_INST_USAGE_SIZE`
+    - `XS` XS
+    - `S` S
+    - `M` M
+    - `L` L
+    - `XXL` XXL
 
 `MonProject` business object definition
 ---------------------------------------

@@ -243,9 +243,36 @@ components:
     MonInstance:
       type: object
       properties:
+        monInstModelSize:
+          description: Model Size
+          type: string
+          enum:
+          - XS
+          - S
+          - M
+          - L
+          - XXL
         monInstUrl:
           description: URL
           type: string
+        monInstMemoryUsage:
+          description: Memory Usage
+          type: string
+          enum:
+          - XS
+          - S
+          - M
+          - L
+          - XXL
+        monInstUserUsage:
+          description: User Usage
+          type: string
+          enum:
+          - XS
+          - S
+          - M
+          - L
+          - XXL
         monInstPollFreq:
           description: Polling frequency (min)
           type: integer
@@ -307,9 +334,36 @@ components:
     MonProjectInstance:
       type: object
       properties:
+        monInstModelSize:
+          description: Model Size
+          type: string
+          enum:
+          - XS
+          - S
+          - M
+          - L
+          - XXL
         monInstUrl:
           description: URL
           type: string
+        monInstMemoryUsage:
+          description: Memory Usage
+          type: string
+          enum:
+          - XS
+          - S
+          - M
+          - L
+          - XXL
+        monInstUserUsage:
+          description: User Usage
+          type: string
+          enum:
+          - XS
+          - S
+          - M
+          - L
+          - XXL
         monInstPollFreq:
           description: Polling frequency (min)
           type: integer
@@ -1589,6 +1643,42 @@ paths:
         name: monInstPollFreq
         description: Search filter for Polling frequency (min)
         required: false
+      - schema:
+          type: string
+          enum:
+          - XS
+          - S
+          - M
+          - L
+          - XXL
+        in: query
+        name: monInstMemoryUsage
+        description: Search filter for Memory Usage
+        required: false
+      - schema:
+          type: string
+          enum:
+          - XS
+          - S
+          - M
+          - L
+          - XXL
+        in: query
+        name: monInstUserUsage
+        description: Search filter for User Usage
+        required: false
+      - schema:
+          type: string
+          enum:
+          - XS
+          - S
+          - M
+          - L
+          - XXL
+        in: query
+        name: monInstModelSize
+        description: Search filter for Model Size
+        required: false
       tags:
       - MonInstance
   /rest/MonCntPrj:
@@ -2038,6 +2128,42 @@ paths:
         in: query
         name: monInstPollFreq
         description: Search filter for Polling frequency (min)
+        required: false
+      - schema:
+          type: string
+          enum:
+          - XS
+          - S
+          - M
+          - L
+          - XXL
+        in: query
+        name: monInstMemoryUsage
+        description: Search filter for Memory Usage
+        required: false
+      - schema:
+          type: string
+          enum:
+          - XS
+          - S
+          - M
+          - L
+          - XXL
+        in: query
+        name: monInstUserUsage
+        description: Search filter for User Usage
+        required: false
+      - schema:
+          type: string
+          enum:
+          - XS
+          - S
+          - M
+          - L
+          - XXL
+        in: query
+        name: monInstModelSize
+        description: Search filter for Model Size
         required: false
       - schema:
           type: string

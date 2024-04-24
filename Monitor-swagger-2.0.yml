@@ -1052,6 +1052,39 @@ paths:
         description: Search filter for Polling frequency (min)
         type: integer
         required: false
+      - in: query
+        name: monInstMemoryUsage
+        description: Search filter for Memory Usage
+        type: string
+        required: false
+        enum:
+        - XS
+        - S
+        - M
+        - L
+        - XXL
+      - in: query
+        name: monInstUserUsage
+        description: Search filter for User Usage
+        type: string
+        required: false
+        enum:
+        - XS
+        - S
+        - M
+        - L
+        - XXL
+      - in: query
+        name: monInstModelSize
+        description: Search filter for Model Size
+        type: string
+        required: false
+        enum:
+        - XS
+        - S
+        - M
+        - L
+        - XXL
       tags:
       - MonInstance
   /rest/MonCntPrj:
@@ -1431,6 +1464,39 @@ paths:
         description: Search filter for Polling frequency (min)
         type: integer
         required: false
+      - in: query
+        name: monInstMemoryUsage
+        description: Search filter for Memory Usage
+        type: string
+        required: false
+        enum:
+        - XS
+        - S
+        - M
+        - L
+        - XXL
+      - in: query
+        name: monInstUserUsage
+        description: Search filter for User Usage
+        type: string
+        required: false
+        enum:
+        - XS
+        - S
+        - M
+        - L
+        - XXL
+      - in: query
+        name: monInstModelSize
+        description: Search filter for Model Size
+        type: string
+        required: false
+        enum:
+        - XS
+        - S
+        - M
+        - L
+        - XXL
       - in: query
         name: monInstPrjId
         description: Search filter for Project
@@ -1851,9 +1917,36 @@ definitions:
   MonInstance:
     type: object
     properties:
+      monInstModelSize:
+        description: Model Size
+        type: string
+        enum:
+        - XS
+        - S
+        - M
+        - L
+        - XXL
       monInstUrl:
         description: URL
         type: string
+      monInstMemoryUsage:
+        description: Memory Usage
+        type: string
+        enum:
+        - XS
+        - S
+        - M
+        - L
+        - XXL
+      monInstUserUsage:
+        description: User Usage
+        type: string
+        enum:
+        - XS
+        - S
+        - M
+        - L
+        - XXL
       monInstPollFreq:
         description: Polling frequency (min)
         type: integer
@@ -1915,9 +2008,36 @@ definitions:
   MonProjectInstance:
     type: object
     properties:
+      monInstModelSize:
+        description: Model Size
+        type: string
+        enum:
+        - XS
+        - S
+        - M
+        - L
+        - XXL
       monInstUrl:
         description: URL
         type: string
+      monInstMemoryUsage:
+        description: Memory Usage
+        type: string
+        enum:
+        - XS
+        - S
+        - M
+        - L
+        - XXL
+      monInstUserUsage:
+        description: User Usage
+        type: string
+        enum:
+        - XS
+        - S
+        - M
+        - L
+        - XXL
       monInstPollFreq:
         description: Polling frequency (min)
         type: integer

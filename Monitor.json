@@ -125,16 +125,48 @@
    "label": "List of values",
    "icon": "img/system/list_of_values",
    "field": "row_module_id",
-   "list": [{
-    "object": "FieldList",
-    "userkey": "MONHEASTATUS",
-    "item": {
-     "lov_name": "MONHEASTATUS",
-     "row_module_id__mdl_name": "Monitor",
-     "lov_model_id__mod_name": null,
-     "lov_model_id__mod_image": null
+   "list": [
+    {
+     "object": "FieldList",
+     "userkey": "MON_INST_MODEL_SIZE",
+     "item": {
+      "lov_name": "MON_INST_MODEL_SIZE",
+      "row_module_id__mdl_name": "Monitor",
+      "lov_model_id__mod_name": null,
+      "lov_model_id__mod_image": null
+     }
+    },
+    {
+     "object": "FieldList",
+     "userkey": "MON_INST_USAGE_SIZE",
+     "item": {
+      "lov_name": "MON_INST_USAGE_SIZE",
+      "row_module_id__mdl_name": "Monitor",
+      "lov_model_id__mod_name": null,
+      "lov_model_id__mod_image": null
+     }
+    },
+    {
+     "object": "FieldList",
+     "userkey": "MON_INST_USER_USAGE",
+     "item": {
+      "lov_name": "MON_INST_USER_USAGE",
+      "row_module_id__mdl_name": "Monitor",
+      "lov_model_id__mod_name": null,
+      "lov_model_id__mod_image": null
+     }
+    },
+    {
+     "object": "FieldList",
+     "userkey": "MONHEASTATUS",
+     "item": {
+      "lov_name": "MONHEASTATUS",
+      "row_module_id__mdl_name": "Monitor",
+      "lov_model_id__mod_name": null,
+      "lov_model_id__mod_image": null
+     }
     }
-   }]
+   ]
   },
   {
    "object": "FieldListCode",
@@ -142,6 +174,171 @@
    "icon": "img/system/list_of_values",
    "field": "row_module_id",
    "list": [
+    {
+     "object": "FieldListCode",
+     "userkey": "MON_INST_MODEL_SIZE~A",
+     "item": {
+      "lov_list_id__lov_name": "MON_INST_MODEL_SIZE",
+      "lov_code": "A",
+      "lov_order_by": 10,
+      "lov_label": "code A",
+      "row_module_id__mdl_name": "Monitor",
+      "lov_color": null,
+      "lov_color_bg": null,
+      "lov_icon": null,
+      "lov_display": ["L"]
+     }
+    },
+    {
+     "object": "FieldListCode",
+     "userkey": "MON_INST_MODEL_SIZE~B",
+     "item": {
+      "lov_list_id__lov_name": "MON_INST_MODEL_SIZE",
+      "lov_code": "B",
+      "lov_order_by": 20,
+      "lov_label": "code B",
+      "row_module_id__mdl_name": "Monitor",
+      "lov_color": null,
+      "lov_color_bg": null,
+      "lov_icon": null,
+      "lov_display": ["L"]
+     }
+    },
+    {
+     "object": "FieldListCode",
+     "userkey": "MON_INST_MODEL_SIZE~C",
+     "item": {
+      "lov_list_id__lov_name": "MON_INST_MODEL_SIZE",
+      "lov_code": "C",
+      "lov_order_by": 30,
+      "lov_label": "code C",
+      "row_module_id__mdl_name": "Monitor",
+      "lov_color": null,
+      "lov_color_bg": null,
+      "lov_icon": null,
+      "lov_display": ["L"]
+     }
+    },
+    {
+     "object": "FieldListCode",
+     "userkey": "MON_INST_USAGE_SIZE~XS",
+     "item": {
+      "lov_list_id__lov_name": "MON_INST_USAGE_SIZE",
+      "lov_code": "XS",
+      "lov_order_by": 10,
+      "lov_label": "XS",
+      "row_module_id__mdl_name": "Monitor",
+      "lov_color": null,
+      "lov_color_bg": null,
+      "lov_icon": null,
+      "lov_display": ["L"]
+     }
+    },
+    {
+     "object": "FieldListCode",
+     "userkey": "MON_INST_USAGE_SIZE~S",
+     "item": {
+      "lov_list_id__lov_name": "MON_INST_USAGE_SIZE",
+      "lov_code": "S",
+      "lov_order_by": 20,
+      "lov_label": "S",
+      "row_module_id__mdl_name": "Monitor",
+      "lov_color": null,
+      "lov_color_bg": null,
+      "lov_icon": null,
+      "lov_display": ["L"]
+     }
+    },
+    {
+     "object": "FieldListCode",
+     "userkey": "MON_INST_USAGE_SIZE~M",
+     "item": {
+      "lov_list_id__lov_name": "MON_INST_USAGE_SIZE",
+      "lov_code": "M",
+      "lov_order_by": 30,
+      "lov_label": "M",
+      "row_module_id__mdl_name": "Monitor",
+      "lov_color": null,
+      "lov_color_bg": null,
+      "lov_icon": null,
+      "lov_display": ["L"]
+     }
+    },
+    {
+     "object": "FieldListCode",
+     "userkey": "MON_INST_USAGE_SIZE~L",
+     "item": {
+      "lov_list_id__lov_name": "MON_INST_USAGE_SIZE",
+      "lov_code": "L",
+      "lov_order_by": 40,
+      "lov_label": "L",
+      "row_module_id__mdl_name": "Monitor",
+      "lov_color": null,
+      "lov_color_bg": null,
+      "lov_icon": null,
+      "lov_display": ["L"]
+     }
+    },
+    {
+     "object": "FieldListCode",
+     "userkey": "MON_INST_USAGE_SIZE~XXL",
+     "item": {
+      "lov_list_id__lov_name": "MON_INST_USAGE_SIZE",
+      "lov_code": "XXL",
+      "lov_order_by": 50,
+      "lov_label": "XXL",
+      "row_module_id__mdl_name": "Monitor",
+      "lov_color": null,
+      "lov_color_bg": null,
+      "lov_icon": null,
+      "lov_display": ["L"]
+     }
+    },
+    {
+     "object": "FieldListCode",
+     "userkey": "MON_INST_USER_USAGE~A",
+     "item": {
+      "lov_list_id__lov_name": "MON_INST_USER_USAGE",
+      "lov_code": "A",
+      "lov_order_by": 10,
+      "lov_label": "code A",
+      "row_module_id__mdl_name": "Monitor",
+      "lov_color": null,
+      "lov_color_bg": null,
+      "lov_icon": null,
+      "lov_display": ["L"]
+     }
+    },
+    {
+     "object": "FieldListCode",
+     "userkey": "MON_INST_USER_USAGE~B",
+     "item": {
+      "lov_list_id__lov_name": "MON_INST_USER_USAGE",
+      "lov_code": "B",
+      "lov_order_by": 20,
+      "lov_label": "code B",
+      "row_module_id__mdl_name": "Monitor",
+      "lov_color": null,
+      "lov_color_bg": null,
+      "lov_icon": null,
+      "lov_display": ["L"]
+     }
+    },
+    {
+     "object": "FieldListCode",
+     "userkey": "MON_INST_USER_USAGE~C",
+     "item": {
+      "lov_list_id__lov_name": "MON_INST_USER_USAGE",
+      "lov_code": "C",
+      "lov_order_by": 30,
+      "lov_label": "code C",
+      "row_module_id__mdl_name": "Monitor",
+      "lov_color": null,
+      "lov_color_bg": null,
+      "lov_icon": null,
+      "lov_display": ["L"]
+     }
+    },
     {
      "object": "FieldListCode",
      "userkey": "MONHEASTATUS~OK",
@@ -180,6 +377,248 @@
    "icon": "img/system/translation",
    "field": "row_module_id",
    "list": [
+    {
+     "object": "FieldListValue",
+     "userkey": "MON_INST_MODEL_SIZE~A~ENU",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "MON_INST_MODEL_SIZE",
+      "lov_code_id__lov_code": "A",
+      "lov_lang": "ENU",
+      "lov_value": "A",
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "MON_INST_MODEL_SIZE~B~ENU",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "MON_INST_MODEL_SIZE",
+      "lov_code_id__lov_code": "B",
+      "lov_lang": "ENU",
+      "lov_value": "B",
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "MON_INST_MODEL_SIZE~C~ENU",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "MON_INST_MODEL_SIZE",
+      "lov_code_id__lov_code": "C",
+      "lov_lang": "ENU",
+      "lov_value": "C",
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "MON_INST_MODEL_SIZE~A~FRA",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "MON_INST_MODEL_SIZE",
+      "lov_code_id__lov_code": "A",
+      "lov_lang": "FRA",
+      "lov_value": "A",
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "MON_INST_MODEL_SIZE~B~FRA",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "MON_INST_MODEL_SIZE",
+      "lov_code_id__lov_code": "B",
+      "lov_lang": "FRA",
+      "lov_value": "B",
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "MON_INST_MODEL_SIZE~C~FRA",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "MON_INST_MODEL_SIZE",
+      "lov_code_id__lov_code": "C",
+      "lov_lang": "FRA",
+      "lov_value": "C",
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "MON_INST_USAGE_SIZE~XS~ENU",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "MON_INST_USAGE_SIZE",
+      "lov_code_id__lov_code": "XS",
+      "lov_lang": "ENU",
+      "lov_value": "XS",
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "MON_INST_USAGE_SIZE~S~ENU",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "MON_INST_USAGE_SIZE",
+      "lov_code_id__lov_code": "S",
+      "lov_lang": "ENU",
+      "lov_value": "S",
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "MON_INST_USAGE_SIZE~M~ENU",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "MON_INST_USAGE_SIZE",
+      "lov_code_id__lov_code": "M",
+      "lov_lang": "ENU",
+      "lov_value": "M",
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "MON_INST_USAGE_SIZE~L~ENU",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "MON_INST_USAGE_SIZE",
+      "lov_code_id__lov_code": "L",
+      "lov_lang": "ENU",
+      "lov_value": "L",
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "MON_INST_USAGE_SIZE~XXL~ENU",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "MON_INST_USAGE_SIZE",
+      "lov_code_id__lov_code": "XXL",
+      "lov_lang": "ENU",
+      "lov_value": "XXL",
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "MON_INST_USAGE_SIZE~XS~FRA",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "MON_INST_USAGE_SIZE",
+      "lov_code_id__lov_code": "XS",
+      "lov_lang": "FRA",
+      "lov_value": "Xs",
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "MON_INST_USAGE_SIZE~S~FRA",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "MON_INST_USAGE_SIZE",
+      "lov_code_id__lov_code": "S",
+      "lov_lang": "FRA",
+      "lov_value": "S",
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "MON_INST_USAGE_SIZE~M~FRA",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "MON_INST_USAGE_SIZE",
+      "lov_code_id__lov_code": "M",
+      "lov_lang": "FRA",
+      "lov_value": "M",
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "MON_INST_USAGE_SIZE~L~FRA",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "MON_INST_USAGE_SIZE",
+      "lov_code_id__lov_code": "L",
+      "lov_lang": "FRA",
+      "lov_value": "L",
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "MON_INST_USAGE_SIZE~XXL~FRA",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "MON_INST_USAGE_SIZE",
+      "lov_code_id__lov_code": "XXL",
+      "lov_lang": "FRA",
+      "lov_value": "Xxl",
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "MON_INST_USER_USAGE~A~ENU",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "MON_INST_USER_USAGE",
+      "lov_code_id__lov_code": "A",
+      "lov_lang": "ENU",
+      "lov_value": "A",
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "MON_INST_USER_USAGE~B~ENU",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "MON_INST_USER_USAGE",
+      "lov_code_id__lov_code": "B",
+      "lov_lang": "ENU",
+      "lov_value": "B",
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "MON_INST_USER_USAGE~C~ENU",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "MON_INST_USER_USAGE",
+      "lov_code_id__lov_code": "C",
+      "lov_lang": "ENU",
+      "lov_value": "C",
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "MON_INST_USER_USAGE~A~FRA",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "MON_INST_USER_USAGE",
+      "lov_code_id__lov_code": "A",
+      "lov_lang": "FRA",
+      "lov_value": "A",
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "MON_INST_USER_USAGE~B~FRA",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "MON_INST_USER_USAGE",
+      "lov_code_id__lov_code": "B",
+      "lov_lang": "FRA",
+      "lov_value": "B",
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "MON_INST_USER_USAGE~C~FRA",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "MON_INST_USER_USAGE",
+      "lov_code_id__lov_code": "C",
+      "lov_lang": "FRA",
+      "lov_value": "C",
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
     {
      "object": "FieldListValue",
      "userkey": "MONHEASTATUS~KO~ENU",
@@ -1868,6 +2307,92 @@
     },
     {
      "object": "Field",
+     "userkey": "monInstMemoryUsage",
+     "item": {
+      "fld_name": "monInstMemoryUsage",
+      "fld_dbname": "mon_inst_memory_usage",
+      "fld_visible": "3",
+      "fld_updatable": "0",
+      "fld_required": false,
+      "fld_fonctid": false,
+      "fld_research": "1",
+      "fld_researchreq": "0",
+      "fld_sort": "C",
+      "fld_more": false,
+      "fld_listmore": false,
+      "fld_listsum": null,
+      "fld_exportable": true,
+      "fld_tray": null,
+      "fld_type": "7",
+      "fld_type_id__flt_code": null,
+      "fld_list_id__lov_name": "MON_INST_USAGE_SIZE",
+      "fld_copy": true,
+      "fld_size": 3,
+      "fld_minsize": null,
+      "fld_precision": null,
+      "fld_fromdate_id__fld_name": null,
+      "fld_dfault": null,
+      "fld_indexable": false,
+      "fld_autocomp": "0",
+      "fld_groupby": false,
+      "fld_updall": true,
+      "fld_case": null,
+      "fld_righttoleft": false,
+      "fld_rendering": null,
+      "fld_speech": null,
+      "fld_calc": null,
+      "fld_objlist": null,
+      "fld_comment": null,
+      "fld_classification": null,
+      "row_module_id__mdl_name": "Monitor",
+      "fld_incrementsyntax": null
+     }
+    },
+    {
+     "object": "Field",
+     "userkey": "monInstModelSize",
+     "item": {
+      "fld_name": "monInstModelSize",
+      "fld_dbname": "mon_inst_model_size",
+      "fld_visible": "3",
+      "fld_updatable": "0",
+      "fld_required": false,
+      "fld_fonctid": false,
+      "fld_research": "1",
+      "fld_researchreq": "0",
+      "fld_sort": "C",
+      "fld_more": false,
+      "fld_listmore": false,
+      "fld_listsum": null,
+      "fld_exportable": true,
+      "fld_tray": null,
+      "fld_type": "7",
+      "fld_type_id__flt_code": null,
+      "fld_list_id__lov_name": "MON_INST_USAGE_SIZE",
+      "fld_copy": true,
+      "fld_size": 3,
+      "fld_minsize": null,
+      "fld_precision": null,
+      "fld_fromdate_id__fld_name": null,
+      "fld_dfault": null,
+      "fld_indexable": false,
+      "fld_autocomp": "0",
+      "fld_groupby": false,
+      "fld_updall": true,
+      "fld_case": null,
+      "fld_righttoleft": false,
+      "fld_rendering": null,
+      "fld_speech": null,
+      "fld_calc": null,
+      "fld_objlist": null,
+      "fld_comment": null,
+      "fld_classification": null,
+      "row_module_id__mdl_name": "Monitor",
+      "fld_incrementsyntax": null
+     }
+    },
+    {
+     "object": "Field",
      "userkey": "monInstPollFreq",
      "item": {
       "fld_name": "monInstPollFreq",
@@ -1975,6 +2500,49 @@
       "fld_list_id__lov_name": null,
       "fld_copy": true,
       "fld_size": 100,
+      "fld_minsize": null,
+      "fld_precision": null,
+      "fld_fromdate_id__fld_name": null,
+      "fld_dfault": null,
+      "fld_indexable": false,
+      "fld_autocomp": "0",
+      "fld_groupby": false,
+      "fld_updall": true,
+      "fld_case": null,
+      "fld_righttoleft": false,
+      "fld_rendering": null,
+      "fld_speech": null,
+      "fld_calc": null,
+      "fld_objlist": null,
+      "fld_comment": null,
+      "fld_classification": null,
+      "row_module_id__mdl_name": "Monitor",
+      "fld_incrementsyntax": null
+     }
+    },
+    {
+     "object": "Field",
+     "userkey": "monInstUserUsage",
+     "item": {
+      "fld_name": "monInstUserUsage",
+      "fld_dbname": "mon_inst_user_usage",
+      "fld_visible": "3",
+      "fld_updatable": "0",
+      "fld_required": false,
+      "fld_fonctid": false,
+      "fld_research": "1",
+      "fld_researchreq": "0",
+      "fld_sort": "C",
+      "fld_more": false,
+      "fld_listmore": false,
+      "fld_listsum": null,
+      "fld_exportable": true,
+      "fld_tray": null,
+      "fld_type": "7",
+      "fld_type_id__flt_code": null,
+      "fld_list_id__lov_name": "MON_INST_USAGE_SIZE",
+      "fld_copy": true,
+      "fld_size": 3,
       "fld_minsize": null,
       "fld_precision": null,
       "fld_fromdate_id__fld_name": null,
@@ -2205,7 +2773,7 @@
       "ofa_name": "MonInstance-1",
       "ofa_position": 1,
       "ofa_title": false,
-      "ofa_ui": "<div class=\"row\">\n  <div class=\"col-sm-8\">\n    <div class=\"field\" data-field=\"monInstUrl\"><\/div>\n  <\/div>\n  <div class=\"col-sm-4\">\n    <div class=\"field\" data-field=\"monInstPollFreq\"><\/div>\n  <\/div>\n<\/div>",
+      "ofa_ui": "<div>\n  <div class=\"row\">\n    <div class=\"col-sm-8\">\n      <div class=\"field\" data-field=\"monInstUrl\"><\/div>\n    <\/div>\n    <div class=\"col-sm-4\">\n      <div class=\"field\" data-field=\"monInstPollFreq\"><\/div>\n    <\/div>\n  <\/div>\n  <div class=\"row\">\n    <div class=\"col-sm-4\">\n      <div class=\"field\" data-field=\"monInstMemoryUsage\"><\/div>\n    <\/div>\n    <div class=\"col-sm-4\">\n      <div class=\"field\" data-field=\"monInstUserUsage\"><\/div>\n    <\/div>\n    <div class=\"col-sm-4\">\n      <div class=\"field\" data-field=\"monInstModelSize\"><\/div>\n    <\/div>\n  <\/div>\n<\/div>",
       "ofa_icon": null,
       "row_module_id__mdl_name": "Monitor"
      }
@@ -4512,6 +5080,129 @@
       "obf_field_id__fld_dbname": "mon_inst_poll_freq",
       "obf_field_id__fld_type": "1",
       "obf_order": 20,
+      "obf_group_by": null,
+      "obf_dfault_order": null,
+      "obf_input": null,
+      "obf_ref_field_id__fld_name": null,
+      "obf_ref_object_id__obo_name": null,
+      "obf_cascad": null,
+      "obf_card": null,
+      "obf_visible": null,
+      "obf_ref_export": true,
+      "obf_copy": null,
+      "obf_ref_order": null,
+      "obf_fld_visible": null,
+      "obf_fld_required": null,
+      "obf_fld_updatable": null,
+      "obf_fld_research": null,
+      "obf_fld_more": null,
+      "obf_fld_listmore": null,
+      "obf_fld_researchreq": null,
+      "obf_fld_dfault": null,
+      "obf_field_id__fld_dfault": null,
+      "obf_fld_exportable": null,
+      "obf_field_id__fld_exportable": true,
+      "obf_fld_uk": null,
+      "obf_area_id__ofa_name": "MonInstance-1",
+      "obf_area_id__ofa_position": 1,
+      "row_module_id__mdl_name": "Monitor",
+      "obf_joined_id__obf_object_id__obo_name": null,
+      "obf_joined_id__obf_field_id__fld_name": null,
+      "obf_joined_id__obf_order": null
+     }
+    },
+    {
+     "object": "ObjectFieldSystem",
+     "userkey": "MonInstance~monInstMemoryUsage~30",
+     "item": {
+      "obf_object_id__obo_name": "MonInstance",
+      "obf_object_id__obo_dbtable": "mon_instance",
+      "obf_field_id__fld_name": "monInstMemoryUsage",
+      "obf_field_id__fld_dbname": "mon_inst_memory_usage",
+      "obf_field_id__fld_type": "7",
+      "obf_order": 30,
+      "obf_group_by": null,
+      "obf_dfault_order": null,
+      "obf_input": null,
+      "obf_ref_field_id__fld_name": null,
+      "obf_ref_object_id__obo_name": null,
+      "obf_cascad": null,
+      "obf_card": null,
+      "obf_visible": null,
+      "obf_ref_export": true,
+      "obf_copy": null,
+      "obf_ref_order": null,
+      "obf_fld_visible": null,
+      "obf_fld_required": null,
+      "obf_fld_updatable": null,
+      "obf_fld_research": null,
+      "obf_fld_more": null,
+      "obf_fld_listmore": null,
+      "obf_fld_researchreq": null,
+      "obf_fld_dfault": null,
+      "obf_field_id__fld_dfault": null,
+      "obf_fld_exportable": null,
+      "obf_field_id__fld_exportable": true,
+      "obf_fld_uk": null,
+      "obf_area_id__ofa_name": "MonInstance-1",
+      "obf_area_id__ofa_position": 1,
+      "row_module_id__mdl_name": "Monitor",
+      "obf_joined_id__obf_object_id__obo_name": null,
+      "obf_joined_id__obf_field_id__fld_name": null,
+      "obf_joined_id__obf_order": null
+     }
+    },
+    {
+     "object": "ObjectFieldSystem",
+     "userkey": "MonInstance~monInstUserUsage~40",
+     "item": {
+      "obf_object_id__obo_name": "MonInstance",
+      "obf_object_id__obo_dbtable": "mon_instance",
+      "obf_field_id__fld_name": "monInstUserUsage",
+      "obf_field_id__fld_dbname": "mon_inst_user_usage",
+      "obf_field_id__fld_type": "7",
+      "obf_order": 40,
+      "obf_group_by": null,
+      "obf_dfault_order": null,
+      "obf_input": null,
+      "obf_ref_field_id__fld_name": null,
+      "obf_ref_object_id__obo_name": null,
+      "obf_cascad": null,
+      "obf_card": null,
+      "obf_visible": null,
+      "obf_ref_export": true,
+      "obf_copy": null,
+      "obf_ref_order": null,
+      "obf_fld_visible": null,
+      "obf_fld_required": null,
+      "obf_fld_updatable": null,
+      "obf_fld_research": null,
+      "obf_fld_more": null,
+      "obf_fld_listmore": null,
+      "obf_fld_researchreq": null,
+      "obf_fld_dfault": null,
+      "obf_field_id__fld_dfault": null,
+      "obf_fld_exportable": null,
+      "obf_field_id__fld_exportable": true,
+      "obf_fld_uk": null,
+      "obf_area_id__ofa_name": "MonInstance-1",
+      "obf_area_id__ofa_position": 1,
+      "row_module_id__mdl_name": "Monitor",
+      "obf_joined_id__obf_object_id__obo_name": null,
+      "obf_joined_id__obf_field_id__fld_name": null,
+      "obf_joined_id__obf_order": null
+     }
+    },
+    {
+     "object": "ObjectFieldSystem",
+     "userkey": "MonInstance~monInstModelSize~50",
+     "item": {
+      "obf_object_id__obo_name": "MonInstance",
+      "obf_object_id__obo_dbtable": "mon_instance",
+      "obf_field_id__fld_name": "monInstModelSize",
+      "obf_field_id__fld_dbname": "mon_inst_model_size",
+      "obf_field_id__fld_type": "7",
+      "obf_order": 50,
       "obf_group_by": null,
       "obf_dfault_order": null,
       "obf_input": null,
@@ -7286,6 +7977,138 @@
       },
       "tsl_lang": "FRA",
       "tsl_value": "Nom",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monInstMemoryUsage)~ENU",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monInstMemoryUsage"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monInstMemoryUsage",
+       "object": "Field"
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Memory Usage",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monInstMemoryUsage)~FRA",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monInstMemoryUsage"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monInstMemoryUsage",
+       "object": "Field"
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Inst memory usage",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monInstUserUsage)~ENU",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monInstUserUsage"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monInstUserUsage",
+       "object": "Field"
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "User Usage",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monInstUserUsage)~FRA",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monInstUserUsage"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monInstUserUsage",
+       "object": "Field"
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Inst user usage",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monInstModelSize)~ENU",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monInstModelSize"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monInstModelSize",
+       "object": "Field"
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Model Size",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monInstModelSize)~FRA",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monInstModelSize"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monInstModelSize",
+       "object": "Field"
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Inst model size",
       "tsl_simplehelp": null,
       "tsl_plural_value": null,
       "tsl_short_value": null,
