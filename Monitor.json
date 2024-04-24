@@ -76,7 +76,7 @@
      "mod_doc": {
       "path": "files/Model/Monitor.svg",
       "mime": "image/svg+xml",
-      "name": "model.svg"
+      "name": "Monitor.svg"
      },
      "mod_image": {
       "path": "files/Model/Monitor.png",
@@ -2099,7 +2099,7 @@
      "userkey": "MonProjectInstance",
      "item": {
       "tpl_name": "MonProjectInstance",
-      "tpl_ui": "<div>\n  <div class=\"row\">\n    <div class=\"col-sm-8\">\n      <div class=\"area\" data-area=\"1\"><\/div>\n    <\/div>\n    <div class=\"col-sm-4\">\n      <div class=\"area\" data-area=\"2\"><\/div>\n    <\/div>\n  <\/div>\n  <div class=\"extern\" data-extern=\"MonInstGraphExt\" data-title=\"false\" style=\"width: 100%; height: 100%;\"><\/div>\n<\/div>",
+      "tpl_ui": "<div>\n  <div class=\"row\">\n    <div class=\"col-sm-8\">\n      <div class=\"area\" data-area=\"1\"><\/div>\n    <\/div>\n    <div class=\"col-sm-4\">\n      <div class=\"area\" data-area=\"2\"><\/div>\n    <\/div>\n  <\/div>\n<\/div>",
       "tpl_min": null,
       "tpl_image": null,
       "tpl_grid": null,
@@ -4850,7 +4850,6 @@
       "act_method": "callInstance",
       "act_script": null,
       "act_url": null,
-      "act_image": "icon/color/play",
       "act_confirm": true,
       "act_confirm_expr": null,
       "act_confirm_ui": null,
@@ -4862,6 +4861,7 @@
       "act_order": null,
       "act_color": null,
       "act_color_bg": null,
+      "act_image": "icon/color/play",
       "act_group_id__acg_name": null,
       "act_queue_id__acq_name": null,
       "act_queue_id__acq_type": null
@@ -4878,7 +4878,6 @@
       "act_method": "callInstances",
       "act_script": null,
       "act_url": null,
-      "act_image": "icon/color/play",
       "act_confirm": true,
       "act_confirm_expr": null,
       "act_confirm_ui": null,
@@ -4890,6 +4889,7 @@
       "act_order": null,
       "act_color": null,
       "act_color_bg": null,
+      "act_image": "icon/color/play",
       "act_group_id__acg_name": null,
       "act_queue_id__acq_name": null,
       "act_queue_id__acq_type": null
@@ -5449,50 +5449,6 @@
    "list": [
     {
      "object": "TranslateField",
-     "userkey": "Field(monCntEmail)~ENU",
-     "item": {
-      "tsl_object": {
-       "item": {"fld_name": "monCntEmail"},
-       "icon": "img/system/field",
-       "label": "Field",
-       "userkeylabel": "monCntEmail",
-       "object": "Field"
-      },
-      "tsl_lang": "ENU",
-      "tsl_value": "Email",
-      "tsl_simplehelp": null,
-      "tsl_plural_value": null,
-      "tsl_short_value": null,
-      "tsl_placeholder": null,
-      "tsl_listhelp": null,
-      "tsl_tooltip": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateField",
-     "userkey": "Field(monCntEmail)~FRA",
-     "item": {
-      "tsl_object": {
-       "item": {"fld_name": "monCntEmail"},
-       "icon": "img/system/field",
-       "label": "Field",
-       "userkeylabel": "monCntEmail",
-       "object": "Field"
-      },
-      "tsl_lang": "FRA",
-      "tsl_value": "Email",
-      "tsl_simplehelp": null,
-      "tsl_plural_value": null,
-      "tsl_short_value": null,
-      "tsl_placeholder": null,
-      "tsl_listhelp": null,
-      "tsl_tooltip": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateField",
      "userkey": "Field(monCntprjCntId)~ENU",
      "item": {
       "tsl_object": {
@@ -5581,17 +5537,17 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "Field(monHeaDatabasePatchLevel)~ENU",
+     "userkey": "Field(monCntEmail)~ENU",
      "item": {
       "tsl_object": {
-       "item": {"fld_name": "monHeaDatabasePatchLevel"},
+       "item": {"fld_name": "monCntEmail"},
        "icon": "img/system/field",
        "label": "Field",
-       "userkeylabel": "monHeaDatabasePatchLevel",
+       "userkeylabel": "monCntEmail",
        "object": "Field"
       },
       "tsl_lang": "ENU",
-      "tsl_value": "Database Patch Level",
+      "tsl_value": "Email",
       "tsl_simplehelp": null,
       "tsl_plural_value": null,
       "tsl_short_value": null,
@@ -5603,17 +5559,17 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "Field(monHeaDatabasePatchLevel)~FRA",
+     "userkey": "Field(monCntEmail)~FRA",
      "item": {
       "tsl_object": {
-       "item": {"fld_name": "monHeaDatabasePatchLevel"},
+       "item": {"fld_name": "monCntEmail"},
        "icon": "img/system/field",
        "label": "Field",
-       "userkeylabel": "monHeaDatabasePatchLevel",
+       "userkeylabel": "monCntEmail",
        "object": "Field"
       },
       "tsl_lang": "FRA",
-      "tsl_value": "Niveau patch BDD",
+      "tsl_value": "Email",
       "tsl_simplehelp": null,
       "tsl_plural_value": null,
       "tsl_short_value": null,
@@ -5625,17 +5581,17 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "Field(monHeaConstraints)~ENU",
+     "userkey": "Field(monHeaActiveUsers)~ENU",
      "item": {
       "tsl_object": {
-       "item": {"fld_name": "monHeaConstraints"},
+       "item": {"fld_name": "monHeaActiveUsers"},
        "icon": "img/system/field",
        "label": "Field",
-       "userkeylabel": "monHeaConstraints",
+       "userkeylabel": "monHeaActiveUsers",
        "object": "Field"
       },
       "tsl_lang": "ENU",
-      "tsl_value": "Constraints",
+      "tsl_value": "Active Users",
       "tsl_simplehelp": null,
       "tsl_plural_value": null,
       "tsl_short_value": null,
@@ -5647,17 +5603,17 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "Field(monHeaConstraints)~FRA",
+     "userkey": "Field(monHeaActiveUsers)~FRA",
      "item": {
       "tsl_object": {
-       "item": {"fld_name": "monHeaConstraints"},
+       "item": {"fld_name": "monHeaActiveUsers"},
        "icon": "img/system/field",
        "label": "Field",
-       "userkeylabel": "monHeaConstraints",
+       "userkeylabel": "monHeaActiveUsers",
        "object": "Field"
       },
       "tsl_lang": "FRA",
-      "tsl_value": "Contraintes",
+      "tsl_value": "Hea active users",
       "tsl_simplehelp": null,
       "tsl_plural_value": null,
       "tsl_short_value": null,
@@ -5713,6 +5669,50 @@
     },
     {
      "object": "TranslateField",
+     "userkey": "Field(monHeaConstraints)~ENU",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monHeaConstraints"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monHeaConstraints",
+       "object": "Field"
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Constraints",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monHeaConstraints)~FRA",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monHeaConstraints"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monHeaConstraints",
+       "object": "Field"
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Contraintes",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
      "userkey": "Field(monHeaBuiltOn)~ENU",
      "item": {
       "tsl_object": {
@@ -5746,6 +5746,50 @@
       },
       "tsl_lang": "FRA",
       "tsl_value": "Compilé le",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monHeaDatabasePatchLevel)~ENU",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monHeaDatabasePatchLevel"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monHeaDatabasePatchLevel",
+       "object": "Field"
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Database Patch Level",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monHeaDatabasePatchLevel)~FRA",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monHeaDatabasePatchLevel"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monHeaDatabasePatchLevel",
+       "object": "Field"
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Niveau patch BDD",
       "tsl_simplehelp": null,
       "tsl_plural_value": null,
       "tsl_short_value": null,
@@ -5801,50 +5845,6 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "Field(monHeaDate)~ENU",
-     "item": {
-      "tsl_object": {
-       "item": {"fld_name": "monHeaDate"},
-       "icon": "img/system/field",
-       "label": "Field",
-       "userkeylabel": "monHeaDate",
-       "object": "Field"
-      },
-      "tsl_lang": "ENU",
-      "tsl_value": "Date",
-      "tsl_simplehelp": null,
-      "tsl_plural_value": null,
-      "tsl_short_value": null,
-      "tsl_placeholder": null,
-      "tsl_listhelp": null,
-      "tsl_tooltip": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateField",
-     "userkey": "Field(monHeaDate)~FRA",
-     "item": {
-      "tsl_object": {
-       "item": {"fld_name": "monHeaDate"},
-       "icon": "img/system/field",
-       "label": "Field",
-       "userkeylabel": "monHeaDate",
-       "object": "Field"
-      },
-      "tsl_lang": "FRA",
-      "tsl_value": "Date",
-      "tsl_simplehelp": null,
-      "tsl_plural_value": null,
-      "tsl_short_value": null,
-      "tsl_placeholder": null,
-      "tsl_listhelp": null,
-      "tsl_tooltip": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateField",
      "userkey": "Field(monHeaAppVersion)~ENU",
      "item": {
       "tsl_object": {
@@ -5889,50 +5889,6 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "Field(monHeaFreeHeap)~ENU",
-     "item": {
-      "tsl_object": {
-       "item": {"fld_name": "monHeaFreeHeap"},
-       "icon": "img/system/field",
-       "label": "Field",
-       "userkeylabel": "monHeaFreeHeap",
-       "object": "Field"
-      },
-      "tsl_lang": "ENU",
-      "tsl_value": "Free Heap",
-      "tsl_simplehelp": null,
-      "tsl_plural_value": null,
-      "tsl_short_value": null,
-      "tsl_placeholder": null,
-      "tsl_listhelp": null,
-      "tsl_tooltip": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateField",
-     "userkey": "Field(monHeaFreeHeap)~FRA",
-     "item": {
-      "tsl_object": {
-       "item": {"fld_name": "monHeaFreeHeap"},
-       "icon": "img/system/field",
-       "label": "Field",
-       "userkeylabel": "monHeaFreeHeap",
-       "object": "Field"
-      },
-      "tsl_lang": "FRA",
-      "tsl_value": "Heap libre",
-      "tsl_simplehelp": null,
-      "tsl_plural_value": null,
-      "tsl_short_value": null,
-      "tsl_placeholder": null,
-      "tsl_listhelp": null,
-      "tsl_tooltip": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateField",
      "userkey": "Field(monHeaActions)~ENU",
      "item": {
       "tsl_object": {
@@ -5966,6 +5922,94 @@
       },
       "tsl_lang": "FRA",
       "tsl_value": "Actions",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monHeaDate)~ENU",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monHeaDate"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monHeaDate",
+       "object": "Field"
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Date",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monHeaDate)~FRA",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monHeaDate"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monHeaDate",
+       "object": "Field"
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Date",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monHeaFreeHeap)~ENU",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monHeaFreeHeap"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monHeaFreeHeap",
+       "object": "Field"
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Free Heap",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monHeaFreeHeap)~FRA",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monHeaFreeHeap"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monHeaFreeHeap",
+       "object": "Field"
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Heap libre",
       "tsl_simplehelp": null,
       "tsl_plural_value": null,
       "tsl_short_value": null,
@@ -6241,6 +6285,94 @@
     },
     {
      "object": "TranslateField",
+     "userkey": "Field(monHeaInactiveUsers)~ENU",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monHeaInactiveUsers"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monHeaInactiveUsers",
+       "object": "Field"
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Inactive Users",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monHeaInactiveUsers)~FRA",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monHeaInactiveUsers"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monHeaInactiveUsers",
+       "object": "Field"
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Hea inactive users",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monHeaInstId)~ENU",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monHeaInstId"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monHeaInstId",
+       "object": "Field"
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Instance",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monHeaInstId)~FRA",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monHeaInstId"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monHeaInstId",
+       "object": "Field"
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Instance",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
      "userkey": "Field(monHeaLastLogin)~ENU",
      "item": {
       "tsl_object": {
@@ -6274,50 +6406,6 @@
       },
       "tsl_lang": "FRA",
       "tsl_value": "Dernière Connexion",
-      "tsl_simplehelp": null,
-      "tsl_plural_value": null,
-      "tsl_short_value": null,
-      "tsl_placeholder": null,
-      "tsl_listhelp": null,
-      "tsl_tooltip": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateField",
-     "userkey": "Field(monHeaMaxHeapSize)~ENU",
-     "item": {
-      "tsl_object": {
-       "item": {"fld_name": "monHeaMaxHeapSize"},
-       "icon": "img/system/field",
-       "label": "Field",
-       "userkeylabel": "monHeaMaxHeapSize",
-       "object": "Field"
-      },
-      "tsl_lang": "ENU",
-      "tsl_value": "Max Heap Size",
-      "tsl_simplehelp": null,
-      "tsl_plural_value": null,
-      "tsl_short_value": null,
-      "tsl_placeholder": null,
-      "tsl_listhelp": null,
-      "tsl_tooltip": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateField",
-     "userkey": "Field(monHeaMaxHeapSize)~FRA",
-     "item": {
-      "tsl_object": {
-       "item": {"fld_name": "monHeaMaxHeapSize"},
-       "icon": "img/system/field",
-       "label": "Field",
-       "userkeylabel": "monHeaMaxHeapSize",
-       "object": "Field"
-      },
-      "tsl_lang": "FRA",
-      "tsl_value": "Heap max",
       "tsl_simplehelp": null,
       "tsl_plural_value": null,
       "tsl_short_value": null,
@@ -6373,50 +6461,6 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "Field(monHeaObjectCacheRatio)~ENU",
-     "item": {
-      "tsl_object": {
-       "item": {"fld_name": "monHeaObjectCacheRatio"},
-       "icon": "img/system/field",
-       "label": "Field",
-       "userkeylabel": "monHeaObjectCacheRatio",
-       "object": "Field"
-      },
-      "tsl_lang": "ENU",
-      "tsl_value": "Object Cache Usage",
-      "tsl_simplehelp": null,
-      "tsl_plural_value": null,
-      "tsl_short_value": null,
-      "tsl_placeholder": null,
-      "tsl_listhelp": null,
-      "tsl_tooltip": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateField",
-     "userkey": "Field(monHeaObjectCacheRatio)~FRA",
-     "item": {
-      "tsl_object": {
-       "item": {"fld_name": "monHeaObjectCacheRatio"},
-       "icon": "img/system/field",
-       "label": "Field",
-       "userkeylabel": "monHeaObjectCacheRatio",
-       "object": "Field"
-      },
-      "tsl_lang": "FRA",
-      "tsl_value": "Utilisation Cache Objet",
-      "tsl_simplehelp": null,
-      "tsl_plural_value": null,
-      "tsl_short_value": "Object Usage",
-      "tsl_placeholder": null,
-      "tsl_listhelp": null,
-      "tsl_tooltip": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateField",
      "userkey": "Field(monHeaObjectCache)~ENU",
      "item": {
       "tsl_object": {
@@ -6461,6 +6505,94 @@
     },
     {
      "object": "TranslateField",
+     "userkey": "Field(monHeaObjectCacheRatio)~ENU",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monHeaObjectCacheRatio"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monHeaObjectCacheRatio",
+       "object": "Field"
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Object Cache Usage",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monHeaObjectCacheRatio)~FRA",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monHeaObjectCacheRatio"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monHeaObjectCacheRatio",
+       "object": "Field"
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Utilisation Cache Objet",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": "Object Usage",
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monHeaMaxHeapSize)~ENU",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monHeaMaxHeapSize"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monHeaMaxHeapSize",
+       "object": "Field"
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Max Heap Size",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monHeaMaxHeapSize)~FRA",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monHeaMaxHeapSize"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monHeaMaxHeapSize",
+       "object": "Field"
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Heap max",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
      "userkey": "Field(monHeaObjects)~ENU",
      "item": {
       "tsl_object": {
@@ -6494,6 +6626,50 @@
       },
       "tsl_lang": "FRA",
       "tsl_value": "Objets",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monHeaPendingUsers)~ENU",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monHeaPendingUsers"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monHeaPendingUsers",
+       "object": "Field"
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Pending Users",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monHeaPendingUsers)~FRA",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monHeaPendingUsers"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monHeaPendingUsers",
+       "object": "Field"
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Hea pending users",
       "tsl_simplehelp": null,
       "tsl_plural_value": null,
       "tsl_short_value": null,
@@ -6593,50 +6769,6 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "Field(monHeaInstId)~ENU",
-     "item": {
-      "tsl_object": {
-       "item": {"fld_name": "monHeaInstId"},
-       "icon": "img/system/field",
-       "label": "Field",
-       "userkeylabel": "monHeaInstId",
-       "object": "Field"
-      },
-      "tsl_lang": "ENU",
-      "tsl_value": "Instance",
-      "tsl_simplehelp": null,
-      "tsl_plural_value": null,
-      "tsl_short_value": null,
-      "tsl_placeholder": null,
-      "tsl_listhelp": null,
-      "tsl_tooltip": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateField",
-     "userkey": "Field(monHeaInstId)~FRA",
-     "item": {
-      "tsl_object": {
-       "item": {"fld_name": "monHeaInstId"},
-       "icon": "img/system/field",
-       "label": "Field",
-       "userkeylabel": "monHeaInstId",
-       "object": "Field"
-      },
-      "tsl_lang": "FRA",
-      "tsl_value": "Instance",
-      "tsl_simplehelp": null,
-      "tsl_plural_value": null,
-      "tsl_short_value": null,
-      "tsl_placeholder": null,
-      "tsl_listhelp": null,
-      "tsl_tooltip": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateField",
      "userkey": "Field(monHeaSessions)~ENU",
      "item": {
       "tsl_object": {
@@ -6670,182 +6802,6 @@
       },
       "tsl_lang": "FRA",
       "tsl_value": "Sessions",
-      "tsl_simplehelp": null,
-      "tsl_plural_value": null,
-      "tsl_short_value": null,
-      "tsl_placeholder": null,
-      "tsl_listhelp": null,
-      "tsl_tooltip": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateField",
-     "userkey": "Field(monHeaStatus)~ENU",
-     "item": {
-      "tsl_object": {
-       "item": {"fld_name": "monHeaStatus"},
-       "icon": "img/system/field",
-       "label": "Field",
-       "userkeylabel": "monHeaStatus",
-       "object": "Field"
-      },
-      "tsl_lang": "ENU",
-      "tsl_value": "Status",
-      "tsl_simplehelp": null,
-      "tsl_plural_value": null,
-      "tsl_short_value": null,
-      "tsl_placeholder": null,
-      "tsl_listhelp": null,
-      "tsl_tooltip": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateField",
-     "userkey": "Field(monHeaStatus)~FRA",
-     "item": {
-      "tsl_object": {
-       "item": {"fld_name": "monHeaStatus"},
-       "icon": "img/system/field",
-       "label": "Field",
-       "userkeylabel": "monHeaStatus",
-       "object": "Field"
-      },
-      "tsl_lang": "FRA",
-      "tsl_value": "Statut",
-      "tsl_simplehelp": null,
-      "tsl_plural_value": null,
-      "tsl_short_value": null,
-      "tsl_placeholder": null,
-      "tsl_listhelp": null,
-      "tsl_tooltip": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateField",
-     "userkey": "Field(monHeaTotalUsers)~ENU",
-     "item": {
-      "tsl_object": {
-       "item": {"fld_name": "monHeaTotalUsers"},
-       "icon": "img/system/field",
-       "label": "Field",
-       "userkeylabel": "monHeaTotalUsers",
-       "object": "Field"
-      },
-      "tsl_lang": "ENU",
-      "tsl_value": "Total Users",
-      "tsl_simplehelp": null,
-      "tsl_plural_value": null,
-      "tsl_short_value": null,
-      "tsl_placeholder": null,
-      "tsl_listhelp": null,
-      "tsl_tooltip": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateField",
-     "userkey": "Field(monHeaTotalUsers)~FRA",
-     "item": {
-      "tsl_object": {
-       "item": {"fld_name": "monHeaTotalUsers"},
-       "icon": "img/system/field",
-       "label": "Field",
-       "userkeylabel": "monHeaTotalUsers",
-       "object": "Field"
-      },
-      "tsl_lang": "FRA",
-      "tsl_value": "Total utilisateurs",
-      "tsl_simplehelp": null,
-      "tsl_plural_value": null,
-      "tsl_short_value": null,
-      "tsl_placeholder": null,
-      "tsl_listhelp": null,
-      "tsl_tooltip": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateField",
-     "userkey": "Field(monHeaTotalFreeSize)~ENU",
-     "item": {
-      "tsl_object": {
-       "item": {"fld_name": "monHeaTotalFreeSize"},
-       "icon": "img/system/field",
-       "label": "Field",
-       "userkeylabel": "monHeaTotalFreeSize",
-       "object": "Field"
-      },
-      "tsl_lang": "ENU",
-      "tsl_value": "Total Free Size",
-      "tsl_simplehelp": null,
-      "tsl_plural_value": null,
-      "tsl_short_value": null,
-      "tsl_placeholder": null,
-      "tsl_listhelp": null,
-      "tsl_tooltip": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateField",
-     "userkey": "Field(monHeaTotalFreeSize)~FRA",
-     "item": {
-      "tsl_object": {
-       "item": {"fld_name": "monHeaTotalFreeSize"},
-       "icon": "img/system/field",
-       "label": "Field",
-       "userkeylabel": "monHeaTotalFreeSize",
-       "object": "Field"
-      },
-      "tsl_lang": "FRA",
-      "tsl_value": "Total Free Size",
-      "tsl_simplehelp": null,
-      "tsl_plural_value": null,
-      "tsl_short_value": null,
-      "tsl_placeholder": null,
-      "tsl_listhelp": null,
-      "tsl_tooltip": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateField",
-     "userkey": "Field(monHeaTemplates)~ENU",
-     "item": {
-      "tsl_object": {
-       "item": {"fld_name": "monHeaTemplates"},
-       "icon": "img/system/field",
-       "label": "Field",
-       "userkeylabel": "monHeaTemplates",
-       "object": "Field"
-      },
-      "tsl_lang": "ENU",
-      "tsl_value": "Templates",
-      "tsl_simplehelp": null,
-      "tsl_plural_value": null,
-      "tsl_short_value": null,
-      "tsl_placeholder": null,
-      "tsl_listhelp": null,
-      "tsl_tooltip": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateField",
-     "userkey": "Field(monHeaTemplates)~FRA",
-     "item": {
-      "tsl_object": {
-       "item": {"fld_name": "monHeaTemplates"},
-       "icon": "img/system/field",
-       "label": "Field",
-       "userkeylabel": "monHeaTemplates",
-       "object": "Field"
-      },
-      "tsl_lang": "FRA",
-      "tsl_value": "Templates",
       "tsl_simplehelp": null,
       "tsl_plural_value": null,
       "tsl_short_value": null,
@@ -6901,17 +6857,17 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "Field(monHeaVersion)~ENU",
+     "userkey": "Field(monHeaTemplates)~ENU",
      "item": {
       "tsl_object": {
-       "item": {"fld_name": "monHeaVersion"},
+       "item": {"fld_name": "monHeaTemplates"},
        "icon": "img/system/field",
        "label": "Field",
-       "userkeylabel": "monHeaVersion",
+       "userkeylabel": "monHeaTemplates",
        "object": "Field"
       },
       "tsl_lang": "ENU",
-      "tsl_value": "Platform Version",
+      "tsl_value": "Templates",
       "tsl_simplehelp": null,
       "tsl_plural_value": null,
       "tsl_short_value": null,
@@ -6923,17 +6879,149 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "Field(monHeaVersion)~FRA",
+     "userkey": "Field(monHeaTemplates)~FRA",
      "item": {
       "tsl_object": {
-       "item": {"fld_name": "monHeaVersion"},
+       "item": {"fld_name": "monHeaTemplates"},
        "icon": "img/system/field",
        "label": "Field",
-       "userkeylabel": "monHeaVersion",
+       "userkeylabel": "monHeaTemplates",
        "object": "Field"
       },
       "tsl_lang": "FRA",
-      "tsl_value": "Version Plateforme",
+      "tsl_value": "Templates",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monHeaStatus)~ENU",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monHeaStatus"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monHeaStatus",
+       "object": "Field"
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Status",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monHeaStatus)~FRA",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monHeaStatus"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monHeaStatus",
+       "object": "Field"
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Statut",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monHeaTotalFreeSize)~ENU",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monHeaTotalFreeSize"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monHeaTotalFreeSize",
+       "object": "Field"
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Total Free Size",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monHeaTotalFreeSize)~FRA",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monHeaTotalFreeSize"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monHeaTotalFreeSize",
+       "object": "Field"
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Total Free Size",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monHeaTotalUsers)~ENU",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monHeaTotalUsers"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monHeaTotalUsers",
+       "object": "Field"
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Total Users",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monHeaTotalUsers)~FRA",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monHeaTotalUsers"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monHeaTotalUsers",
+       "object": "Field"
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Total utilisateurs",
       "tsl_simplehelp": null,
       "tsl_plural_value": null,
       "tsl_short_value": null,
@@ -6978,6 +7066,138 @@
       },
       "tsl_lang": "FRA",
       "tsl_value": "Projet",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monHeaVersion)~ENU",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monHeaVersion"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monHeaVersion",
+       "object": "Field"
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Platform Version",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monHeaVersion)~FRA",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monHeaVersion"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monHeaVersion",
+       "object": "Field"
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Version Plateforme",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monHeaWebserviceUsers)~ENU",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monHeaWebserviceUsers"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monHeaWebserviceUsers",
+       "object": "Field"
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Webservice Users",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monHeaWebserviceUsers)~FRA",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monHeaWebserviceUsers"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monHeaWebserviceUsers",
+       "object": "Field"
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Hea webservice users",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monInstUrl)~ENU",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monInstUrl"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monInstUrl",
+       "object": "Field"
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "URL",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(monInstUrl)~FRA",
+     "item": {
+      "tsl_object": {
+       "item": {"fld_name": "monInstUrl"},
+       "icon": "img/system/field",
+       "label": "Field",
+       "userkeylabel": "monInstUrl",
+       "object": "Field"
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "URL",
       "tsl_simplehelp": null,
       "tsl_plural_value": null,
       "tsl_short_value": null,
@@ -7074,226 +7294,6 @@
       "tsl_tooltip": null,
       "row_module_id__mdl_name": "Monitor"
      }
-    },
-    {
-     "object": "TranslateField",
-     "userkey": "Field(monInstUrl)~ENU",
-     "item": {
-      "tsl_object": {
-       "item": {"fld_name": "monInstUrl"},
-       "icon": "img/system/field",
-       "label": "Field",
-       "userkeylabel": "monInstUrl",
-       "object": "Field"
-      },
-      "tsl_lang": "ENU",
-      "tsl_value": "URL",
-      "tsl_simplehelp": null,
-      "tsl_plural_value": null,
-      "tsl_short_value": null,
-      "tsl_placeholder": null,
-      "tsl_listhelp": null,
-      "tsl_tooltip": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateField",
-     "userkey": "Field(monInstUrl)~FRA",
-     "item": {
-      "tsl_object": {
-       "item": {"fld_name": "monInstUrl"},
-       "icon": "img/system/field",
-       "label": "Field",
-       "userkeylabel": "monInstUrl",
-       "object": "Field"
-      },
-      "tsl_lang": "FRA",
-      "tsl_value": "URL",
-      "tsl_simplehelp": null,
-      "tsl_plural_value": null,
-      "tsl_short_value": null,
-      "tsl_placeholder": null,
-      "tsl_listhelp": null,
-      "tsl_tooltip": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateField",
-     "userkey": "Field(monHeaActiveUsers)~ENU",
-     "item": {
-      "tsl_object": {
-       "item": {"fld_name": "monHeaActiveUsers"},
-       "icon": "img/system/field",
-       "label": "Field",
-       "userkeylabel": "monHeaActiveUsers",
-       "object": "Field"
-      },
-      "tsl_lang": "ENU",
-      "tsl_value": "Active Users",
-      "tsl_simplehelp": null,
-      "tsl_plural_value": null,
-      "tsl_short_value": null,
-      "tsl_placeholder": null,
-      "tsl_listhelp": null,
-      "tsl_tooltip": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateField",
-     "userkey": "Field(monHeaActiveUsers)~FRA",
-     "item": {
-      "tsl_object": {
-       "item": {"fld_name": "monHeaActiveUsers"},
-       "icon": "img/system/field",
-       "label": "Field",
-       "userkeylabel": "monHeaActiveUsers",
-       "object": "Field"
-      },
-      "tsl_lang": "FRA",
-      "tsl_value": "Hea active users",
-      "tsl_simplehelp": null,
-      "tsl_plural_value": null,
-      "tsl_short_value": null,
-      "tsl_placeholder": null,
-      "tsl_listhelp": null,
-      "tsl_tooltip": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateField",
-     "userkey": "Field(monHeaInactiveUsers)~ENU",
-     "item": {
-      "tsl_object": {
-       "item": {"fld_name": "monHeaInactiveUsers"},
-       "icon": "img/system/field",
-       "label": "Field",
-       "userkeylabel": "monHeaInactiveUsers",
-       "object": "Field"
-      },
-      "tsl_lang": "ENU",
-      "tsl_value": "Inactive Users",
-      "tsl_simplehelp": null,
-      "tsl_plural_value": null,
-      "tsl_short_value": null,
-      "tsl_placeholder": null,
-      "tsl_listhelp": null,
-      "tsl_tooltip": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateField",
-     "userkey": "Field(monHeaInactiveUsers)~FRA",
-     "item": {
-      "tsl_object": {
-       "item": {"fld_name": "monHeaInactiveUsers"},
-       "icon": "img/system/field",
-       "label": "Field",
-       "userkeylabel": "monHeaInactiveUsers",
-       "object": "Field"
-      },
-      "tsl_lang": "FRA",
-      "tsl_value": "Hea inactive users",
-      "tsl_simplehelp": null,
-      "tsl_plural_value": null,
-      "tsl_short_value": null,
-      "tsl_placeholder": null,
-      "tsl_listhelp": null,
-      "tsl_tooltip": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateField",
-     "userkey": "Field(monHeaPendingUsers)~ENU",
-     "item": {
-      "tsl_object": {
-       "item": {"fld_name": "monHeaPendingUsers"},
-       "icon": "img/system/field",
-       "label": "Field",
-       "userkeylabel": "monHeaPendingUsers",
-       "object": "Field"
-      },
-      "tsl_lang": "ENU",
-      "tsl_value": "Pending Users",
-      "tsl_simplehelp": null,
-      "tsl_plural_value": null,
-      "tsl_short_value": null,
-      "tsl_placeholder": null,
-      "tsl_listhelp": null,
-      "tsl_tooltip": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateField",
-     "userkey": "Field(monHeaPendingUsers)~FRA",
-     "item": {
-      "tsl_object": {
-       "item": {"fld_name": "monHeaPendingUsers"},
-       "icon": "img/system/field",
-       "label": "Field",
-       "userkeylabel": "monHeaPendingUsers",
-       "object": "Field"
-      },
-      "tsl_lang": "FRA",
-      "tsl_value": "Hea pending users",
-      "tsl_simplehelp": null,
-      "tsl_plural_value": null,
-      "tsl_short_value": null,
-      "tsl_placeholder": null,
-      "tsl_listhelp": null,
-      "tsl_tooltip": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateField",
-     "userkey": "Field(monHeaWebserviceUsers)~ENU",
-     "item": {
-      "tsl_object": {
-       "item": {"fld_name": "monHeaWebserviceUsers"},
-       "icon": "img/system/field",
-       "label": "Field",
-       "userkeylabel": "monHeaWebserviceUsers",
-       "object": "Field"
-      },
-      "tsl_lang": "ENU",
-      "tsl_value": "Webservice Users",
-      "tsl_simplehelp": null,
-      "tsl_plural_value": null,
-      "tsl_short_value": null,
-      "tsl_placeholder": null,
-      "tsl_listhelp": null,
-      "tsl_tooltip": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateField",
-     "userkey": "Field(monHeaWebserviceUsers)~FRA",
-     "item": {
-      "tsl_object": {
-       "item": {"fld_name": "monHeaWebserviceUsers"},
-       "icon": "img/system/field",
-       "label": "Field",
-       "userkeylabel": "monHeaWebserviceUsers",
-       "object": "Field"
-      },
-      "tsl_lang": "FRA",
-      "tsl_value": "Hea webservice users",
-      "tsl_simplehelp": null,
-      "tsl_plural_value": null,
-      "tsl_short_value": null,
-      "tsl_placeholder": null,
-      "tsl_listhelp": null,
-      "tsl_tooltip": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
     }
    ]
   },
@@ -7303,38 +7303,6 @@
    "icon": "img/system/translation",
    "field": "row_module_id",
    "list": [
-    {
-     "object": "TranslateFieldArea",
-     "userkey": "ObjectFieldArea(MonContact-1)~ENU",
-     "item": {
-      "tsl_object": {
-       "item": {"ofa_name": "MonContact-1"},
-       "icon": "img/system/field_area",
-       "label": "Fields area",
-       "userkeylabel": "MonContact-1",
-       "object": "ObjectFieldArea"
-      },
-      "tsl_lang": "ENU",
-      "tsl_value": "MonContact-1",
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateFieldArea",
-     "userkey": "ObjectFieldArea(MonContact-1)~FRA",
-     "item": {
-      "tsl_object": {
-       "item": {"ofa_name": "MonContact-1"},
-       "icon": "img/system/field_area",
-       "label": "Fields area",
-       "userkeylabel": "MonContact-1",
-       "object": "ObjectFieldArea"
-      },
-      "tsl_lang": "FRA",
-      "tsl_value": "MonContact-1",
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
     {
      "object": "TranslateFieldArea",
      "userkey": "ObjectFieldArea(MonHealth-1)~ENU",
@@ -7369,97 +7337,33 @@
     },
     {
      "object": "TranslateFieldArea",
-     "userkey": "ObjectFieldArea(MonHealth-2)~ENU",
+     "userkey": "ObjectFieldArea(MonContact-1)~ENU",
      "item": {
       "tsl_object": {
-       "item": {"ofa_name": "MonHealth-2"},
+       "item": {"ofa_name": "MonContact-1"},
        "icon": "img/system/field_area",
        "label": "Fields area",
-       "userkeylabel": "MonHealth-2",
+       "userkeylabel": "MonContact-1",
        "object": "ObjectFieldArea"
       },
       "tsl_lang": "ENU",
-      "tsl_value": "Platform",
+      "tsl_value": "MonContact-1",
       "row_module_id__mdl_name": "Monitor"
      }
     },
     {
      "object": "TranslateFieldArea",
-     "userkey": "ObjectFieldArea(MonHealth-2)~FRA",
+     "userkey": "ObjectFieldArea(MonContact-1)~FRA",
      "item": {
       "tsl_object": {
-       "item": {"ofa_name": "MonHealth-2"},
+       "item": {"ofa_name": "MonContact-1"},
        "icon": "img/system/field_area",
        "label": "Fields area",
-       "userkeylabel": "MonHealth-2",
+       "userkeylabel": "MonContact-1",
        "object": "ObjectFieldArea"
       },
       "tsl_lang": "FRA",
-      "tsl_value": "Plateforme",
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateFieldArea",
-     "userkey": "ObjectFieldArea(MonHealth-3)~ENU",
-     "item": {
-      "tsl_object": {
-       "item": {"ofa_name": "MonHealth-3"},
-       "icon": "img/system/field_area",
-       "label": "Fields area",
-       "userkeylabel": "MonHealth-3",
-       "object": "ObjectFieldArea"
-      },
-      "tsl_lang": "ENU",
-      "tsl_value": "Application",
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateFieldArea",
-     "userkey": "ObjectFieldArea(MonHealth-3)~FRA",
-     "item": {
-      "tsl_object": {
-       "item": {"ofa_name": "MonHealth-3"},
-       "icon": "img/system/field_area",
-       "label": "Fields area",
-       "userkeylabel": "MonHealth-3",
-       "object": "ObjectFieldArea"
-      },
-      "tsl_lang": "FRA",
-      "tsl_value": "Application",
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateFieldArea",
-     "userkey": "ObjectFieldArea(MonHealth-6)~ENU",
-     "item": {
-      "tsl_object": {
-       "item": {"ofa_name": "MonHealth-6"},
-       "icon": "img/system/field_area",
-       "label": "Fields area",
-       "userkeylabel": "MonHealth-6",
-       "object": "ObjectFieldArea"
-      },
-      "tsl_lang": "ENU",
-      "tsl_value": "Cache",
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateFieldArea",
-     "userkey": "ObjectFieldArea(MonHealth-6)~FRA",
-     "item": {
-      "tsl_object": {
-       "item": {"ofa_name": "MonHealth-6"},
-       "icon": "img/system/field_area",
-       "label": "Fields area",
-       "userkeylabel": "MonHealth-6",
-       "object": "ObjectFieldArea"
-      },
-      "tsl_lang": "FRA",
-      "tsl_value": "Cache",
+      "tsl_value": "MonContact-1",
       "row_module_id__mdl_name": "Monitor"
      }
     },
@@ -7497,33 +7401,65 @@
     },
     {
      "object": "TranslateFieldArea",
-     "userkey": "ObjectFieldArea(MonInstance-1)~ENU",
+     "userkey": "ObjectFieldArea(MonHealth-6)~ENU",
      "item": {
       "tsl_object": {
-       "item": {"ofa_name": "MonInstance-1"},
+       "item": {"ofa_name": "MonHealth-6"},
        "icon": "img/system/field_area",
        "label": "Fields area",
-       "userkeylabel": "MonInstance-1",
+       "userkeylabel": "MonHealth-6",
        "object": "ObjectFieldArea"
       },
       "tsl_lang": "ENU",
-      "tsl_value": "MonInstance-1",
+      "tsl_value": "Cache",
       "row_module_id__mdl_name": "Monitor"
      }
     },
     {
      "object": "TranslateFieldArea",
-     "userkey": "ObjectFieldArea(MonInstance-1)~FRA",
+     "userkey": "ObjectFieldArea(MonHealth-6)~FRA",
      "item": {
       "tsl_object": {
-       "item": {"ofa_name": "MonInstance-1"},
+       "item": {"ofa_name": "MonHealth-6"},
        "icon": "img/system/field_area",
        "label": "Fields area",
-       "userkeylabel": "MonInstance-1",
+       "userkeylabel": "MonHealth-6",
        "object": "ObjectFieldArea"
       },
       "tsl_lang": "FRA",
-      "tsl_value": "MonInstance-1",
+      "tsl_value": "Cache",
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateFieldArea",
+     "userkey": "ObjectFieldArea(MonHealth-2)~ENU",
+     "item": {
+      "tsl_object": {
+       "item": {"ofa_name": "MonHealth-2"},
+       "icon": "img/system/field_area",
+       "label": "Fields area",
+       "userkeylabel": "MonHealth-2",
+       "object": "ObjectFieldArea"
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Platform",
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateFieldArea",
+     "userkey": "ObjectFieldArea(MonHealth-2)~FRA",
+     "item": {
+      "tsl_object": {
+       "item": {"ofa_name": "MonHealth-2"},
+       "icon": "img/system/field_area",
+       "label": "Fields area",
+       "userkeylabel": "MonHealth-2",
+       "object": "ObjectFieldArea"
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Plateforme",
       "row_module_id__mdl_name": "Monitor"
      }
     },
@@ -7620,6 +7556,70 @@
       },
       "tsl_lang": "FRA",
       "tsl_value": "MonProjectInstance-2",
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateFieldArea",
+     "userkey": "ObjectFieldArea(MonHealth-3)~ENU",
+     "item": {
+      "tsl_object": {
+       "item": {"ofa_name": "MonHealth-3"},
+       "icon": "img/system/field_area",
+       "label": "Fields area",
+       "userkeylabel": "MonHealth-3",
+       "object": "ObjectFieldArea"
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Application",
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateFieldArea",
+     "userkey": "ObjectFieldArea(MonHealth-3)~FRA",
+     "item": {
+      "tsl_object": {
+       "item": {"ofa_name": "MonHealth-3"},
+       "icon": "img/system/field_area",
+       "label": "Fields area",
+       "userkeylabel": "MonHealth-3",
+       "object": "ObjectFieldArea"
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Application",
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateFieldArea",
+     "userkey": "ObjectFieldArea(MonInstance-1)~ENU",
+     "item": {
+      "tsl_object": {
+       "item": {"ofa_name": "MonInstance-1"},
+       "icon": "img/system/field_area",
+       "label": "Fields area",
+       "userkeylabel": "MonInstance-1",
+       "object": "ObjectFieldArea"
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "MonInstance-1",
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateFieldArea",
+     "userkey": "ObjectFieldArea(MonInstance-1)~FRA",
+     "item": {
+      "tsl_object": {
+       "item": {"ofa_name": "MonInstance-1"},
+       "icon": "img/system/field_area",
+       "label": "Fields area",
+       "userkeylabel": "MonInstance-1",
+       "object": "ObjectFieldArea"
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "MonInstance-1",
       "row_module_id__mdl_name": "Monitor"
      }
     }
@@ -7953,40 +7953,6 @@
    "list": [
     {
      "object": "TranslateView",
-     "userkey": "View(MonitorScope)~ENU",
-     "item": {
-      "tsl_object": {
-       "item": {"viw_name": "MonitorScope"},
-       "icon": "img/system/view",
-       "label": "View",
-       "userkeylabel": "MonitorScope",
-       "object": "View"
-      },
-      "tsl_lang": "ENU",
-      "tsl_value": "App Monitor",
-      "tsl_help": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateView",
-     "userkey": "View(MonitorScope)~FRA",
-     "item": {
-      "tsl_object": {
-       "item": {"viw_name": "MonitorScope"},
-       "icon": "img/system/view",
-       "label": "View",
-       "userkeylabel": "MonitorScope",
-       "object": "View"
-      },
-      "tsl_lang": "FRA",
-      "tsl_value": "Moniteur d'applications",
-      "tsl_help": null,
-      "row_module_id__mdl_name": "Monitor"
-     }
-    },
-    {
-     "object": "TranslateView",
      "userkey": "View(MonitorStats)~ENU",
      "item": {
       "tsl_object": {
@@ -8015,6 +7981,40 @@
       },
       "tsl_lang": "FRA",
       "tsl_value": "Itor stats",
+      "tsl_help": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateView",
+     "userkey": "View(MonitorScope)~ENU",
+     "item": {
+      "tsl_object": {
+       "item": {"viw_name": "MonitorScope"},
+       "icon": "img/system/view",
+       "label": "View",
+       "userkeylabel": "MonitorScope",
+       "object": "View"
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "App Monitor",
+      "tsl_help": null,
+      "row_module_id__mdl_name": "Monitor"
+     }
+    },
+    {
+     "object": "TranslateView",
+     "userkey": "View(MonitorScope)~FRA",
+     "item": {
+      "tsl_object": {
+       "item": {"viw_name": "MonitorScope"},
+       "icon": "img/system/view",
+       "label": "View",
+       "userkeylabel": "MonitorScope",
+       "object": "View"
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Moniteur d'applications",
       "tsl_help": null,
       "row_module_id__mdl_name": "Monitor"
      }
