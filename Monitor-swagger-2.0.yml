@@ -2,7 +2,7 @@
 # / __(_)_ __  _ __| (_)__(_) |_ /_/
 # \__ \ | '  \| '_ \ | / _| |  _/ -_)
 # |___/_|_|_|_| .__/_|_\__|_|\__\___|
-#             |_| Module: Monitor 2.0
+#             |_| Module: Monitor 2.1
 basePath: /api
 paths:
   /rest/MonCntPrj/{row_id}:
@@ -1049,42 +1049,9 @@ paths:
         required: false
       - in: query
         name: monInstPollFreq
-        description: Search filter for Polling frequency (min)
+        description: Search filter for Fréquence (min)
         type: integer
         required: false
-      - in: query
-        name: monInstMemoryUsage
-        description: Search filter for Memory Usage
-        type: string
-        required: false
-        enum:
-        - XS
-        - S
-        - M
-        - L
-        - XXL
-      - in: query
-        name: monInstUserUsage
-        description: Search filter for User Usage
-        type: string
-        required: false
-        enum:
-        - XS
-        - S
-        - M
-        - L
-        - XXL
-      - in: query
-        name: monInstModelSize
-        description: Search filter for Model Size
-        type: string
-        required: false
-        enum:
-        - XS
-        - S
-        - M
-        - L
-        - XXL
       tags:
       - MonInstance
   /rest/MonCntPrj:
@@ -1132,7 +1099,7 @@ paths:
         required: false
       - in: query
         name: monCntprjCntId__monCntEmail
-        description: Search filter for mon cntprj cnt id Email
+        description: Search filter for Email mon cntprj cnt id
         type: string
         required: false
       - in: query
@@ -1142,7 +1109,7 @@ paths:
         required: false
       - in: query
         name: monCntprjPrjId__monPrjName
-        description: Search filter for mon cntprj prj id Name
+        description: Search filter for Nom mon cntprj prj id
         type: string
         required: false
       tags:
@@ -1192,7 +1159,7 @@ paths:
         required: false
       - in: query
         name: monHeaInstId__monInstUrl
-        description: Search filter for Instance URL
+        description: Search filter for URL Instance
         type: string
         required: false
       - in: query
@@ -1202,7 +1169,7 @@ paths:
         required: false
       - in: query
         name: monHeaStatus
-        description: Search filter for Status
+        description: Search filter for Statut
         type: string
         required: false
         enum:
@@ -1210,22 +1177,22 @@ paths:
         - KO
       - in: query
         name: monHeaVersion
-        description: Search filter for Platform Version
+        description: Search filter for Version Plateforme
         type: string
         required: false
       - in: query
         name: monHeaBuiltOn
-        description: Search filter for Built On
+        description: Search filter for Compilé le
         type: string
         required: false
       - in: query
         name: monHeaDatabasePatchLevel
-        description: Search filter for Database Patch Level
+        description: Search filter for Niveau patch BDD
         type: string
         required: false
       - in: query
         name: monHeaAppVersion
-        description: Search filter for App Version
+        description: Search filter for Version Applicative
         type: string
         required: false
       - in: query
@@ -1235,27 +1202,47 @@ paths:
         required: false
       - in: query
         name: monHeaEnabledUsers
-        description: Search filter for Enabled Users
+        description: Search filter for Utilisateurs actifs
         type: integer
         required: false
       - in: query
         name: monHeaTotalUsers
-        description: Search filter for Total Users
+        description: Search filter for Total utilisateurs
         type: integer
         required: false
       - in: query
+        name: monHeaFreeDisk
+        description: Search filter for Espace libre
+        type: integer
+        required: false
+      - in: query
+        name: monHeaUsableDisk
+        description: Search filter for Espace utilisable
+        type: integer
+        required: false
+      - in: query
+        name: monHeaTotalDisk
+        description: Search filter for Espace total
+        type: integer
+        required: false
+      - in: query
+        name: monHeaDiskUsage
+        description: Search filter for Utilisation Espace
+        type: number
+        required: false
+      - in: query
         name: monHeaFreeHeap
-        description: Search filter for Free Heap
+        description: Search filter for Heap libre
         type: integer
         required: false
       - in: query
         name: monHeaHeapSize
-        description: Search filter for Heap Size
+        description: Search filter for Taille heap
         type: integer
         required: false
       - in: query
         name: monHeaMaxHeapSize
-        description: Search filter for Max Heap Size
+        description: Search filter for Heap max
         type: integer
         required: false
       - in: query
@@ -1265,7 +1252,7 @@ paths:
         required: false
       - in: query
         name: monHeaHeapUsage
-        description: Search filter for Heap Usage
+        description: Search filter for Utilisation Heap
         type: number
         required: false
       - in: query
@@ -1274,53 +1261,63 @@ paths:
         type: integer
         required: false
       - in: query
+        name: monHeaMaxGrantCache
+        description: Search filter for Grant Cache Max
+        type: integer
+        required: false
+      - in: query
+        name: monHeaGrantCacheRatio
+        description: Search filter for Utilisation Grant Cache
+        type: number
+        required: false
+      - in: query
         name: monHeaObjectCache
-        description: Search filter for Object Cache
+        description: Search filter for Cache Objet
         type: integer
         required: false
       - in: query
         name: monHeaMaxObjectCache
-        description: Search filter for Max Object Cache
+        description: Search filter for Cache Objet Max
         type: integer
         required: false
       - in: query
         name: monHeaObjectCacheRatio
-        description: Search filter for Object Cache Usage
+        description: Search filter for Utilisation Cache Objet
         type: number
         required: false
       - in: query
         name: monHeaObjects
-        description: Search filter for Objects
+        description: Search filter for Objets
         type: integer
         required: false
       - in: query
         name: monHeaAttributes
-        description: Search filter for Attributes
+        description: Search filter for Attributs
         type: integer
         required: false
       - in: query
         name: monHeaFunctions
-        description: Search filter for Functions
+        description: Search filter for Fonctions
         type: integer
         required: false
       - in: query
         name: monHeaGroups
-        description: Search filter for Groups
+        description: Search filter for Groupes
         type: integer
         required: false
       - in: query
         name: monHeaStates
-        description: Search filter for States
+        description: Search filter for États
         type: integer
         required: false
       - in: query
         name: monHeaConstraints
-        description: Search filter for Constraints
+        description: Search filter for Contraintes
         type: integer
         required: false
       - in: query
         name: monHeaCrosstables
-        description: Search filter for Crosstables
+        description: Search filter for Tableaux croisés
         type: integer
         required: false
       - in: query
@@ -1345,27 +1342,27 @@ paths:
         required: false
       - in: query
         name: monHeaLastLogin
-        description: Search filter for Last login
+        description: Search filter for Dernière Connexion
         type: string
         required: false
       - in: query
         name: monHeaActiveUsers
-        description: Search filter for Active Users
+        description: Search filter for Hea active users
         type: integer
         required: false
       - in: query
         name: monHeaInactiveUsers
-        description: Search filter for Inactive Users
+        description: Search filter for Hea inactive users
         type: integer
         required: false
       - in: query
         name: monHeaPendingUsers
-        description: Search filter for Pending Users
+        description: Search filter for Hea pending users
         type: integer
         required: false
       - in: query
         name: monHeaWebserviceUsers
-        description: Search filter for Webservice Users
+        description: Search filter for Hea webservice users
         type: integer
         required: false
       tags:
@@ -1410,7 +1407,7 @@ paths:
         required: false
       - in: query
         name: monPrjName
-        description: Search filter for Name
+        description: Search filter for Nom
         type: string
         required: false
       tags:
@@ -1461,50 +1458,17 @@ paths:
         required: false
       - in: query
         name: monInstPollFreq
-        description: Search filter for Polling frequency (min)
+        description: Search filter for Fréquence (min)
         type: integer
         required: false
       - in: query
-        name: monInstMemoryUsage
-        description: Search filter for Memory Usage
-        type: string
-        required: false
-        enum:
-        - XS
-        - S
-        - M
-        - L
-        - XXL
-      - in: query
-        name: monInstUserUsage
-        description: Search filter for User Usage
-        type: string
-        required: false
-        enum:
-        - XS
-        - S
-        - M
-        - L
-        - XXL
-      - in: query
-        name: monInstModelSize
-        description: Search filter for Model Size
-        type: string
-        required: false
-        enum:
-        - XS
-        - S
-        - M
-        - L
-        - XXL
-      - in: query
         name: monInstPrjId
-        description: Search filter for Project
+        description: Search filter for Projet
         type: string
         required: false
       - in: query
         name: monInstPrjId__monPrjName
-        description: Search filter for Project Name
+        description: Search filter for Nom Projet
         type: string
         required: false
       tags:
@@ -1706,7 +1670,7 @@ definitions:
         description: Unique technical row ID
         type: string
       monPrjName:
-        description: Name
+        description: Nom
         type: string
   ArrayOfMonProjectInstance:
     type: array
@@ -1775,7 +1739,7 @@ definitions:
     type: object
     properties:
       monCntprjPrjId__monPrjName:
-        description: mon cntprj prj id Name
+        description: Nom mon cntprj prj id
         type: string
       monCntprjCntId:
         description: mon cntprj cnt id
@@ -1784,7 +1748,7 @@ definitions:
         description: Unique technical row ID
         type: string
       monCntprjCntId__monCntEmail:
-        description: mon cntprj cnt id Email
+        description: Email mon cntprj cnt id
         type: string
       monCntprjPrjId:
         description: mon cntprj prj id
@@ -1799,114 +1763,132 @@ definitions:
     type: object
     properties:
       monHeaTotalUsers:
-        description: Total Users
+        description: Total utilisateurs
         type: integer
       monHeaInactiveUsers:
-        description: Inactive Users
+        description: Hea inactive users
         type: integer
       monHeaFreeHeap:
-        description: Free Heap
+        description: Heap libre
         type: integer
       monHeaActions:
         description: Actions
         type: integer
       monHeaActiveUsers:
-        description: Active Users
+        description: Hea active users
         type: integer
       monHeaAppVersion:
-        description: App Version
+        description: Version Applicative
         type: string
       monHeaObjects:
-        description: Objects
+        description: Objets
         type: integer
       monHeaStatus:
-        description: Status
+        description: Statut
         type: string
         enum:
         - OK
         - KO
       monHeaHeapSize:
-        description: Heap Size
+        description: Taille heap
         type: integer
       monHeaScripts:
         description: Scripts
         type: integer
       monHeaBuiltOn:
-        description: Built On
+        description: Compilé le
         type: string
+      monHeaFreeDisk:
+        description: Espace libre
+        type: integer
       monHeaObjectCacheRatio:
-        description: Object Cache Usage
+        description: Utilisation Cache Objet
         type: number
       monHeaTotalFreeSize:
         description: Total Free Size
         type: integer
       monHeaWebserviceUsers:
-        description: Webservice Users
+        description: Hea webservice users
         type: integer
       monHeaFunctions:
-        description: Functions
+        description: Fonctions
         type: integer
       monHeaStates:
-        description: States
+        description: États
         type: integer
+      monHeaDiskUsage:
+        description: Utilisation Espace
+        type: number
       monHeaVersion:
-        description: Platform Version
+        description: Version Plateforme
         type: string
       monHeaGroups:
-        description: Groups
+        description: Groupes
+        type: integer
+      monHeaUsableDisk:
+        description: Espace utilisable
         type: integer
       monHeaInstId__monInstUrl:
-        description: Instance URL
+        description: URL Instance
         type: string
       monHeaConstraints:
-        description: Constraints
+        description: Contraintes
         type: integer
       monHeaHeapUsage:
-        description: Heap Usage
+        description: Utilisation Heap
         type: number
       monHeaDate:
         description: Date
         type: string
         example: yyyy-MM-dd HH:mm:ss
+      monHeaTotalDisk:
+        description: Espace total
+        type: integer
       monHeaEnabledUsers:
-        description: Enabled Users
+        description: Utilisateurs actifs
         type: integer
       monHeaDatabasePatchLevel:
-        description: Database Patch Level
+        description: Niveau patch BDD
         type: string
+      monHeaMaxGrantCache:
+        description: Grant Cache Max
+        type: integer
       monHeaPendingUsers:
-        description: Pending Users
+        description: Hea pending users
         type: integer
       monHeaAttributes:
-        description: Attributes
+        description: Attributs
         type: integer
       monHeaPublications:
         description: Publications
         type: integer
       monHeaCrosstables:
-        description: Crosstables
+        description: Tableaux croisés
         type: integer
       monHeaSessions:
         description: Sessions
         type: integer
       monHeaMaxObjectCache:
-        description: Max Object Cache
+        description: Cache Objet Max
         type: integer
       monHeaGrantCache:
         description: Grant Cache
         type: integer
       monHeaMaxHeapSize:
-        description: Max Heap Size
+        description: Heap max
         type: integer
+      monHeaGrantCacheRatio:
+        description: Utilisation Grant Cache
+        type: number
       monHeaLastLogin:
-        description: Last login
+        description: Dernière Connexion
         type: string
         example: yyyy-MM-dd HH:mm:ss
       monHeaTemplates:
         description: Templates
         type: integer
       monHeaObjectCache:
-        description: Object Cache
+        description: Cache Objet
         type: integer
       monHeaInstId:
         description: Instance
@@ -1917,38 +1899,11 @@ definitions:
   MonInstance:
     type: object
     properties:
-      monInstModelSize:
-        description: Model Size
-        type: string
-        enum:
-        - XS
-        - S
-        - M
-        - L
-        - XXL
       monInstUrl:
         description: URL
         type: string
-      monInstMemoryUsage:
-        description: Memory Usage
-        type: string
-        enum:
-        - XS
-        - S
-        - M
-        - L
-        - XXL
-      monInstUserUsage:
-        description: User Usage
-        type: string
-        enum:
-        - XS
-        - S
-        - M
-        - L
-        - XXL
       monInstPollFreq:
-        description: Polling frequency (min)
+        description: Fréquence (min)
         type: integer
       row_id:
         description: Unique technical row ID
@@ -2008,44 +1963,17 @@ definitions:
   MonProjectInstance:
     type: object
     properties:
-      monInstModelSize:
-        description: Model Size
-        type: string
-        enum:
-        - XS
-        - S
-        - M
-        - L
-        - XXL
       monInstUrl:
         description: URL
         type: string
-      monInstMemoryUsage:
-        description: Memory Usage
-        type: string
-        enum:
-        - XS
-        - S
-        - M
-        - L
-        - XXL
-      monInstUserUsage:
-        description: User Usage
-        type: string
-        enum:
-        - XS
-        - S
-        - M
-        - L
-        - XXL
       monInstPollFreq:
-        description: Polling frequency (min)
+        description: Fréquence (min)
         type: integer
       monInstPrjId:
-        description: Project
+        description: Projet
         type: string
       monInstPrjId__monPrjName:
-        description: Project Name
+        description: Nom Projet
         type: string
       row_id:
         description: Unique technical row ID
@@ -2061,17 +1989,17 @@ info:
     email: contact@simplicitesoftware.com
   description: API for module Monitor
   title: Monitor
-  version: '2.0'
+  version: '2.1'
 tags:
 - name: MonCntPrj
-  description: To contact in case of problem
+  description: MonCntPrj
 - name: MonContact
-  description: Manager
+  description: Responsable
 - name: MonHealth
-  description: Health
+  description: Santé
 - name: MonInstance
   description: Instance
 - name: MonProject
-  description: Project
+  description: Projet
 - name: MonProjectInstance
   description: Instance

@@ -14,11 +14,12 @@ public class MonProjectInstance extends MonInstance {
 	protected void callSingleInstance(String instanceId, String instanceBaseUrl) {
 		boolean notifyManager = false;
 		try{
-			super.callSingleInstance(instanceId, instanceBaseUrl);
+			createHealthRow(instanceId, instanceBaseUrl);
 			notifyManager = getLatestHealth(instanceId).hasProblem();
 		}
 		catch(Exception e){
 			notifyManager = true;
+			//AppLog.error(getClass(), "callSingleInstance", "Unable to request URL : "+instanceBaseUrl, e, getGrant());
 		}
 		
 		if(notifyManager) notifyContacts(instanceId, instanceBaseUrl);

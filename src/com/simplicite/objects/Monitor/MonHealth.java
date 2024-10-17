@@ -20,43 +20,6 @@ public class MonHealth extends ObjectDB {
 	
 	private static final String ObjHealth = "MonHealth";
 	
-	@Override
-	public String postCreate() {
-		// update parent instance
-		boolean[] oldcrud = getGrant().changeAccess("MonInstance", false,true,true,false);
-		try{
-			ObjectDB inst = getGrant().getTmpObject("MonInstance");
-			inst.getTool().getForUpdate(getFieldValue("monHeaInstId"));
-			inst.setFieldValue("monInstModelSize", getTshirtSize(getField("monHeaObjects").getDouble(0), 100.0));
-			inst.setFieldValue("monInstUserUsage", getTshirtSize(getField("monHeaActiveUsers").getDouble(0), 100.0));
-			inst.setFieldValue("monInstMemoryUsage", getTshirtSize(getField("monHeaHeapUsage").getDouble(0), 1.0));
-			inst.getTool().validateAndUpdate();
-		}
-		catch(Exception e){
-			AppLog.error("Error updating instance with health data", e, getGrant());
-		}
-		finally{
-			getGrant().changeAccess("MonInstance", oldcrud);
-		}
-		
-		return null;
-	}
-	
-	private String getTshirtSize(double val, double max){
-		double ratio = val / max;
-		
-		if(ratio < 0.2)
-			return "XS";
-		else if (ratio < 0.4)
-			return "S";
-		else if (ratio < 0.6)
-			return "M";
-		else if (ratio < 0.8)
-			return "L";
-		else
-			return "XL";
-	}
-	
 	public static final HashMap<String, String> corresp = getMapOf(
 		"monHeaStatus", "platform.status",
 		"monHeaVersion", "platform.version",

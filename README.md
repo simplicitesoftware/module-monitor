@@ -58,12 +58,18 @@
 | `monHeaSessions`                                             | int(10)                                  |          |           |          | -                                                                                |
 | `monHeaEnabledUsers`                                         | int(10)                                  |          |           |          | -                                                                                |
 | `monHeaTotalUsers`                                           | int(10)                                  |          |           |          | -                                                                                |
+| `monHeaFreeDisk`                                             | int(10)                                  |          |           |          | -                                                                                |
+| `monHeaUsableDisk`                                           | int(10)                                  |          |           |          | -                                                                                |
+| `monHeaTotalDisk`                                            | int(10)                                  |          |           |          | -                                                                                |
+| `monHeaDiskUsage`                                            | float(5, 2)                              |          |           |          | -                                                                                |
 | `monHeaFreeHeap`                                             | int(10)                                  |          |           |          | -                                                                                |
 | `monHeaHeapSize`                                             | int(10)                                  |          |           |          | -                                                                                |
 | `monHeaMaxHeapSize`                                          | int(10)                                  |          |           |          | -                                                                                |
 | `monHeaTotalFreeSize`                                        | int(10)                                  |          |           |          | -                                                                                |
 | `monHeaHeapUsage`                                            | float(5, 2)                              |          | yes       |          | -                                                                                |
 | `monHeaGrantCache`                                           | int(10)                                  |          |           |          | -                                                                                |
+| `monHeaMaxGrantCache`                                        | int(10)                                  |          |           |          | -                                                                                |
+| `monHeaGrantCacheRatio`                                      | float(5, 2)                              |          |           |          | -                                                                                |
 | `monHeaObjectCache`                                          | int(10)                                  |          |           |          | -                                                                                |
 | `monHeaMaxObjectCache`                                       | int(10)                                  |          |           |          | -                                                                                |
 | `monHeaObjectCacheRatio`                                     | float(5, 2)                              |          |           |          | -                                                                                |
@@ -101,18 +107,6 @@
 |--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
 | `monInstUrl`                                                 | url(100)                                 | yes*     | yes       |          | -                                                                                |
 | `monInstPollFreq`                                            | int(10)                                  |          | yes       |          | -                                                                                |
-| `monInstMemoryUsage`                                         | enum(3) using `MON_INST_USAGE_SIZE` list |          |           |          | -                                                                                |
-| `monInstUserUsage`                                           | enum(3) using `MON_INST_USAGE_SIZE` list |          |           |          | -                                                                                |
-| `monInstModelSize`                                           | enum(3) using `MON_INST_USAGE_SIZE` list |          |           |          | -                                                                                |
-
-### Lists
-
-* `MON_INST_USAGE_SIZE`
-    - `XS` XS
-    - `S` S
-    - `M` M
-    - `L` L
-    - `XXL` XXL
 
 `MonProject` business object definition
 ---------------------------------------
