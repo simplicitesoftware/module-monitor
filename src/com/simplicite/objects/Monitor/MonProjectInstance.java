@@ -18,7 +18,7 @@ public class MonProjectInstance extends MonInstance {
 			notifyManager = getLatestHealth(instanceId).hasProblem();
 		}
 		catch(Exception e){
-			notifyManager = true;
+			notifyManager = true;  
 			//AppLog.error(getClass(), "callSingleInstance", "Unable to request URL : "+instanceBaseUrl, e, getGrant());
 		}
 		
