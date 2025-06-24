@@ -6,6 +6,7 @@
 components:
   schemas:
     Error404:
+      description: Not found
       type: object
       properties:
         error:
@@ -17,32 +18,41 @@ components:
           enum:
           - 404
     MonContact:
+      description: Responsable
       type: object
       properties:
         monCntEmail:
           description: Email
           type: string
+          maxLength: 100
         row_id:
           description: Unique technical row ID
           type: string
+          maxLength: 11
     MonProject:
+      description: Projet
       type: object
       properties:
         row_id:
           description: Unique technical row ID
           type: string
+          maxLength: 11
         monPrjName:
           description: Nom
           type: string
+          maxLength: 50
     ArrayOfMonProjectInstance:
+      description: List of Instances
       type: array
       items:
         $ref: '#/components/schemas/MonProjectInstance'
     ArrayOfMonCntPrj:
+      description: List of MonCntPrj
       type: array
       items:
         $ref: '#/components/schemas/MonCntPrj'
     PublicationResult:
+      description: Publication result
       type: object
       properties:
         mime:
@@ -52,6 +62,7 @@ components:
           description: Content (plain text or base64 encoded)
           type: string
     PlaceData:
+      description: Place data
       type: object
       properties:
         coord:
@@ -73,14 +84,17 @@ components:
           description: 'Label #3'
           type: string
     ArrayOfMonContact:
+      description: List of Responsables
       type: array
       items:
         $ref: '#/components/schemas/MonContact'
     ArrayOfMonHealth:
+      description: List of Santé
       type: array
       items:
         $ref: '#/components/schemas/MonHealth'
     PlaceMapData:
+      description: Places map data
       type: object
       properties:
         places:
@@ -92,29 +106,36 @@ components:
           description: Name
           type: string
     ActionResult:
+      description: Action result
       type: object
       properties:
         result:
           description: Action result
           type: string
     MonCntPrj:
+      description: MonCntPrj
       type: object
       properties:
         monCntprjPrjId__monPrjName:
           description: Nom mon cntprj prj id
           type: string
+          maxLength: 50
         monCntprjCntId:
           description: mon cntprj cnt id
           type: string
+          maxLength: 11
         row_id:
           description: Unique technical row ID
           type: string
+          maxLength: 11
         monCntprjCntId__monCntEmail:
           description: Email mon cntprj cnt id
           type: string
+          maxLength: 100
         monCntprjPrjId:
           description: mon cntprj prj id
           type: string
+          maxLength: 11
     TreeviewData:
       type: object
       properties:
@@ -122,6 +143,7 @@ components:
           description: Object item with lists of linked objects' items
           type: object
     MonHealth:
+      description: Santé
       type: object
       properties:
         monHeaTotalUsers:
@@ -142,12 +164,14 @@ components:
         monHeaAppVersion:
           description: Version Applicative
           type: string
+          maxLength: 255
         monHeaObjects:
           description: Objets
           type: integer
         monHeaStatus:
           description: Statut
           type: string
+          maxLength: 2
           enum:
           - OK
           - KO
@@ -160,6 +184,7 @@ components:
         monHeaBuiltOn:
           description: Compilé le
           type: string
+          maxLength: 250
         monHeaFreeDisk:
           description: Espace libre
           type: integer
@@ -184,6 +209,7 @@ components:
         monHeaVersion:
           description: Version Plateforme
           type: string
+          maxLength: 100
         monHeaGroups:
           description: Groupes
           type: integer
@@ -193,6 +219,7 @@ components:
         monHeaInstId__monInstUrl:
           description: URL Instance
           type: string
+          maxLength: 100
         monHeaConstraints:
           description: Contraintes
           type: integer
@@ -202,6 +229,7 @@ components:
         monHeaDate:
           description: Date
           type: string
+          maxLength: 19
           example: yyyy-MM-dd HH:mm:ss
         monHeaTotalDisk:
           description: Espace total
@@ -212,6 +240,7 @@ components:
         monHeaDatabasePatchLevel:
           description: Niveau patch BDD
           type: string
+          maxLength: 100
         monHeaMaxGrantCache:
           description: Grant Cache Max
           type: integer
@@ -245,6 +274,7 @@ components:
         monHeaLastLogin:
           description: Dernière Connexion
           type: string
+          maxLength: 19
           example: yyyy-MM-dd HH:mm:ss
         monHeaTemplates:
           description: Templates
@@ -255,22 +285,28 @@ components:
         monHeaInstId:
           description: Instance
           type: string
+          maxLength: 11
         row_id:
           description: Unique technical row ID
           type: string
+          maxLength: 11
     MonInstance:
+      description: Instance
       type: object
       properties:
         monInstUrl:
           description: URL
           type: string
+          maxLength: 100
         monInstPollFreq:
           description: Fréquence (min)
           type: integer
         row_id:
           description: Unique technical row ID
           type: string
+          maxLength: 11
     Error400:
+      description: Bad request
       type: object
       properties:
         error:
@@ -282,14 +318,17 @@ components:
           enum:
           - 400
     ArrayOfMonInstance:
+      description: List of Instances
       type: array
       items:
         $ref: '#/components/schemas/MonInstance'
     ArrayOfMonProject:
+      description: List of Projets
       type: array
       items:
         $ref: '#/components/schemas/MonProject'
     Error401:
+      description: Unauthorized
       type: object
       properties:
         error:
@@ -301,6 +340,7 @@ components:
           enum:
           - 401
     Error500:
+      description: Internal server error
       type: object
       properties:
         error:
@@ -312,6 +352,7 @@ components:
           enum:
           - 500
     Error403:
+      description: Forbidden
       type: object
       properties:
         error:
@@ -323,23 +364,31 @@ components:
           enum:
           - 403
     MonProjectInstance:
+      description: |-
+        Instance:
+
+        Simplicité instance
       type: object
       properties:
         monInstUrl:
           description: URL
           type: string
+          maxLength: 100
         monInstPollFreq:
           description: Fréquence (min)
           type: integer
         monInstPrjId:
           description: Projet
           type: string
+          maxLength: 11
         monInstPrjId__monPrjName:
           description: Nom Projet
           type: string
+          maxLength: 50
         row_id:
           description: Unique technical row ID
           type: string
+          maxLength: 11
   securitySchemes:
     basicAuth:
       scheme: basic

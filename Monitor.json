@@ -62,7 +62,7 @@
       "viw_disp_id__dis_code": null,
       "viw_scope": "MonitorScope",
       "row_module_id__mdl_name": "Monitor",
-      "viw_theme_id__thm_name": "CustomThemeV5",
+      "viw_theme_id__thm_name": "ThemeMondrian-Light",
       "viw_lang": null
      }
     }
@@ -119,7 +119,7 @@
    "field": "row_module_id",
    "list": [{
     "object": "Profile",
-    "userkey": "ADMIN MON_ADMIN",
+    "userkey": "ADMIN~MON_ADMIN",
     "item": {
      "prf_profile_id__grp_name": "ADMIN",
      "prf_group_id__grp_name": "MON_ADMIN",
@@ -152,7 +152,7 @@
    "list": [
     {
      "object": "FieldListCode",
-     "userkey": "MONHEASTATUS OK",
+     "userkey": "MONHEASTATUS~OK",
      "item": {
       "lov_list_id__lov_name": "MONHEASTATUS",
       "lov_code": "OK",
@@ -167,7 +167,7 @@
     },
     {
      "object": "FieldListCode",
-     "userkey": "MONHEASTATUS KO",
+     "userkey": "MONHEASTATUS~KO",
      "item": {
       "lov_list_id__lov_name": "MONHEASTATUS",
       "lov_code": "KO",
@@ -190,7 +190,7 @@
    "list": [
     {
      "object": "FieldListValue",
-     "userkey": "MONHEASTATUS OK Anglais",
+     "userkey": "MONHEASTATUS~OK~ENU",
      "item": {
       "lov_code_id__lov_list_id__lov_name": "MONHEASTATUS",
       "lov_code_id__lov_code": "OK",
@@ -201,7 +201,7 @@
     },
     {
      "object": "FieldListValue",
-     "userkey": "MONHEASTATUS KO Anglais",
+     "userkey": "MONHEASTATUS~KO~ENU",
      "item": {
       "lov_code_id__lov_list_id__lov_name": "MONHEASTATUS",
       "lov_code_id__lov_code": "KO",
@@ -212,7 +212,7 @@
     },
     {
      "object": "FieldListValue",
-     "userkey": "MONHEASTATUS OK Français",
+     "userkey": "MONHEASTATUS~OK~FRA",
      "item": {
       "lov_code_id__lov_list_id__lov_name": "MONHEASTATUS",
       "lov_code_id__lov_code": "OK",
@@ -223,7 +223,7 @@
     },
     {
      "object": "FieldListValue",
-     "userkey": "MONHEASTATUS KO Français",
+     "userkey": "MONHEASTATUS~KO~FRA",
      "item": {
       "lov_code_id__lov_list_id__lov_name": "MONHEASTATUS",
       "lov_code_id__lov_code": "KO",
@@ -2576,7 +2576,7 @@
      "obd_view_id__viw_name": null,
      "obd_nohome": true,
      "obd_icon": "img/color/monitoring",
-     "obd_order": 83000,
+     "obd_order": 10000,
      "obd_domain_id__obd_name": null,
      "row_module_id__mdl_name": "Monitor"
     }
@@ -3113,7 +3113,7 @@
    "list": [
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonCntPrj monCntprjCntId 100",
+     "userkey": "MonCntPrj~monCntprjCntId~100",
      "item": {
       "obf_object_id__obo_name": "MonCntPrj",
       "obf_field_id__fld_name": "monCntprjCntId",
@@ -3148,7 +3148,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonCntPrj monCntEmail 110",
+     "userkey": "MonCntPrj~monCntEmail~110",
      "item": {
       "obf_object_id__obo_name": "MonCntPrj",
       "obf_field_id__fld_name": "monCntEmail",
@@ -3183,7 +3183,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonCntPrj monCntprjPrjId 200",
+     "userkey": "MonCntPrj~monCntprjPrjId~200",
      "item": {
       "obf_object_id__obo_name": "MonCntPrj",
       "obf_field_id__fld_name": "monCntprjPrjId",
@@ -3218,7 +3218,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonCntPrj monPrjName 210",
+     "userkey": "MonCntPrj~monPrjName~210",
      "item": {
       "obf_object_id__obo_name": "MonCntPrj",
       "obf_field_id__fld_name": "monPrjName",
@@ -3253,7 +3253,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonContact monCntEmail 10",
+     "userkey": "MonContact~monCntEmail~10",
      "item": {
       "obf_object_id__obo_name": "MonContact",
       "obf_field_id__fld_name": "monCntEmail",
@@ -3288,7 +3288,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaInstId 10",
+     "userkey": "MonHealth~monHeaInstId~10",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaInstId",
@@ -3323,7 +3323,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monInstUrl 20",
+     "userkey": "MonHealth~monInstUrl~20",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monInstUrl",
@@ -3358,7 +3358,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaDate 30",
+     "userkey": "MonHealth~monHeaDate~30",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaDate",
@@ -3393,7 +3393,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaStatus 40",
+     "userkey": "MonHealth~monHeaStatus~40",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaStatus",
@@ -3428,7 +3428,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaVersion 50",
+     "userkey": "MonHealth~monHeaVersion~50",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaVersion",
@@ -3463,7 +3463,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaBuiltOn 60",
+     "userkey": "MonHealth~monHeaBuiltOn~60",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaBuiltOn",
@@ -3498,7 +3498,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaDatabasePatchLevel 70",
+     "userkey": "MonHealth~monHeaDatabasePatchLevel~70",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaDatabasePatchLevel",
@@ -3533,7 +3533,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaAppVersion 80",
+     "userkey": "MonHealth~monHeaAppVersion~80",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaAppVersion",
@@ -3568,7 +3568,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaSessions 90",
+     "userkey": "MonHealth~monHeaSessions~90",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaSessions",
@@ -3603,7 +3603,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaEnabledUsers 100",
+     "userkey": "MonHealth~monHeaEnabledUsers~100",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaEnabledUsers",
@@ -3638,7 +3638,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaTotalUsers 110",
+     "userkey": "MonHealth~monHeaTotalUsers~110",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaTotalUsers",
@@ -3673,7 +3673,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaFreeDisk 120",
+     "userkey": "MonHealth~monHeaFreeDisk~120",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaFreeDisk",
@@ -3708,7 +3708,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaUsableDisk 130",
+     "userkey": "MonHealth~monHeaUsableDisk~130",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaUsableDisk",
@@ -3743,7 +3743,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaTotalDisk 140",
+     "userkey": "MonHealth~monHeaTotalDisk~140",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaTotalDisk",
@@ -3778,7 +3778,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaDiskUsage 150",
+     "userkey": "MonHealth~monHeaDiskUsage~150",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaDiskUsage",
@@ -3813,7 +3813,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaFreeHeap 160",
+     "userkey": "MonHealth~monHeaFreeHeap~160",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaFreeHeap",
@@ -3848,7 +3848,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaHeapSize 170",
+     "userkey": "MonHealth~monHeaHeapSize~170",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaHeapSize",
@@ -3883,7 +3883,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaMaxHeapSize 180",
+     "userkey": "MonHealth~monHeaMaxHeapSize~180",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaMaxHeapSize",
@@ -3918,7 +3918,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaTotalFreeSize 190",
+     "userkey": "MonHealth~monHeaTotalFreeSize~190",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaTotalFreeSize",
@@ -3953,7 +3953,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaHeapUsage 200",
+     "userkey": "MonHealth~monHeaHeapUsage~200",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaHeapUsage",
@@ -3988,7 +3988,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaGrantCache 210",
+     "userkey": "MonHealth~monHeaGrantCache~210",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaGrantCache",
@@ -4023,7 +4023,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaMaxGrantCache 220",
+     "userkey": "MonHealth~monHeaMaxGrantCache~220",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaMaxGrantCache",
@@ -4058,7 +4058,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaGrantCacheRatio 230",
+     "userkey": "MonHealth~monHeaGrantCacheRatio~230",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaGrantCacheRatio",
@@ -4093,7 +4093,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaObjectCache 240",
+     "userkey": "MonHealth~monHeaObjectCache~240",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaObjectCache",
@@ -4128,7 +4128,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaMaxObjectCache 250",
+     "userkey": "MonHealth~monHeaMaxObjectCache~250",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaMaxObjectCache",
@@ -4163,7 +4163,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaObjectCacheRatio 260",
+     "userkey": "MonHealth~monHeaObjectCacheRatio~260",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaObjectCacheRatio",
@@ -4198,7 +4198,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaObjects 270",
+     "userkey": "MonHealth~monHeaObjects~270",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaObjects",
@@ -4233,7 +4233,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaAttributes 280",
+     "userkey": "MonHealth~monHeaAttributes~280",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaAttributes",
@@ -4268,7 +4268,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaFunctions 290",
+     "userkey": "MonHealth~monHeaFunctions~290",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaFunctions",
@@ -4303,7 +4303,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaGroups 300",
+     "userkey": "MonHealth~monHeaGroups~300",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaGroups",
@@ -4338,7 +4338,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaStates 310",
+     "userkey": "MonHealth~monHeaStates~310",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaStates",
@@ -4373,7 +4373,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaConstraints 320",
+     "userkey": "MonHealth~monHeaConstraints~320",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaConstraints",
@@ -4408,7 +4408,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaCrosstables 330",
+     "userkey": "MonHealth~monHeaCrosstables~330",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaCrosstables",
@@ -4443,7 +4443,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaTemplates 340",
+     "userkey": "MonHealth~monHeaTemplates~340",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaTemplates",
@@ -4478,7 +4478,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaScripts 350",
+     "userkey": "MonHealth~monHeaScripts~350",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaScripts",
@@ -4513,7 +4513,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaActions 360",
+     "userkey": "MonHealth~monHeaActions~360",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaActions",
@@ -4548,7 +4548,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaPublications 370",
+     "userkey": "MonHealth~monHeaPublications~370",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaPublications",
@@ -4583,7 +4583,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaLastLogin 380",
+     "userkey": "MonHealth~monHeaLastLogin~380",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaLastLogin",
@@ -4618,7 +4618,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaActiveUsers 390",
+     "userkey": "MonHealth~monHeaActiveUsers~390",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaActiveUsers",
@@ -4653,7 +4653,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaInactiveUsers 400",
+     "userkey": "MonHealth~monHeaInactiveUsers~400",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaInactiveUsers",
@@ -4688,7 +4688,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaPendingUsers 410",
+     "userkey": "MonHealth~monHeaPendingUsers~410",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaPendingUsers",
@@ -4723,7 +4723,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonHealth monHeaWebserviceUsers 420",
+     "userkey": "MonHealth~monHeaWebserviceUsers~420",
      "item": {
       "obf_object_id__obo_name": "MonHealth",
       "obf_field_id__fld_name": "monHeaWebserviceUsers",
@@ -4758,7 +4758,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonInstance monInstUrl 10",
+     "userkey": "MonInstance~monInstUrl~10",
      "item": {
       "obf_object_id__obo_name": "MonInstance",
       "obf_field_id__fld_name": "monInstUrl",
@@ -4793,7 +4793,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonInstance monInstPollFreq 20",
+     "userkey": "MonInstance~monInstPollFreq~20",
      "item": {
       "obf_object_id__obo_name": "MonInstance",
       "obf_field_id__fld_name": "monInstPollFreq",
@@ -4828,7 +4828,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonProject monPrjName 10",
+     "userkey": "MonProject~monPrjName~10",
      "item": {
       "obf_object_id__obo_name": "MonProject",
       "obf_field_id__fld_name": "monPrjName",
@@ -4863,7 +4863,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonProjectInstance monInstUrl 10",
+     "userkey": "MonProjectInstance~monInstUrl~10",
      "item": {
       "obf_object_id__obo_name": "MonProjectInstance",
       "obf_field_id__fld_name": "monInstUrl",
@@ -4898,7 +4898,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonProjectInstance monInstPrjId 100",
+     "userkey": "MonProjectInstance~monInstPrjId~100",
      "item": {
       "obf_object_id__obo_name": "MonProjectInstance",
       "obf_field_id__fld_name": "monInstPrjId",
@@ -4933,7 +4933,7 @@
     },
     {
      "object": "ObjectFieldSystem",
-     "userkey": "MonProjectInstance monPrjName 110",
+     "userkey": "MonProjectInstance~monPrjName~110",
      "item": {
       "obf_object_id__obo_name": "MonProjectInstance",
       "obf_field_id__fld_name": "monPrjName",
@@ -4976,7 +4976,7 @@
    "list": [
     {
      "object": "Link",
-     "userkey": "100 MonCntPrj monCntprjCntId",
+     "userkey": "100~MonCntPrj~monCntprjCntId",
      "item": {
       "obf_ref_object_id__obo_name": "MonContact",
       "obf_order": 100,
@@ -5000,7 +5000,7 @@
     },
     {
      "object": "Link",
-     "userkey": "10 MonHealth monHeaInstId",
+     "userkey": "10~MonHealth~monHeaInstId",
      "item": {
       "obf_ref_object_id__obo_name": "MonInstance",
       "obf_order": 10,
@@ -5024,7 +5024,7 @@
     },
     {
      "object": "Link",
-     "userkey": "100 MonProjectInstance monInstPrjId",
+     "userkey": "100~MonProjectInstance~monInstPrjId",
      "item": {
       "obf_ref_object_id__obo_name": "MonProject",
       "obf_order": 100,
@@ -5048,7 +5048,7 @@
     },
     {
      "object": "Link",
-     "userkey": "200 MonCntPrj monCntprjPrjId",
+     "userkey": "200~MonCntPrj~monCntprjPrjId",
      "item": {
       "obf_ref_object_id__obo_name": "MonProject",
       "obf_order": 200,
@@ -5246,7 +5246,7 @@
    "list": [
     {
      "object": "Grant",
-     "userkey": "MON_ADMIN MON_CNTPRJ_CRUD MonCntPrj",
+     "userkey": "MON_ADMIN~MON_CNTPRJ_CRUD~MonCntPrj~",
      "item": {
       "grt_group_id__grp_name": "MON_ADMIN",
       "grt_function_id__fct_name": "MON_CNTPRJ_CRUD",
@@ -5258,7 +5258,7 @@
     },
     {
      "object": "Grant",
-     "userkey": "MON_ADMIN MonContact-CUD MonContact",
+     "userkey": "MON_ADMIN~MonContact-CUD~MonContact~",
      "item": {
       "grt_group_id__grp_name": "MON_ADMIN",
       "grt_function_id__fct_name": "MonContact-CUD",
@@ -5270,7 +5270,7 @@
     },
     {
      "object": "Grant",
-     "userkey": "MON_ADMIN MonHealth-R MonHealth",
+     "userkey": "MON_ADMIN~MonHealth-R~MonHealth~",
      "item": {
       "grt_group_id__grp_name": "MON_ADMIN",
       "grt_function_id__fct_name": "MonHealth-R",
@@ -5282,7 +5282,7 @@
     },
     {
      "object": "Grant",
-     "userkey": "MON_ADMIN MonInstance_R MonInstance",
+     "userkey": "MON_ADMIN~MonInstance_R~MonInstance~",
      "item": {
       "grt_group_id__grp_name": "MON_ADMIN",
       "grt_function_id__fct_name": "MonInstance_R",
@@ -5294,7 +5294,7 @@
     },
     {
      "object": "Grant",
-     "userkey": "MON_ADMIN MonProject-CUD MonProject",
+     "userkey": "MON_ADMIN~MonProject-CUD~MonProject~",
      "item": {
       "grt_group_id__grp_name": "MON_ADMIN",
       "grt_function_id__fct_name": "MonProject-CUD",
@@ -5306,7 +5306,7 @@
     },
     {
      "object": "Grant",
-     "userkey": "MON_ADMIN MON_INST_CALL_INSTANCE_A MonProjectInstance callInstance",
+     "userkey": "MON_ADMIN~MON_INST_CALL_INSTANCE_A~MonProjectInstance~callInstance",
      "item": {
       "grt_group_id__grp_name": "MON_ADMIN",
       "grt_function_id__fct_name": "MON_INST_CALL_INSTANCE_A",
@@ -5318,7 +5318,7 @@
     },
     {
      "object": "Grant",
-     "userkey": "MON_ADMIN MON_INST_CALL_INSTANCES_A MonProjectInstance callInstances",
+     "userkey": "MON_ADMIN~MON_INST_CALL_INSTANCES_A~MonProjectInstance~callInstances",
      "item": {
       "grt_group_id__grp_name": "MON_ADMIN",
       "grt_function_id__fct_name": "MON_INST_CALL_INSTANCES_A",
@@ -5330,7 +5330,7 @@
     },
     {
      "object": "Grant",
-     "userkey": "MON_ADMIN MonInstance-CUD MonProjectInstance",
+     "userkey": "MON_ADMIN~MonInstance-CUD~MonProjectInstance~",
      "item": {
       "grt_group_id__grp_name": "MON_ADMIN",
       "grt_function_id__fct_name": "MonInstance-CUD",
@@ -5374,7 +5374,7 @@
    "list": [
     {
      "object": "Map",
-     "userkey": "MonDomain MonProject 83000",
+     "userkey": "MonDomain~ObjectInternal(MonProject)~83000",
      "item": {
       "map_domain_id__obd_name": "MonDomain",
       "map_object": {
@@ -5391,7 +5391,7 @@
     },
     {
      "object": "Map",
-     "userkey": "MonDomain MonProjectInstance 83005",
+     "userkey": "MonDomain~ObjectInternal(MonProjectInstance)~83005",
      "item": {
       "map_domain_id__obd_name": "MonDomain",
       "map_object": {
@@ -5408,7 +5408,7 @@
     },
     {
      "object": "Map",
-     "userkey": "MonDomain MonContact 83010",
+     "userkey": "MonDomain~ObjectInternal(MonContact)~83010",
      "item": {
       "map_domain_id__obd_name": "MonDomain",
       "map_object": {
@@ -5432,7 +5432,7 @@
    "field": "row_module_id",
    "list": [{
     "object": "ViewItem",
-    "userkey": "MonitorScope 1",
+    "userkey": "MonitorScope~1",
     "item": {
      "vwi_view_id__viw_name": "MonitorScope",
      "vwi_position": 1,
@@ -5462,7 +5462,7 @@
    "field": "row_module_id",
    "list": [{
     "object": "ViewGroup",
-    "userkey": "MonitorScope MON_ADMIN",
+    "userkey": "MonitorScope~MON_ADMIN",
     "item": {
      "vig_view_id__viw_name": "MonitorScope",
      "vig_group_id__grp_name": "MON_ADMIN",
@@ -5478,7 +5478,7 @@
    "list": [
     {
      "object": "Resource",
-     "userkey": "default * MON_LOGO",
+     "userkey": "Disposition(default)~ANY~MON_LOGO",
      "item": {
       "res_object": {
        "item": {"dis_code": "default"},
@@ -5502,7 +5502,7 @@
     },
     {
      "object": "Resource",
-     "userkey": "MonInstGraphExt * HTML",
+     "userkey": "ObjectExternal(MonInstGraphExt)~ANY~HTML",
      "item": {
       "res_object": {
        "item": {"obe_name": "MonInstGraphExt"},
@@ -5526,7 +5526,7 @@
     },
     {
      "object": "Resource",
-     "userkey": "MonInstGraphExt * SCRIPT",
+     "userkey": "ObjectExternal(MonInstGraphExt)~ANY~SCRIPT",
      "item": {
       "res_object": {
        "item": {"obe_name": "MonInstGraphExt"},
@@ -5578,7 +5578,7 @@
    "list": [
     {
      "object": "TranslateAction",
-     "userkey": "callInstance Anglais",
+     "userkey": "Action(callInstance)~ENU",
      "item": {
       "tsl_object": {
        "item": {"act_name": "callInstance"},
@@ -5595,7 +5595,7 @@
     },
     {
      "object": "TranslateAction",
-     "userkey": "callInstance Français",
+     "userkey": "Action(callInstance)~FRA",
      "item": {
       "tsl_object": {
        "item": {"act_name": "callInstance"},
@@ -5612,7 +5612,7 @@
     },
     {
      "object": "TranslateAction",
-     "userkey": "callInstances Anglais",
+     "userkey": "Action(callInstances)~ENU",
      "item": {
       "tsl_object": {
        "item": {"act_name": "callInstances"},
@@ -5629,7 +5629,7 @@
     },
     {
      "object": "TranslateAction",
-     "userkey": "callInstances Français",
+     "userkey": "Action(callInstances)~FRA",
      "item": {
       "tsl_object": {
        "item": {"act_name": "callInstances"},
@@ -5654,7 +5654,7 @@
    "list": [
     {
      "object": "TranslateField",
-     "userkey": "monCntEmail Anglais",
+     "userkey": "Field(monCntEmail)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monCntEmail"},
@@ -5676,7 +5676,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monCntEmail Français",
+     "userkey": "Field(monCntEmail)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monCntEmail"},
@@ -5698,7 +5698,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monCntprjCntId Anglais",
+     "userkey": "Field(monCntprjCntId)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monCntprjCntId"},
@@ -5720,7 +5720,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monCntprjCntId Français",
+     "userkey": "Field(monCntprjCntId)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monCntprjCntId"},
@@ -5742,7 +5742,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monCntprjPrjId Anglais",
+     "userkey": "Field(monCntprjPrjId)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monCntprjPrjId"},
@@ -5764,7 +5764,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monCntprjPrjId Français",
+     "userkey": "Field(monCntprjPrjId)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monCntprjPrjId"},
@@ -5786,7 +5786,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaAppVersion Anglais",
+     "userkey": "Field(monHeaAppVersion)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaAppVersion"},
@@ -5808,7 +5808,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaAppVersion Français",
+     "userkey": "Field(monHeaAppVersion)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaAppVersion"},
@@ -5830,7 +5830,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaBuiltOn Anglais",
+     "userkey": "Field(monHeaBuiltOn)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaBuiltOn"},
@@ -5852,7 +5852,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaBuiltOn Français",
+     "userkey": "Field(monHeaBuiltOn)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaBuiltOn"},
@@ -5874,7 +5874,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaDatabasePatchLevel Anglais",
+     "userkey": "Field(monHeaDatabasePatchLevel)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaDatabasePatchLevel"},
@@ -5896,7 +5896,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaDatabasePatchLevel Français",
+     "userkey": "Field(monHeaDatabasePatchLevel)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaDatabasePatchLevel"},
@@ -5918,7 +5918,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaDate Anglais",
+     "userkey": "Field(monHeaDate)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaDate"},
@@ -5940,7 +5940,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaDate Français",
+     "userkey": "Field(monHeaDate)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaDate"},
@@ -5962,7 +5962,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaDiskUsage Anglais",
+     "userkey": "Field(monHeaDiskUsage)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaDiskUsage"},
@@ -5984,7 +5984,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaDiskUsage Français",
+     "userkey": "Field(monHeaDiskUsage)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaDiskUsage"},
@@ -6006,7 +6006,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaEnabledUsers Anglais",
+     "userkey": "Field(monHeaEnabledUsers)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaEnabledUsers"},
@@ -6028,7 +6028,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaEnabledUsers Français",
+     "userkey": "Field(monHeaEnabledUsers)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaEnabledUsers"},
@@ -6050,7 +6050,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaFreeDisk Anglais",
+     "userkey": "Field(monHeaFreeDisk)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaFreeDisk"},
@@ -6072,7 +6072,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaFreeDisk Français",
+     "userkey": "Field(monHeaFreeDisk)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaFreeDisk"},
@@ -6094,7 +6094,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaFreeHeap Anglais",
+     "userkey": "Field(monHeaFreeHeap)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaFreeHeap"},
@@ -6116,7 +6116,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaFreeHeap Français",
+     "userkey": "Field(monHeaFreeHeap)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaFreeHeap"},
@@ -6138,7 +6138,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaGrantCache Anglais",
+     "userkey": "Field(monHeaGrantCache)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaGrantCache"},
@@ -6160,7 +6160,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaGrantCache Français",
+     "userkey": "Field(monHeaGrantCache)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaGrantCache"},
@@ -6182,7 +6182,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaGrantCacheRatio Anglais",
+     "userkey": "Field(monHeaGrantCacheRatio)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaGrantCacheRatio"},
@@ -6204,7 +6204,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaGrantCacheRatio Français",
+     "userkey": "Field(monHeaGrantCacheRatio)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaGrantCacheRatio"},
@@ -6226,7 +6226,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaHeapSize Anglais",
+     "userkey": "Field(monHeaHeapSize)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaHeapSize"},
@@ -6248,7 +6248,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaHeapSize Français",
+     "userkey": "Field(monHeaHeapSize)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaHeapSize"},
@@ -6270,7 +6270,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaHeapUsage Anglais",
+     "userkey": "Field(monHeaHeapUsage)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaHeapUsage"},
@@ -6292,7 +6292,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaHeapUsage Français",
+     "userkey": "Field(monHeaHeapUsage)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaHeapUsage"},
@@ -6314,7 +6314,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaInstId Anglais",
+     "userkey": "Field(monHeaInstId)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaInstId"},
@@ -6336,7 +6336,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaInstId Français",
+     "userkey": "Field(monHeaInstId)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaInstId"},
@@ -6358,7 +6358,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaMaxGrantCache Anglais",
+     "userkey": "Field(monHeaMaxGrantCache)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaMaxGrantCache"},
@@ -6380,7 +6380,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaMaxGrantCache Français",
+     "userkey": "Field(monHeaMaxGrantCache)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaMaxGrantCache"},
@@ -6402,7 +6402,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaMaxHeapSize Anglais",
+     "userkey": "Field(monHeaMaxHeapSize)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaMaxHeapSize"},
@@ -6424,7 +6424,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaMaxHeapSize Français",
+     "userkey": "Field(monHeaMaxHeapSize)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaMaxHeapSize"},
@@ -6446,7 +6446,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaMaxObjectCache Anglais",
+     "userkey": "Field(monHeaMaxObjectCache)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaMaxObjectCache"},
@@ -6468,7 +6468,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaMaxObjectCache Français",
+     "userkey": "Field(monHeaMaxObjectCache)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaMaxObjectCache"},
@@ -6490,7 +6490,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaObjectCache Anglais",
+     "userkey": "Field(monHeaObjectCache)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaObjectCache"},
@@ -6512,7 +6512,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaObjectCache Français",
+     "userkey": "Field(monHeaObjectCache)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaObjectCache"},
@@ -6534,7 +6534,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaObjectCacheRatio Anglais",
+     "userkey": "Field(monHeaObjectCacheRatio)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaObjectCacheRatio"},
@@ -6556,7 +6556,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaObjectCacheRatio Français",
+     "userkey": "Field(monHeaObjectCacheRatio)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaObjectCacheRatio"},
@@ -6578,7 +6578,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaSessions Anglais",
+     "userkey": "Field(monHeaSessions)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaSessions"},
@@ -6600,7 +6600,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaSessions Français",
+     "userkey": "Field(monHeaSessions)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaSessions"},
@@ -6622,7 +6622,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaStatus Anglais",
+     "userkey": "Field(monHeaStatus)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaStatus"},
@@ -6644,7 +6644,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaStatus Français",
+     "userkey": "Field(monHeaStatus)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaStatus"},
@@ -6666,7 +6666,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaTotalDisk Anglais",
+     "userkey": "Field(monHeaTotalDisk)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaTotalDisk"},
@@ -6688,7 +6688,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaTotalDisk Français",
+     "userkey": "Field(monHeaTotalDisk)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaTotalDisk"},
@@ -6710,7 +6710,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaTotalFreeSize Anglais",
+     "userkey": "Field(monHeaTotalFreeSize)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaTotalFreeSize"},
@@ -6732,7 +6732,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaTotalFreeSize Français",
+     "userkey": "Field(monHeaTotalFreeSize)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaTotalFreeSize"},
@@ -6754,7 +6754,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaTotalUsers Anglais",
+     "userkey": "Field(monHeaTotalUsers)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaTotalUsers"},
@@ -6776,7 +6776,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaTotalUsers Français",
+     "userkey": "Field(monHeaTotalUsers)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaTotalUsers"},
@@ -6798,7 +6798,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaUsableDisk Anglais",
+     "userkey": "Field(monHeaUsableDisk)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaUsableDisk"},
@@ -6820,7 +6820,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaUsableDisk Français",
+     "userkey": "Field(monHeaUsableDisk)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaUsableDisk"},
@@ -6842,7 +6842,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaVersion Anglais",
+     "userkey": "Field(monHeaVersion)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaVersion"},
@@ -6864,7 +6864,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaVersion Français",
+     "userkey": "Field(monHeaVersion)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaVersion"},
@@ -6886,7 +6886,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monInstPrjId Anglais",
+     "userkey": "Field(monInstPrjId)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monInstPrjId"},
@@ -6908,7 +6908,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monInstPrjId Français",
+     "userkey": "Field(monInstPrjId)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monInstPrjId"},
@@ -6930,7 +6930,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monInstUrl Anglais",
+     "userkey": "Field(monInstUrl)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monInstUrl"},
@@ -6952,7 +6952,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monInstUrl Français",
+     "userkey": "Field(monInstUrl)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monInstUrl"},
@@ -6974,7 +6974,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monPrjName Anglais",
+     "userkey": "Field(monPrjName)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monPrjName"},
@@ -6996,7 +6996,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monPrjName Français",
+     "userkey": "Field(monPrjName)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monPrjName"},
@@ -7018,7 +7018,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaObjects Anglais",
+     "userkey": "Field(monHeaObjects)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaObjects"},
@@ -7040,7 +7040,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaObjects Français",
+     "userkey": "Field(monHeaObjects)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaObjects"},
@@ -7062,7 +7062,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaAttributes Anglais",
+     "userkey": "Field(monHeaAttributes)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaAttributes"},
@@ -7084,7 +7084,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaAttributes Français",
+     "userkey": "Field(monHeaAttributes)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaAttributes"},
@@ -7106,7 +7106,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaFunctions Anglais",
+     "userkey": "Field(monHeaFunctions)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaFunctions"},
@@ -7128,7 +7128,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaFunctions Français",
+     "userkey": "Field(monHeaFunctions)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaFunctions"},
@@ -7150,7 +7150,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaGroups Anglais",
+     "userkey": "Field(monHeaGroups)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaGroups"},
@@ -7172,7 +7172,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaGroups Français",
+     "userkey": "Field(monHeaGroups)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaGroups"},
@@ -7194,7 +7194,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaStates Anglais",
+     "userkey": "Field(monHeaStates)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaStates"},
@@ -7216,7 +7216,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaStates Français",
+     "userkey": "Field(monHeaStates)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaStates"},
@@ -7238,7 +7238,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaConstraints Anglais",
+     "userkey": "Field(monHeaConstraints)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaConstraints"},
@@ -7260,7 +7260,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaConstraints Français",
+     "userkey": "Field(monHeaConstraints)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaConstraints"},
@@ -7282,7 +7282,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaCrosstables Anglais",
+     "userkey": "Field(monHeaCrosstables)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaCrosstables"},
@@ -7304,7 +7304,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaCrosstables Français",
+     "userkey": "Field(monHeaCrosstables)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaCrosstables"},
@@ -7326,7 +7326,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaTemplates Anglais",
+     "userkey": "Field(monHeaTemplates)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaTemplates"},
@@ -7348,7 +7348,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaTemplates Français",
+     "userkey": "Field(monHeaTemplates)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaTemplates"},
@@ -7370,7 +7370,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaScripts Anglais",
+     "userkey": "Field(monHeaScripts)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaScripts"},
@@ -7392,7 +7392,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaScripts Français",
+     "userkey": "Field(monHeaScripts)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaScripts"},
@@ -7414,7 +7414,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaActions Anglais",
+     "userkey": "Field(monHeaActions)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaActions"},
@@ -7436,7 +7436,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaActions Français",
+     "userkey": "Field(monHeaActions)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaActions"},
@@ -7458,7 +7458,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaPublications Anglais",
+     "userkey": "Field(monHeaPublications)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaPublications"},
@@ -7480,7 +7480,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaPublications Français",
+     "userkey": "Field(monHeaPublications)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaPublications"},
@@ -7502,7 +7502,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaLastLogin Anglais",
+     "userkey": "Field(monHeaLastLogin)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaLastLogin"},
@@ -7524,7 +7524,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaLastLogin Français",
+     "userkey": "Field(monHeaLastLogin)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaLastLogin"},
@@ -7546,7 +7546,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monInstPollFreq Anglais",
+     "userkey": "Field(monInstPollFreq)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monInstPollFreq"},
@@ -7568,7 +7568,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monInstPollFreq Français",
+     "userkey": "Field(monInstPollFreq)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monInstPollFreq"},
@@ -7590,7 +7590,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaActiveUsers Anglais",
+     "userkey": "Field(monHeaActiveUsers)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaActiveUsers"},
@@ -7612,7 +7612,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaActiveUsers Français",
+     "userkey": "Field(monHeaActiveUsers)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaActiveUsers"},
@@ -7634,7 +7634,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaInactiveUsers Anglais",
+     "userkey": "Field(monHeaInactiveUsers)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaInactiveUsers"},
@@ -7656,7 +7656,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaInactiveUsers Français",
+     "userkey": "Field(monHeaInactiveUsers)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaInactiveUsers"},
@@ -7678,7 +7678,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaPendingUsers Anglais",
+     "userkey": "Field(monHeaPendingUsers)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaPendingUsers"},
@@ -7700,7 +7700,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaPendingUsers Français",
+     "userkey": "Field(monHeaPendingUsers)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaPendingUsers"},
@@ -7722,7 +7722,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaWebserviceUsers Anglais",
+     "userkey": "Field(monHeaWebserviceUsers)~ENU",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaWebserviceUsers"},
@@ -7744,7 +7744,7 @@
     },
     {
      "object": "TranslateField",
-     "userkey": "monHeaWebserviceUsers Français",
+     "userkey": "Field(monHeaWebserviceUsers)~FRA",
      "item": {
       "tsl_object": {
        "item": {"fld_name": "monHeaWebserviceUsers"},
@@ -7774,7 +7774,7 @@
    "list": [
     {
      "object": "TranslateFieldArea",
-     "userkey": "MonContact-1 Anglais",
+     "userkey": "ObjectFieldArea(MonContact-1)~ENU",
      "item": {
       "tsl_object": {
        "item": {"ofa_name": "MonContact-1"},
@@ -7790,7 +7790,7 @@
     },
     {
      "object": "TranslateFieldArea",
-     "userkey": "MonContact-1 Français",
+     "userkey": "ObjectFieldArea(MonContact-1)~FRA",
      "item": {
       "tsl_object": {
        "item": {"ofa_name": "MonContact-1"},
@@ -7806,7 +7806,7 @@
     },
     {
      "object": "TranslateFieldArea",
-     "userkey": "MonHealth-1 Anglais",
+     "userkey": "ObjectFieldArea(MonHealth-1)~ENU",
      "item": {
       "tsl_object": {
        "item": {"ofa_name": "MonHealth-1"},
@@ -7822,7 +7822,7 @@
     },
     {
      "object": "TranslateFieldArea",
-     "userkey": "MonHealth-1 Français",
+     "userkey": "ObjectFieldArea(MonHealth-1)~FRA",
      "item": {
       "tsl_object": {
        "item": {"ofa_name": "MonHealth-1"},
@@ -7838,7 +7838,7 @@
     },
     {
      "object": "TranslateFieldArea",
-     "userkey": "MonHealth-2 Anglais",
+     "userkey": "ObjectFieldArea(MonHealth-2)~ENU",
      "item": {
       "tsl_object": {
        "item": {"ofa_name": "MonHealth-2"},
@@ -7854,7 +7854,7 @@
     },
     {
      "object": "TranslateFieldArea",
-     "userkey": "MonHealth-2 Français",
+     "userkey": "ObjectFieldArea(MonHealth-2)~FRA",
      "item": {
       "tsl_object": {
        "item": {"ofa_name": "MonHealth-2"},
@@ -7870,7 +7870,7 @@
     },
     {
      "object": "TranslateFieldArea",
-     "userkey": "MonHealth-3 Anglais",
+     "userkey": "ObjectFieldArea(MonHealth-3)~ENU",
      "item": {
       "tsl_object": {
        "item": {"ofa_name": "MonHealth-3"},
@@ -7886,7 +7886,7 @@
     },
     {
      "object": "TranslateFieldArea",
-     "userkey": "MonHealth-3 Français",
+     "userkey": "ObjectFieldArea(MonHealth-3)~FRA",
      "item": {
       "tsl_object": {
        "item": {"ofa_name": "MonHealth-3"},
@@ -7902,7 +7902,7 @@
     },
     {
      "object": "TranslateFieldArea",
-     "userkey": "MonHealth-4 Anglais",
+     "userkey": "ObjectFieldArea(MonHealth-4)~ENU",
      "item": {
       "tsl_object": {
        "item": {"ofa_name": "MonHealth-4"},
@@ -7918,7 +7918,7 @@
     },
     {
      "object": "TranslateFieldArea",
-     "userkey": "MonHealth-4 Français",
+     "userkey": "ObjectFieldArea(MonHealth-4)~FRA",
      "item": {
       "tsl_object": {
        "item": {"ofa_name": "MonHealth-4"},
@@ -7934,7 +7934,7 @@
     },
     {
      "object": "TranslateFieldArea",
-     "userkey": "MonHealth-5 Anglais",
+     "userkey": "ObjectFieldArea(MonHealth-5)~ENU",
      "item": {
       "tsl_object": {
        "item": {"ofa_name": "MonHealth-5"},
@@ -7950,7 +7950,7 @@
     },
     {
      "object": "TranslateFieldArea",
-     "userkey": "MonHealth-5 Français",
+     "userkey": "ObjectFieldArea(MonHealth-5)~FRA",
      "item": {
       "tsl_object": {
        "item": {"ofa_name": "MonHealth-5"},
@@ -7966,7 +7966,7 @@
     },
     {
      "object": "TranslateFieldArea",
-     "userkey": "MonHealth-6 Anglais",
+     "userkey": "ObjectFieldArea(MonHealth-6)~ENU",
      "item": {
       "tsl_object": {
        "item": {"ofa_name": "MonHealth-6"},
@@ -7982,7 +7982,7 @@
     },
     {
      "object": "TranslateFieldArea",
-     "userkey": "MonHealth-6 Français",
+     "userkey": "ObjectFieldArea(MonHealth-6)~FRA",
      "item": {
       "tsl_object": {
        "item": {"ofa_name": "MonHealth-6"},
@@ -7998,7 +7998,7 @@
     },
     {
      "object": "TranslateFieldArea",
-     "userkey": "MonInstance-1 Anglais",
+     "userkey": "ObjectFieldArea(MonInstance-1)~ENU",
      "item": {
       "tsl_object": {
        "item": {"ofa_name": "MonInstance-1"},
@@ -8014,7 +8014,7 @@
     },
     {
      "object": "TranslateFieldArea",
-     "userkey": "MonInstance-1 Français",
+     "userkey": "ObjectFieldArea(MonInstance-1)~FRA",
      "item": {
       "tsl_object": {
        "item": {"ofa_name": "MonInstance-1"},
@@ -8030,7 +8030,7 @@
     },
     {
      "object": "TranslateFieldArea",
-     "userkey": "MonProject-1 Anglais",
+     "userkey": "ObjectFieldArea(MonProject-1)~ENU",
      "item": {
       "tsl_object": {
        "item": {"ofa_name": "MonProject-1"},
@@ -8046,7 +8046,7 @@
     },
     {
      "object": "TranslateFieldArea",
-     "userkey": "MonProject-1 Français",
+     "userkey": "ObjectFieldArea(MonProject-1)~FRA",
      "item": {
       "tsl_object": {
        "item": {"ofa_name": "MonProject-1"},
@@ -8062,7 +8062,7 @@
     },
     {
      "object": "TranslateFieldArea",
-     "userkey": "MonHealth-7 Anglais",
+     "userkey": "ObjectFieldArea(MonHealth-7)~ENU",
      "item": {
       "tsl_object": {
        "item": {"ofa_name": "MonHealth-7"},
@@ -8078,7 +8078,7 @@
     },
     {
      "object": "TranslateFieldArea",
-     "userkey": "MonHealth-7 Français",
+     "userkey": "ObjectFieldArea(MonHealth-7)~FRA",
      "item": {
       "tsl_object": {
        "item": {"ofa_name": "MonHealth-7"},
@@ -8094,7 +8094,7 @@
     },
     {
      "object": "TranslateFieldArea",
-     "userkey": "MonProjectInstance-2 Anglais",
+     "userkey": "ObjectFieldArea(MonProjectInstance-2)~ENU",
      "item": {
       "tsl_object": {
        "item": {"ofa_name": "MonProjectInstance-2"},
@@ -8110,7 +8110,7 @@
     },
     {
      "object": "TranslateFieldArea",
-     "userkey": "MonProjectInstance-2 Français",
+     "userkey": "ObjectFieldArea(MonProjectInstance-2)~FRA",
      "item": {
       "tsl_object": {
        "item": {"ofa_name": "MonProjectInstance-2"},
@@ -8134,7 +8134,7 @@
    "list": [
     {
      "object": "TranslateDomain",
-     "userkey": "MonDomain Anglais",
+     "userkey": "Domain(MonDomain)~ENU",
      "item": {
       "tsl_object": {
        "item": {"obd_name": "MonDomain"},
@@ -8151,7 +8151,7 @@
     },
     {
      "object": "TranslateDomain",
-     "userkey": "MonDomain Français",
+     "userkey": "Domain(MonDomain)~FRA",
      "item": {
       "tsl_object": {
        "item": {"obd_name": "MonDomain"},
@@ -8176,7 +8176,7 @@
    "list": [
     {
      "object": "TranslateObject",
-     "userkey": "MonCntPrj Anglais",
+     "userkey": "ObjectInternal(MonCntPrj)~ENU",
      "item": {
       "tsl_object": {
        "item": {"obo_name": "MonCntPrj"},
@@ -8194,7 +8194,7 @@
     },
     {
      "object": "TranslateObject",
-     "userkey": "MonContact Anglais",
+     "userkey": "ObjectInternal(MonContact)~ENU",
      "item": {
       "tsl_object": {
        "item": {"obo_name": "MonContact"},
@@ -8212,7 +8212,7 @@
     },
     {
      "object": "TranslateObject",
-     "userkey": "MonContact Français",
+     "userkey": "ObjectInternal(MonContact)~FRA",
      "item": {
       "tsl_object": {
        "item": {"obo_name": "MonContact"},
@@ -8230,7 +8230,7 @@
     },
     {
      "object": "TranslateObject",
-     "userkey": "MonHealth Anglais",
+     "userkey": "ObjectInternal(MonHealth)~ENU",
      "item": {
       "tsl_object": {
        "item": {"obo_name": "MonHealth"},
@@ -8248,7 +8248,7 @@
     },
     {
      "object": "TranslateObject",
-     "userkey": "MonHealth Français",
+     "userkey": "ObjectInternal(MonHealth)~FRA",
      "item": {
       "tsl_object": {
        "item": {"obo_name": "MonHealth"},
@@ -8266,7 +8266,7 @@
     },
     {
      "object": "TranslateObject",
-     "userkey": "MonProjectInstance Anglais",
+     "userkey": "ObjectInternal(MonProjectInstance)~ENU",
      "item": {
       "tsl_object": {
        "item": {"obo_name": "MonProjectInstance"},
@@ -8284,7 +8284,7 @@
     },
     {
      "object": "TranslateObject",
-     "userkey": "MonProjectInstance Français",
+     "userkey": "ObjectInternal(MonProjectInstance)~FRA",
      "item": {
       "tsl_object": {
        "item": {"obo_name": "MonProjectInstance"},
@@ -8302,7 +8302,7 @@
     },
     {
      "object": "TranslateObject",
-     "userkey": "MonProject Anglais",
+     "userkey": "ObjectInternal(MonProject)~ENU",
      "item": {
       "tsl_object": {
        "item": {"obo_name": "MonProject"},
@@ -8320,7 +8320,7 @@
     },
     {
      "object": "TranslateObject",
-     "userkey": "MonProject Français",
+     "userkey": "ObjectInternal(MonProject)~FRA",
      "item": {
       "tsl_object": {
        "item": {"obo_name": "MonProject"},
@@ -8338,7 +8338,7 @@
     },
     {
      "object": "TranslateObject",
-     "userkey": "MonInstance Anglais",
+     "userkey": "ObjectInternal(MonInstance)~ENU",
      "item": {
       "tsl_object": {
        "item": {"obo_name": "MonInstance"},
@@ -8356,7 +8356,7 @@
     },
     {
      "object": "TranslateObject",
-     "userkey": "MonInstance Français",
+     "userkey": "ObjectInternal(MonInstance)~FRA",
      "item": {
       "tsl_object": {
        "item": {"obo_name": "MonInstance"},
@@ -8382,7 +8382,7 @@
    "list": [
     {
      "object": "TranslateExternal",
-     "userkey": "MonInstGraphExt Anglais",
+     "userkey": "ObjectExternal(MonInstGraphExt)~ENU",
      "item": {
       "tsl_object": {
        "item": {"obe_name": "MonInstGraphExt"},
@@ -8400,7 +8400,7 @@
     },
     {
      "object": "TranslateExternal",
-     "userkey": "MonInstGraphExt Français",
+     "userkey": "ObjectExternal(MonInstGraphExt)~FRA",
      "item": {
       "tsl_object": {
        "item": {"obe_name": "MonInstGraphExt"},
@@ -8425,7 +8425,7 @@
    "field": "row_module_id",
    "list": [{
     "object": "TranslateLink",
-    "userkey": "monCntprjPrjId Français",
+    "userkey": "Link(monCntprjPrjId)~FRA",
     "item": {
      "tsl_object": {
       "item": {
@@ -8454,7 +8454,7 @@
    "list": [
     {
      "object": "TranslateView",
-     "userkey": "MonitorScope Anglais",
+     "userkey": "View(MonitorScope)~ENU",
      "item": {
       "tsl_object": {
        "item": {"viw_name": "MonitorScope"},
@@ -8471,7 +8471,7 @@
     },
     {
      "object": "TranslateView",
-     "userkey": "MonitorScope Français",
+     "userkey": "View(MonitorScope)~FRA",
      "item": {
       "tsl_object": {
        "item": {"viw_name": "MonitorScope"},
@@ -8496,7 +8496,7 @@
    "list": [
     {
      "object": "Permission",
-     "userkey": "MON_ADMIN MonDomain",
+     "userkey": "MON_ADMIN~Domain(MonDomain)~",
      "item": {
       "prm_group_id__grp_name": "MON_ADMIN",
       "prm_object": {
@@ -8516,7 +8516,7 @@
     },
     {
      "object": "Permission",
-     "userkey": "MON_ADMIN MonInstGraphExt",
+     "userkey": "MON_ADMIN~ObjectExternal(MonInstGraphExt)~",
      "item": {
       "prm_group_id__grp_name": "MON_ADMIN",
       "prm_object": {

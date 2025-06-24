@@ -1644,6 +1644,7 @@ securityDefinitions:
     type: apiKey
 definitions:
   Error404:
+    description: Not found
     type: object
     properties:
       error:
@@ -1655,32 +1656,41 @@ definitions:
         enum:
         - 404
   MonContact:
+    description: Responsable
     type: object
     properties:
       monCntEmail:
         description: Email
         type: string
+        maxLength: 100
       row_id:
         description: Unique technical row ID
         type: string
+        maxLength: 11
   MonProject:
+    description: Projet
     type: object
     properties:
       row_id:
         description: Unique technical row ID
         type: string
+        maxLength: 11
       monPrjName:
         description: Nom
         type: string
+        maxLength: 50
   ArrayOfMonProjectInstance:
+    description: List of Instances
     type: array
     items:
       $ref: '#/definitions/MonProjectInstance'
   ArrayOfMonCntPrj:
+    description: List of MonCntPrj
     type: array
     items:
       $ref: '#/definitions/MonCntPrj'
   PublicationResult:
+    description: Publication result
     type: object
     properties:
       mime:
@@ -1690,6 +1700,7 @@ definitions:
         description: Content (plain text or base64 encoded)
         type: string
   PlaceData:
+    description: Place data
     type: object
     properties:
       coord:
@@ -1711,14 +1722,17 @@ definitions:
         description: 'Label #3'
         type: string
   ArrayOfMonContact:
+    description: List of Responsables
     type: array
     items:
       $ref: '#/definitions/MonContact'
   ArrayOfMonHealth:
+    description: List of Santé
     type: array
     items:
       $ref: '#/definitions/MonHealth'
   PlaceMapData:
+    description: Places map data
     type: object
     properties:
       places:
@@ -1730,29 +1744,36 @@ definitions:
         description: Name
         type: string
   ActionResult:
+    description: Action result
     type: object
     properties:
       result:
         description: Action result
         type: string
   MonCntPrj:
+    description: MonCntPrj
     type: object
     properties:
       monCntprjPrjId__monPrjName:
         description: Nom mon cntprj prj id
         type: string
+        maxLength: 50
       monCntprjCntId:
         description: mon cntprj cnt id
         type: string
+        maxLength: 11
       row_id:
         description: Unique technical row ID
         type: string
+        maxLength: 11
       monCntprjCntId__monCntEmail:
         description: Email mon cntprj cnt id
         type: string
+        maxLength: 100
       monCntprjPrjId:
         description: mon cntprj prj id
         type: string
+        maxLength: 11
   TreeviewData:
     type: object
     properties:
@@ -1760,6 +1781,7 @@ definitions:
         description: Object item with lists of linked objects' items
         type: object
   MonHealth:
+    description: Santé
     type: object
     properties:
       monHeaTotalUsers:
@@ -1780,12 +1802,14 @@ definitions:
       monHeaAppVersion:
         description: Version Applicative
         type: string
+        maxLength: 255
       monHeaObjects:
         description: Objets
         type: integer
       monHeaStatus:
         description: Statut
         type: string
+        maxLength: 2
         enum:
         - OK
         - KO
@@ -1798,6 +1822,7 @@ definitions:
       monHeaBuiltOn:
         description: Compilé le
         type: string
+        maxLength: 250
       monHeaFreeDisk:
         description: Espace libre
         type: integer
@@ -1822,6 +1847,7 @@ definitions:
       monHeaVersion:
         description: Version Plateforme
         type: string
+        maxLength: 100
       monHeaGroups:
         description: Groupes
         type: integer
@@ -1831,6 +1857,7 @@ definitions:
       monHeaInstId__monInstUrl:
         description: URL Instance
         type: string
+        maxLength: 100
       monHeaConstraints:
         description: Contraintes
         type: integer
@@ -1840,6 +1867,7 @@ definitions:
       monHeaDate:
         description: Date
         type: string
+        maxLength: 19
         example: yyyy-MM-dd HH:mm:ss
       monHeaTotalDisk:
         description: Espace total
@@ -1850,6 +1878,7 @@ definitions:
       monHeaDatabasePatchLevel:
         description: Niveau patch BDD
         type: string
+        maxLength: 100
       monHeaMaxGrantCache:
         description: Grant Cache Max
         type: integer
@@ -1883,6 +1912,7 @@ definitions:
       monHeaLastLogin:
         description: Dernière Connexion
         type: string
+        maxLength: 19
         example: yyyy-MM-dd HH:mm:ss
       monHeaTemplates:
         description: Templates
@@ -1893,22 +1923,28 @@ definitions:
       monHeaInstId:
         description: Instance
         type: string
+        maxLength: 11
       row_id:
         description: Unique technical row ID
         type: string
+        maxLength: 11
   MonInstance:
+    description: Instance
     type: object
     properties:
       monInstUrl:
         description: URL
         type: string
+        maxLength: 100
       monInstPollFreq:
         description: Fréquence (min)
         type: integer
       row_id:
         description: Unique technical row ID
         type: string
+        maxLength: 11
   Error400:
+    description: Bad request
     type: object
     properties:
       error:
@@ -1920,14 +1956,17 @@ definitions:
         enum:
         - 400
   ArrayOfMonInstance:
+    description: List of Instances
     type: array
     items:
       $ref: '#/definitions/MonInstance'
   ArrayOfMonProject:
+    description: List of Projets
     type: array
     items:
       $ref: '#/definitions/MonProject'
   Error401:
+    description: Unauthorized
     type: object
     properties:
       error:
@@ -1939,6 +1978,7 @@ definitions:
         enum:
         - 401
   Error500:
+    description: Internal server error
     type: object
     properties:
       error:
@@ -1950,6 +1990,7 @@ definitions:
         enum:
         - 500
   Error403:
+    description: Forbidden
     type: object
     properties:
       error:
@@ -1961,23 +2002,31 @@ definitions:
         enum:
         - 403
   MonProjectInstance:
+    description: |-
+      Instance:
+
+      Simplicité instance
     type: object
     properties:
       monInstUrl:
         description: URL
         type: string
+        maxLength: 100
       monInstPollFreq:
         description: Fréquence (min)
         type: integer
       monInstPrjId:
         description: Projet
         type: string
+        maxLength: 11
       monInstPrjId__monPrjName:
         description: Nom Projet
         type: string
+        maxLength: 50
       row_id:
         description: Unique technical row ID
         type: string
+        maxLength: 11
 swagger: '2.0'
 info:
   license:
